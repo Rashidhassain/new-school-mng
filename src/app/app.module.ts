@@ -15,6 +15,8 @@ import { DemoComponent } from './demo/demo.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Demo2Component } from './demo2/demo2.component';
+import { ParentComponent } from './parent/parent.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { Demo2Component } from './demo2/demo2.component';
     DemoComponent,
     Demo1Component,
     Demo2Component,
+    ParentComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

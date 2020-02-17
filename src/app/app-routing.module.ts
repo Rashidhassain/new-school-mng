@@ -7,6 +7,8 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { DemoComponent } from './demo/demo.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { Demo2Component } from './demo2/demo2.component';
+import { ParentComponent } from './parent/parent.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -16,7 +18,11 @@ const routes: Routes = [
   {path: 'adminhome', component: AdminhomeComponent},
   {path: 'demo', component: DemoComponent},
   {path: 'demo1', component: Demo1Component},
-  {path: 'demo2', component: Demo2Component}
+  {path: 'demo2', component: Demo2Component},
+  {path: 'parent', component: ParentComponent},
+  {path: 'home', component: HomeComponent}
+
+
 
 
 
