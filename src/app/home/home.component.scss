@@ -39,10 +39,14 @@
     transition: width .3s;
 }
 
-#sec{
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../../assets/bbd7cd62c9f1f6778e91b11a71874ab6.gif');
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-}
+// #sec{
+//     background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../../assets/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg');
+//     background-size: cover;
+//     background-position: center;
+//     height: 50vh;
+// }
 
+
+*{
+    overflow: hidden;
+}
