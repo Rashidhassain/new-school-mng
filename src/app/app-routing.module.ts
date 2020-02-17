@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { DemoComponent } from './demo/demo.component';
 import { Demo1Component } from './demo1/demo1.component';
+import { Demo2Component } from './demo2/demo2.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'adminhome', component: AdminhomeComponent},
   {path: 'demo', component: DemoComponent},
-  {path: 'demo1', component: Demo1Component}
+  {path: 'demo1', component: Demo1Component},
+  {path: 'demo2', component: Demo2Component}
+
 
 
 

@@ -3,13 +3,13 @@
     <div class="row">
       <div class="col-sm-12">
         <h3 class="text-center mt-5">Dash Board</h3>
-        <hr style="border:0.8px solid black;    width: 40%;
-      ">
+        <!-- <hr style="border:0.8px solid black;    width: 40%;
+      "> -->
       </div>
     </div>
   </div>
 
-  <div class="container-fluid">
+  <div class="container">
     <mat-tab-group class="mt-5">
       <mat-tab label="School information">
         <div class="container-fluid">
@@ -30,7 +30,7 @@
           </div>
 
           <div class="row mt-4">
-            <div class="col-sm-6">
+            <div class="col-sm-5">
               <div class="card">
                 <form>
                   <div class="form-group">
@@ -59,7 +59,7 @@
                 </form>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-7">
               <table class="table">
                 <thead>
                   <tr>
@@ -168,9 +168,13 @@
       <mat-tab label="Staff">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
 
               <h3 class="text-center mt-5">Add Staff Details</h3>
+
+            </div>
+            <div class="col-sm-6">
+              <h3 class="text-center mt-5">View Staff Details</h3>
 
             </div>
           </div>
@@ -178,9 +182,6 @@
           <div class="container mt-5">
             <div class="row">
               <div class="col-sm-6">
-                <img src="../../assets/admin-login-png-4.png" alt="">
-              </div>
-              <div class="col-sm-6 mt-4">
                 <div class="card">
                   <form>
                     <div class="form-group">
@@ -198,22 +199,61 @@
                     <button mat-raised-button color="primary" class="btn-block"
                       style="outline:none;border-radius:45%">Add Staff Details</button>
                   </form>
-                </div>
+                </div>              </div>
+              <div class="col-sm-6 mt-4">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Staff Name</th>
+                      <th scope="col">Qualification</th>
+                      <th scope="col">Salary</th>
+
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>Otto</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
+                      </tr>
+                    <tr>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>Otto</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
+                      </tr>
+                    <tr>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>Otto</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
+                      </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
 
       </mat-tab>
-      <mat-tab label="View Staff"> Content 2 </mat-tab>
+     
       <mat-tab label="Set Exam">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
               <h3 class="text-center mt-5">Set Exam Time Table Details</h3>
             </div>
+            <div class="col-sm-6">
+              <h3 class="text-center mt-5">View Exam time Table Details</h3>
+
+            </div>
           </div>
-          <div class="container mt-5 offset-3">
+          <div class="container mt-5">
             <div class="row">
               <div class="col-sm-6">
                 <div class="card">
@@ -327,15 +367,54 @@
 
 
               </div>
+<div class="col-sm-6">
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">Exam Name</th>
+          <th scope="col">Class Name</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Delete</th>
 
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <th scope="row">1</th> -->
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
+
+        </tr>
+        <tr>
+          <!-- <th scope="row">2</th> -->
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
+          </tr>
+        <tr>
+          <!-- <th scope="row">3</th> -->
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+          <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
            
             </div>
           </div>
         </div>
       </mat-tab>
-      <mat-tab label="View Exam"> Content 1 </mat-tab>
+     
       <mat-tab label="View student"> Content 2 </mat-tab>
-      <mat-tab label="Log Out"> Content 3 </mat-tab>
     </mat-tab-group>
 
 
