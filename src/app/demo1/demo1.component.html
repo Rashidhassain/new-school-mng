@@ -199,7 +199,8 @@
                     <button mat-raised-button color="primary" class="btn-block"
                       style="outline:none;border-radius:45%">Add Staff Details</button>
                   </form>
-                </div>              </div>
+                </div>
+              </div>
               <div class="col-sm-6 mt-4">
                 <table class="table">
                   <thead>
@@ -218,21 +219,21 @@
                       <td>Otto</td>
 
                       <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
-                      </tr>
+                    </tr>
                     <tr>
                       <td>Jacob</td>
                       <td>Thornton</td>
                       <td>Otto</td>
 
                       <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
-                      </tr>
+                    </tr>
                     <tr>
                       <td>Larry</td>
                       <td>the Bird</td>
                       <td>Otto</td>
 
                       <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
-                      </tr>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -241,7 +242,7 @@
         </div>
 
       </mat-tab>
-     
+
       <mat-tab label="Set Exam">
         <div class="container-fluid">
           <div class="row">
@@ -367,54 +368,92 @@
 
 
               </div>
-<div class="col-sm-6">
-  <div class="container">
-    <table class="table">
-      <thead>
-        <tr>
-          <!-- <th scope="col">#</th> -->
-          <th scope="col">Exam Name</th>
-          <th scope="col">Class Name</th>
-          <th scope="col">Subject</th>
-          <th scope="col">Delete</th>
+              <div class="col-sm-6">
+                <div class="container">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <!-- <th scope="col">#</th> -->
+                        <th scope="col">Exam Name</th>
+                        <th scope="col">Class Name</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Delete</th>
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <!-- <th scope="row">1</th> -->
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <!-- <th scope="row">1</th> -->
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td><button mat-raised-button color="warn"
+                            style="outline:none;border-radius:45%">Delete</button>
 
-        </tr>
-        <tr>
-          <!-- <th scope="row">2</th> -->
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
-          </tr>
-        <tr>
-          <!-- <th scope="row">3</th> -->
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td><button mat-raised-button color="warn" style="outline:none;border-radius:45%">Delete</button>
+                      </tr>
+                      <tr>
+                        <!-- <th scope="row">2</th> -->
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td><button mat-raised-button color="warn"
+                            style="outline:none;border-radius:45%">Delete</button>
+                      </tr>
+                      <tr>
+                        <!-- <th scope="row">3</th> -->
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td><button mat-raised-button color="warn"
+                            style="outline:none;border-radius:45%">Delete</button>
 
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-           
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </mat-tab>
-     
-      <mat-tab label="Settings"> Content 2 </mat-tab>
+
+      <mat-tab label="Settings">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-center mt-5">Change Password</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row">
+          <div class="col-sm-6">
+            <h3>Here admin can change password from old to new</h3>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Old password</label>
+                  <input type="text" placeholder="Enter Old password" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">New Passowrd</label>
+                  <input type="text" placeholder="Enter New Passowrd" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Confirm Password</label>
+                  <input type="text" placeholder="Enter Confirm Password" class="form-control">
+                </div>
+                <button mat-raised-button color="primary" class="btn-block"
+                  style="outline:none;border-radius:45%">Change Password</button>
+              </form>
+            </div>
+          </div>
+         </div>
+        </div>
+      </mat-tab>
     </mat-tab-group>
 
 
