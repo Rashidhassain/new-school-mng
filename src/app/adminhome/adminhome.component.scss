@@ -57,12 +57,14 @@
 
 h4 {
     color: black;
+
 }
 
 h6{
     color: black;
     cursor: pointer;
     outline: none;
+
 }
 
 
@@ -179,6 +181,8 @@ h6{
   @media (min-width: 1366px) {
     h1 {
       width: 70%;
+      font-family: 'Coda Caption', sans-serif;
+
     }
   
     .tabordion {
@@ -189,4 +193,5 @@ h6{
   
   .div h4{
     color: white;
+
   }

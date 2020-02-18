@@ -43,7 +43,7 @@
     background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('../../assets/tim-mossholder-WE_Kv_ZB1l0-unsplash\ \(1\).jpg');
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    height: 55vh;
 }
 
 
@@ -51,8 +51,13 @@
     overflow: hidden;
 }
 
-.div{
-    background: black;
-    color: white;
-    padding: 10px;
-}
+// .div{
+//     background: black;
+//     color: white;
+//     padding: 10px;
+// }
+
+.card{
+
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
+  }
