@@ -10,6 +10,7 @@ import { Demo2Component } from './demo2/demo2.component';
 import { ParentComponent } from './parent/parent.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { TeacherComponent } from './teacher/teacher.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,9 @@ const routes: Routes = [
   {path: 'demo2', component: Demo2Component},
   {path: 'parent', component: ParentComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'footer', component: FooterComponent}
+  {path: 'footer', component: FooterComponent},
+  {path: 'teacher', component: TeacherComponent}
+
 
 
 
