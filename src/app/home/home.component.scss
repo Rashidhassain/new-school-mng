@@ -40,13 +40,19 @@
 }
 
 #sec{
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../../assets/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg');
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('../../assets/tim-mossholder-WE_Kv_ZB1l0-unsplash\ \(1\).jpg');
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    height: 60vh;
 }
 
 
 *{
     overflow: hidden;
+}
+
+.div{
+    background: black;
+    color: white;
+    padding: 10px;
 }
