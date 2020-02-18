@@ -61,3 +61,57 @@
 
     box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
   }
+
+
+
+
+.teach::after{
+
+    content: '';
+    width: 0%;
+    margin-left: 42%;
+    display: block;
+    background:black;
+    transition: width .3s;
+    height: 2px;
+    cursor: pointer;
+}
+
+.teach:hover::after{
+    width: 16%;
+    transition: width .3s;
+}
+
+.act::after{
+
+    content: '';
+    width: 0;
+    margin-left: 42%;
+    display: block;
+    background:black;
+    transition: width .3s;
+    height: 2px;
+    cursor: pointer;
+}
+
+.act:hover::after{
+    width: 16%;
+    transition: width .3s;
+}
+
+.tour::after{
+
+    content: '';
+    width: 0;
+    margin-left: 42%;
+    display: block;
+    background:black;
+    transition: width .3s;
+    height: 2px;
+    cursor: pointer;
+}
+
+.tour:hover::after{
+    width: 16%;
+    transition: width .3s;
+}
