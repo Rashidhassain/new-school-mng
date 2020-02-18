@@ -9,6 +9,7 @@ import { Demo1Component } from './demo1/demo1.component';
 import { Demo2Component } from './demo2/demo2.component';
 import { ParentComponent } from './parent/parent.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,9 @@ const routes: Routes = [
   {path: 'demo1', component: Demo1Component},
   {path: 'demo2', component: Demo2Component},
   {path: 'parent', component: ParentComponent},
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent},
+  {path: 'footer', component: FooterComponent}
+
 
 
 

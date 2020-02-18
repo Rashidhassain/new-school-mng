@@ -18,6 +18,7 @@ import { Demo2Component } from './demo2/demo2.component';
 import { ParentComponent } from './parent/parent.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     Demo2Component,
     ParentComponent,
     HomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
