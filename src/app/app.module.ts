@@ -19,6 +19,7 @@ import { ParentComponent } from './parent/parent.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FooterComponent } from './footer/footer.component';
+import { TeacherhomeComponent } from './teacherhome/teacherhome.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     ParentComponent,
     HomeComponent,
     FooterComponent,
+    TeacherhomeComponent,
   ],
   imports: [
     BrowserModule,
