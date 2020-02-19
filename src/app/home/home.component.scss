@@ -39,12 +39,6 @@
     transition: width .3s;
 }
 
-#sec{
-    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('../../assets/tim-mossholder-WE_Kv_ZB1l0-unsplash\ \(1\).jpg');
-    background-size: cover;
-    background-position: center;
-    height: 55vh;
-}
 
 
 *{
@@ -62,7 +56,10 @@
     box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
   }
 
-
+  .div{
+    background-color: black;
+    padding: 10px;
+}
 
 
 .teach::after{
