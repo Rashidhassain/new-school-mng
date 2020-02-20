@@ -20,6 +20,9 @@ import { HomeComponent } from './home/home.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FooterComponent } from './footer/footer.component';
 import { TeacherhomeComponent } from './teacherhome/teacherhome.component';
+import { TeacherregComponent } from './teacherreg/teacherreg.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { TeacherhomeComponent } from './teacherhome/teacherhome.component';
     HomeComponent,
     FooterComponent,
     TeacherhomeComponent,
+    TeacherregComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,8 @@ import { TeacherhomeComponent } from './teacherhome/teacherhome.component';
     MatTabsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

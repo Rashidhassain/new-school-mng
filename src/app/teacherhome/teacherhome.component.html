@@ -357,16 +357,16 @@
                     </div>
                 </div>
             </mat-tab>
-            <mat-tab label="View Exam">
-
-
-            </mat-tab>
+          
 
             <mat-tab label="Add Marks">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                             <h3 class="text-center mt-5">Add Marks</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3 class="text-center mt-5">View Details</h3>
                         </div>
 
                     </div>
@@ -399,21 +399,73 @@
 
 
                                         <button mat-raised-button color="primary" class="btn-block"
-                                            style="outline:none;border-radius:45%">Add Subject Details</button>
+                                            style="outline:none;border-radius:45%">Add Marks</button>
                                     </form>
 
                                 </div>
 
 
                             </div>
+<div class="col-sm-6">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Std.Id</th>
+            <th scope="col">Std.Name</th>
+            <th scope="col">Class</th>
+            <th scope="col">Section</th>
+            <th scope="col">Marks</th>
+            <th scope="col">Delete</th>
 
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td><button mat-raised-button color="warn"
+                style="outline:none;border-radius:45%">Delete</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>@mdo</td>
+            <td><button mat-raised-button color="warn"
+                style="outline:none;border-radius:45%">Delete</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>@mdo</td>
+            <td><button mat-raised-button color="warn"
+                style="outline:none;border-radius:45%">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
 
                         </div>
                     </div>
                 </div>
             </mat-tab>
 
-            <mat-tab label="View Marks">
+            <mat-tab label="Student Result">
+
+
+            </mat-tab>
+            <mat-tab label="Attendence">
+
+
+            </mat-tab>
+            <mat-tab label="Notification">
+
 
             </mat-tab>
 

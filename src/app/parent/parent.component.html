@@ -1,1 +1,84 @@
-<p>parent works!</p>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h5 class="sms">School Management School</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+      
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Welcome To Parent</a>
+        </li>
+ 
+        
+      </ul>
+    </div>
+  </nav>
+
+
+<!-- headers ends -->
+<section id="sec">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-center" style="color: white;margin-top: 13%;">School Management system</h1>
+            </div>
+        </div>
+    </div>
+      </section>
+
+<section id="sec1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="text-center mt-5">Parent Login</h3>
+                <hr style="border:1px solid black;    width: 20%;
+                " class="mb-3">
+
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-6 mt-5 mb-5"> 
+                <div class="card">
+                <form>
+                    <div class="form-group mt-3">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group mt-4">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"required>
+                    </div>
+                    
+                   <div class="text-center mt-4"><button mat-raised-button color="primary" class="btn-block" style="font-size: 18px;">Login</button>
+                </div>
+    
+                
+                  </form>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h5 class="text-center">Don't Have Account?</h5>
+                        <!-- Button trigger modal -->
+    <button mat-raised-button  color="warn"  class="btn-block" (click)="open()" style="outline: none;font-size: 18px;">
+      Register
+    </button>
+    
+    
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="../../assets/admin-login-png-4.png" alt="" style="width:80%" class=" pl-5">
+            </div>
+          
+        </div>
+       
+    </div>
+</section>
+<app-footer></app-footer>
