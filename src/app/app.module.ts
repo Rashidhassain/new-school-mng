@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TeacherhomeComponent } from './teacherhome/teacherhome.component';
 import { TeacherregComponent } from './teacherreg/teacherreg.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ParenthomeComponent } from './parenthome/parenthome.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     FooterComponent,
     TeacherhomeComponent,
     TeacherregComponent,
+    ParenthomeComponent,
 
   ],
   imports: [
