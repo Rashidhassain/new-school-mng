@@ -23,6 +23,8 @@ import { TeacherhomeComponent } from './teacherhome/teacherhome.component';
 import { TeacherregComponent } from './teacherreg/teacherreg.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ParenthomeComponent } from './parenthome/parenthome.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -49,10 +51,12 @@ import { ParenthomeComponent } from './parenthome/parenthome.component';
     MatButtonModule,
     MatInputModule,
     MatTabsModule,
-    AppRoutingModule,
+    AppRoutingModule, HttpClientModule,
     BrowserAnimationsModule,
     CarouselModule.forRoot(),
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

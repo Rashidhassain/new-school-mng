@@ -6,13 +6,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
+ 
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home">Home</a>
+              </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="#">Teacher Home</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Log Out</a>
+                <a class="nav-link" routerLink="/teacher">Log Out</a>
             </li>
 
         </ul>
@@ -77,7 +81,7 @@
                                             <input type="text" placeholder="Enter Section" class="form-control">
                                         </div>
                                         <button mat-raised-button color="primary" class="btn-block"
-                                            style="outline:none;border-radius:45%">Add Details</button>
+                                            style="outline:none;">Add Details</button>
                                     </form>
                                 </div>
                             </div>
@@ -99,7 +103,7 @@
                                             <td>Otto</td>
 
                                             <td><button mat-raised-button color="warn"
-                                                    style="outline:none;border-radius:45%">Delete</button>
+                                                    style="outline:none;">Delete</button>
                                         </tr>
                                         <tr>
                                             <td>Jacob</td>
@@ -107,7 +111,7 @@
                                             <td>Otto</td>
 
                                             <td><button mat-raised-button color="warn"
-                                                    style="outline:none;border-radius:45%">Delete</button>
+                                                    style="outline:none;">Delete</button>
                                         </tr>
                                         <tr>
                                             <td>Larry</td>
@@ -115,7 +119,7 @@
                                             <td>Otto</td>
 
                                             <td><button mat-raised-button color="warn"
-                                                    style="outline:none;border-radius:45%">Delete</button>
+                                                    style="outline:none;">Delete</button>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -136,6 +140,8 @@
 
 
                 </div>
+
+
 
 
 
@@ -245,7 +251,7 @@
                                     </div>
                                 </div>
                                 <div class="text-center mt-4"><button mat-raised-button color="primary" routerLink="/"
-                                        class="btn-block" style="font-size: 18px;border-radius:45%">Add Student
+                                        class="btn-block" style="font-size: 18px;">Add Student
                                         Details</button>
                                 </div>
 
@@ -313,8 +319,8 @@
                                     <td>Otto</td>
 
                                     <td>@mdo</td>
-                                    <td><button mat-raised-button color="warn"
-                                            style="outline:none;border-radius:45%">Delete</button></td>
+                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -331,8 +337,8 @@
                                     <td>Jacob</td>
                                     <td>Thornton</td>
                                     <td>@fat</td>
-                                    <td><button mat-raised-button color="warn"
-                                            style="outline:none;border-radius:45%">Delete</button></td>
+                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -349,15 +355,15 @@
                                     <td>Larry</td>
                                     <td>the Bird</td>
                                     <td>@twitter</td>
-                                    <td><button mat-raised-button color="warn"
-                                            style="outline:none;border-radius:45%">Delete</button></td>
+                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </mat-tab>
-          
+
 
             <mat-tab label="Add Marks">
                 <div class="container-fluid">
@@ -399,57 +405,57 @@
 
 
                                         <button mat-raised-button color="primary" class="btn-block"
-                                            style="outline:none;border-radius:45%">Add Marks</button>
+                                            style="outline:none;">Add Marks</button>
                                     </form>
 
                                 </div>
 
 
                             </div>
-<div class="col-sm-6">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Std.Id</th>
-            <th scope="col">Std.Name</th>
-            <th scope="col">Class</th>
-            <th scope="col">Section</th>
-            <th scope="col">Marks</th>
-            <th scope="col">Delete</th>
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Std.Id</th>
+                                            <th scope="col">Std.Name</th>
+                                            <th scope="col">Class</th>
+                                            <th scope="col">Section</th>
+                                            <th scope="col">Marks</th>
+                                            <th scope="col">Delete</th>
 
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td><button mat-raised-button color="warn"
-                style="outline:none;border-radius:45%">Delete</button></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@mdo</td>
-            <td><button mat-raised-button color="warn"
-                style="outline:none;border-radius:45%">Delete</button></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>@mdo</td>
-            <td><button mat-raised-button color="warn"
-                style="outline:none;border-radius:45%">Delete</button></td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                            <td><button mat-raised-button color="warn"
+                                                    style="outline:none;">Delete</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>@mdo</td>
+                                            <td><button mat-raised-button color="warn"
+                                                    style="outline:none;">Delete</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>@mdo</td>
+                                            <td><button mat-raised-button color="warn"
+                                                    style="outline:none;">Delete</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                         </div>
                     </div>
@@ -484,18 +490,19 @@
                                 <form>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Old password</label>
-                                        <input type="text" placeholder="Enter Old password" class="form-control">
+                                        <input type="password" placeholder="Enter Old password" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">New Passowrd</label>
-                                        <input type="text" placeholder="Enter New Passowrd" class="form-control">
+                                        <input type="password" placeholder="Enter New Passowrd" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Confirm Password</label>
-                                        <input type="text" placeholder="Enter Confirm Password" class="form-control">
+                                        <input type="password" placeholder="Enter Confirm Password"
+                                            class="form-control">
                                     </div>
                                     <button mat-raised-button color="primary" class="btn-block"
-                                        style="outline:none;border-radius:45%">Change Password</button>
+                                        style="outline:none;">Change Password</button>
                                 </form>
                             </div>
                         </div>

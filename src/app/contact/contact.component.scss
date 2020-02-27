@@ -5,8 +5,64 @@
 }
 
 #sec{
-    background-image: url('../../assets/elizeu-dias-SEq9dyZSe6c-unsplash.jpg');
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../../assets/elizeu-dias-SEq9dyZSe6c-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    height: 55vh;
+    height: 45vh;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  *{
+      overflow: hidden;
+  }
+
+  
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    padding: 10px!important;
+    margin: 4px;
+}
+
+
+
+
+
+.navbar-light .navbar-nav .nav-link::after {
+    content: '';
+    width: 0;
+    display: block;
+    background:black;
+    transition: width .3s;
+    height: 2px;
+ 
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+.sms::after{
+
+    content: '';
+    width: 0;
+    display: block;
+    background:black;
+    transition: width .3s;
+    height: 2px;
+    cursor: pointer;
+}
+
+.sms:hover::after{
+    width: 100%;
+    transition: width .3s;
 }

@@ -8,11 +8,15 @@
         <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
+                <a class="nav-link" routerLink="/home">Home</a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="#">Parent Home</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Log Out</a>
+                <a class="nav-link" routerLink="/parent">Log Out</a>
             </li>
 
         </ul>
@@ -44,430 +48,73 @@
 
     <div class="container">
         <mat-tab-group class="mt-5">
-            <mat-tab label="Handled Class">
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-
-                            <h3 class="text-center mt-5">Add Handled Classes </h3>
-
-                        </div>
-                        <div class="col-sm-6">
-                            <h3 class="text-center mt-5"> Details</h3>
-
-                        </div>
-                    </div>
-
-                    <div class="container mt-5">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Class</label>
-                                            <input type="text" placeholder="Enter  Class" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Subject</label>
-                                            <input type="text" placeholder="Enter Subject" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Section</label>
-                                            <input type="text" placeholder="Enter Section" class="form-control">
-                                        </div>
-                                        <button mat-raised-button color="primary" class="btn-block"
-                                            style="outline:none;border-radius:45%">Add Details</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 mt-4">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Class</th>
-                                            <th scope="col">Subject</th>
-                                            <th scope="col">Section</th>
-
-                                            <th scope="col">Delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>Otto</td>
-
-                                            <td><button mat-raised-button color="warn"
-                                                    style="outline:none;border-radius:45%">Delete</button>
-                                        </tr>
-                                        <tr>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>Otto</td>
-
-                                            <td><button mat-raised-button color="warn"
-                                                    style="outline:none;border-radius:45%">Delete</button>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>Otto</td>
-
-                                            <td><button mat-raised-button color="warn"
-                                                    style="outline:none;border-radius:45%">Delete</button>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </mat-tab>
-            <mat-tab label="Students">
+            <mat-tab label="Today's Work">
 
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="text-center mt-5">Add Student Details</h3>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="container  mt-5">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Student Id</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter student Id" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Student Name</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Student Name" required>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Father Name</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter father Name" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Mother Name</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter Mother Name" required>
-
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Class</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter Student Class" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Gender</label>
-                                                <select class="form-control">
-                                                    <option>Select</option>
-                                                    <option>Male</option>
-                                                    <option>Female</option>
-
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Phone Number</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter Phone Number" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Father Mail</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter Parent mail" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Father Mail</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter Parent mail" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Section</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter Student Section" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Address</label>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                    placeholder="Enter Student Address" required>
-                                            </div>
-
-                                            Browse
-                                        </div>
-                                    </div>
-                                    <div class="container-fluid">
-                                        <div class="col-sm-4">
-                                            <div class="row">
-                                                <div class="col-lg-4">
-                                                    <div class="form-group">
-                                                        <div class="text-center"><label
-                                                                for="exampleFormControlInput1">Date</label></div>
-                                                        <input type="email" class="form-control"
-                                                            id="exampleFormControlInput1" placeholder="Date" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="form-group">
-                                                        <div class="text-center"><label
-                                                                for="exampleFormControlInput1">Month</label></div>
-                                                        <input type="email" class="form-control"
-                                                            id="exampleFormControlInput1" placeholder="Month" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="form-group">
-                                                        <div class="text-center"><label
-                                                                for="exampleFormControlInput1">Year</label></div>
-                                                        <input type="email" class="form-control"
-                                                            id="exampleFormControlInput1" placeholder="Year" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-center mt-4"><button mat-raised-button color="primary" routerLink="/"
-                                        class="btn-block" style="font-size: 18px;border-radius:45%">Add Student
-                                        Details</button>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-
-
-            </mat-tab>
-            <mat-tab label="View Students">
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h3 class="text-center mt-5">View Student Details</h3>
-
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-
-                        <table class="table mt-4">
-                            <thead>
-                                <tr>
-                                    <th scope="col">S.Id</th>
-                                    <th scope="col">S.Name</th>
-                                    <th scope="col">F.Name</th>
-                                    <th scope="col">M.Name</th>
-                                    <th scope="col">Gender</th>
-                                    <th scope="col">P.Number</th>
-                                    <th scope="col">F. Mail</th>
-                                    <th scope="col">M. Mail</th>
-                                    <th scope="col">Section</th>
-                                    <th scope="col">Address</th>
-                                    <th scope="col">Class</th>
-                                    <th scope="col">D.O.B</th>
-
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Delete</th>
-
-
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>Otto</td>
-
-                                    <td>@mdo</td>
-                                    <td><button mat-raised-button color="warn"
-                                            style="outline:none;border-radius:45%">Delete</button></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>Otto</td>
-
-                                    <td>@fat</td>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <td><button mat-raised-button color="warn"
-                                            style="outline:none;border-radius:45%">Delete</button></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>Otto</td>
-
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <td><button mat-raised-button color="warn"
-                                            style="outline:none;border-radius:45%">Delete</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </mat-tab>
-          
-
-            <mat-tab label="Add Marks">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="text-center mt-5">Add Marks</h3>
-                        </div>
-                        <div class="col-sm-6">
-                            <h3 class="text-center mt-5">View Details</h3>
-                        </div>
-
-                    </div>
-                    <div class="container-fluid mt-5">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Student Id</label>
-                                            <input type="text" placeholder="Enter subject" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Student Name</label>
-                                            <input type="text" placeholder="Enter Student Name" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Class</label>
-                                            <input type="text" placeholder="Enter Class" class="form-control">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Section</label>
-                                            <input type="text" placeholder="Enter Section" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Marks</label>
-                                            <input type="text" placeholder="Enter Marks" class="form-control">
-                                        </div>
-
-
-                                        <button mat-raised-button color="primary" class="btn-block"
-                                            style="outline:none;border-radius:45%">Add Marks</button>
-                                    </form>
-
-                                </div>
-
-
-                            </div>
-<div class="col-sm-6">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Std.Id</th>
-            <th scope="col">Std.Name</th>
-            <th scope="col">Class</th>
-            <th scope="col">Section</th>
-            <th scope="col">Marks</th>
-            <th scope="col">Delete</th>
-
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td><button mat-raised-button color="warn"
-                style="outline:none;border-radius:45%">Delete</button></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@mdo</td>
-            <td><button mat-raised-button color="warn"
-                style="outline:none;border-radius:45%">Delete</button></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>@mdo</td>
-            <td><button mat-raised-button color="warn"
-                style="outline:none;border-radius:45%">Delete</button></td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-
+                            <p  style="text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                                assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                                dolorum tempora eius repellat qui delectus enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                                assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                                dolorum tempora eius repellat qui delectus enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                                assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                                dolorum tempora eius repellat qui delectus enim!</p>
                         </div>
                     </div>
                 </div>
-            </mat-tab>
-
-            <mat-tab label="Student Result">
-
 
             </mat-tab>
             <mat-tab label="Attendence">
 
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p  style="text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                                assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                                dolorum tempora eius repellat qui delectus enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                                assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                                dolorum tempora eius repellat qui delectus enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                                assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                                dolorum tempora eius repellat qui delectus enim!</p>                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+   
+
+
+
 
             </mat-tab>
-            <mat-tab label="Notification">
+            <mat-tab label="Events">
 
+                <p  style="text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                    assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                    dolorum tempora eius repellat qui delectus enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                    assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                    dolorum tempora eius repellat qui delectus enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                    assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                    dolorum tempora eius repellat qui delectus enim!</p>  
+            </mat-tab>
+
+
+
+
+            <mat-tab label="Edit Profile">
+                <p  style="text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                    assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                    dolorum tempora eius repellat qui delectus enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                    assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                    dolorum tempora eius repellat qui delectus enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni explicabo
+                    assumenda? Ea adipisci a veniam, officiis sint error. Quia cum quibusdam officiis
+                    dolorum tempora eius repellat qui delectus enim!</p>  
 
             </mat-tab>
+
 
             <mat-tab label="Settings">
                 <div class="container-fluid">
@@ -484,18 +131,19 @@
                                 <form>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Old password</label>
-                                        <input type="text" placeholder="Enter Old password" class="form-control">
+                                        <input type="password" placeholder="Enter Old password" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">New Passowrd</label>
-                                        <input type="text" placeholder="Enter New Passowrd" class="form-control">
+                                        <input type="password" placeholder="Enter New Passowrd" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Confirm Password</label>
-                                        <input type="text" placeholder="Enter Confirm Password" class="form-control">
+                                        <input type="password" placeholder="Enter Confirm Password"
+                                            class="form-control">
                                     </div>
                                     <button mat-raised-button color="primary" class="btn-block"
-                                        style="outline:none;border-radius:45%">Change Password</button>
+                                        style="outline:none;">Change Password</button>
                                 </form>
                             </div>
                         </div>
