@@ -97,8 +97,16 @@
               <div class="card">
                 <form>
                   <div class="form-group">
+                    <label for="exampleInputPassword1">Serial.No</label>
+                    <input type="number" class="form-control" id="exampleInputPassword1"
+                      placeholder="Enter Serial Number">
+                  </div>
+
+
+                  <div class="form-group">
                     <label for="exampleInputEmail1">Class Name</label>
-                    <select class="form-control">
+                    <input type="number" placeholder="Enter Class Name" class="form-control">
+                    <!-- <select class="form-control">
                       <option>Select</option>
 
                       <option>4th</option>
@@ -109,7 +117,7 @@
                       <option>9th</option>
                       <option>10th</option>
 
-                    </select>
+                    </select> -->
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Section</label>
@@ -176,8 +184,20 @@
                 <div class="card">
                   <form>
                     <div class="form-group">
+                      <label for="exampleInputEmail1">Serial Number</label>
+                      <input type="number" placeholder="Enter Serial Number" class="form-control">
+                    </div>
+                    <div class="form-group">
                       <label for="exampleInputEmail1">Class Name</label>
-                      <input type="text" placeholder="Enter subject" class="form-control">
+                      <input type="number" placeholder="Enter Class Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Date</label>
+                      <input type="text" placeholder="Enter Date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Subject Name</label>
+                      <input type="text" placeholder="Enter subject Name" class="form-control">
                     </div>
                     <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Subject
                       Details</button>
@@ -190,6 +210,9 @@
                     <tr>
                       <th scope="col">Sl.No</th>
                       <th scope="col">subject Name</th>
+                      <th scope="col">Class Name</th>
+                      <th scope="col">Date</th>
+
                       <th scope="col">Delete</th>
                     </tr>
                   </thead>
@@ -197,6 +220,8 @@
                     <tr>
                       <th scope="row">1</th>
                       <td>English</td>
+                      <td>5th</td>
+                      <td>02/02/2020</td>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                       </td>
@@ -204,6 +229,8 @@
                     <tr>
                       <th scope="row">2</th>
                       <td>Maths</td>
+                      <td>5th</td>
+                      <td>02/02/2020</td>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                       </td>
@@ -211,6 +238,8 @@
                     <tr>
                       <th scope="row">3</th>
                       <td>Science</td>
+                      <td>5th</td>
+                      <td>02/02/2020</td>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                       </td>
@@ -423,7 +452,7 @@
                       </div>
                     </div>
 
-                    <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Subject
+                    <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Exam
                       Details</button>
                   </form>
 
@@ -481,46 +510,298 @@
       <mat-tab label="Fee structure">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptates aliquid rerum. Pariatur
-                consectetur nemo, sed at blanditiis cum, excepturi iure ratione impedit optio autem totam commodi
-                delectus neque vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptates aliquid rerum. Pariatur
-                consectetur nemo, sed at blanditiis cum, excepturi iure ratione impedit optio autem totam commodi
-                delectus neque vitae</p>
+            <div class="col-sm-6">
+              <h3 class="text-center mt-5">Add Fee Structure</h3>
+            </div>
+            <div class="col-sm-6">
+              <h3 class="text-center mt-5">View Fee Structure Details</h3>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-sm-6">
+              <div class="card">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Serial Number</label>
+                    <input type="text" placeholder="Enter Staff Name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Student Name</label>
+                    <input type="text" placeholder="Enter Staff Name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Class Name</label>
+                    <input type="text" placeholder="Enter Qualification" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Amount</label>
+                    <input type="text" placeholder="Enter Salary" class="form-control">
+                  </div>
+                  <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Fees structure</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <!-- <th scope="col">#</th> -->
+                      <th scope="col">Serial.No</th>
+                      <th scope="col">Std.Name</th>
+                      <th scope="col">Cls.Name</th>
+                      <th scope="col">Amount</th>
+
+                      <th scope="col">Delete</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- <th scope="row">1</th> -->
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>@mdo</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+                    </tr>
+                    <tr>
+                      <!-- <th scope="row">2</th> -->
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                      <td>@fat</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                    </tr>
+                    <tr>
+                      <!-- <th scope="row">3</th> -->
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                      <td>@fat</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
 
       </mat-tab>
       <mat-tab label="Event">
+
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptates aliquid rerum. Pariatur
-                consectetur nemo, sed at blanditiis cum, excepturi iure ratione impedit optio autem totam commodi
-                delectus neque vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptates aliquid rerum. Pariatur
-                consectetur nemo, sed at blanditiis cum, excepturi iure ratione impedit optio autem totam commodi
-                delectus neque vitae</p>
+            <div class="col-sm-6">
+              <h3 class="text-center mt-5">Add Event Details</h3>
+            </div>
+            <div class="col-sm-6">
+              <h3 class="text-center mt-5">View Event Details</h3>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-sm-6">
+              <div class="card">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Serial Number</label>
+                    <input type="text" placeholder="Enter Staff Name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Class Name</label>
+                    <input type="text" placeholder="Enter Staff Name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Date</label>
+                    <input type="text" placeholder="Enter Qualification" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Shift</label>
+                    <select class="form-control">
+                      <option>Select shift</option>
+                      <option>Morning</option>
+                      <option>Afternoon</option>
+                      <option>Evening</option>
+
+
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Event</label>
+                    <input type="text" placeholder="Enter Salary" class="form-control">
+                  </div>
+                  <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Event
+                    Details</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <!-- <th scope="col">#</th> -->
+                      <th scope="col">Serial.No</th>
+                      <th scope="col">Cls.Name</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Shift</th>
+                      <th scope="col">Event</th>
+
+                      <th scope="col">Delete</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- <th scope="row">1</th> -->
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>@mdo</td>
+                      <td>@mdo</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+                    </tr>
+                    <tr>
+                      <!-- <th scope="row">2</th> -->
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                      <td>@fat</td>
+                      <td>@mdo</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                    </tr>
+                    <tr>
+                      <!-- <th scope="row">3</th> -->
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                      <td>@fat</td>
+                      <td>@mdo</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-
       </mat-tab>
 
 
       <mat-tab label="Notice">
+       
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptates aliquid rerum. Pariatur
-                consectetur nemo, sed at blanditiis cum, excepturi iure ratione impedit optio autem totam commodi
-                delectus neque vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptates aliquid rerum. Pariatur
-                consectetur nemo, sed at blanditiis cum, excepturi iure ratione impedit optio autem totam commodi
-                delectus neque vitae</p>
+            <div class="col-sm-6">
+              <h3 class="text-center mt-5">Add Notice Details</h3>
+            </div>
+            <div class="col-sm-6">
+              <h3 class="text-center mt-5">View Notice Details</h3>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-sm-6">
+              <div class="card">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Serial Number</label>
+                    <input type="text" placeholder="Enter Staff Name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Class Name</label>
+                    <input type="text" placeholder="Enter Staff Name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Title</label>
+                    <input type="text" placeholder="Enter Qualification" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Notice</label>
+                <input type="text" placeholder="Enter Notice" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Date</label>
+                <input type="text" placeholder="Enter Date from To Till" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">By</label>
+                    <select class="form-control">
+                      <option>Select</option>
+                      <option>Admin</option>
+
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Created-On</label>
+                <input type="text" placeholder="Enter Created Date" class="form-control">
+                  </div>
+                  <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Notice
+                    Details</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <!-- <th scope="col">#</th> -->
+                      <th scope="col">Serial.No</th>
+                      <th scope="col">Cls.Name</th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Notice</th>
+
+                      <th scope="col">Delete</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- <th scope="row">1</th> -->
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>@mdo</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+                    </tr>
+                    <tr>
+                      <!-- <th scope="row">2</th> -->
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                      <td>@fat</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                    </tr>
+                    <tr>
+                      <!-- <th scope="row">3</th> -->
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                      <td>@fat</td>
+
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-
       </mat-tab>
 
       <mat-tab label="Settings">
