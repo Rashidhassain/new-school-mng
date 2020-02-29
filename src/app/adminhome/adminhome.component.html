@@ -312,6 +312,7 @@
                       <th scope="col">Staff Name</th>
                       <th scope="col">Qualification</th>
                       <th scope="col">Salary</th>
+                      <th scope="col">Edit</th>
 
                       <th scope="col">Delete</th>
                     </tr>
@@ -321,6 +322,7 @@
                       <td>Mark</td>
                       <td>Otto</td>
                       <td>Otto</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </tr>
@@ -328,6 +330,7 @@
                       <td>Jacob</td>
                       <td>Thornton</td>
                       <td>Otto</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </tr>
@@ -335,6 +338,7 @@
                       <td>Larry</td>
                       <td>the Bird</td>
                       <td>Otto</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </tr>
@@ -481,6 +485,8 @@
                         <th scope="col">Exam Name</th>
                         <th scope="col">Class Name</th>
                         <th scope="col">Subject</th>
+
+                        <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
 
                       </tr>
@@ -491,6 +497,8 @@
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
+                        <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+
                         <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
                       </tr>
@@ -499,6 +507,8 @@
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>@fat</td>
+                        <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+
                         <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                       </tr>
                       <tr>
@@ -506,6 +516,8 @@
                         <td>Larry</td>
                         <td>the Bird</td>
                         <td>@twitter</td>
+                        <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+
                         <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
                       </tr>
@@ -533,22 +545,22 @@
             <div class="col-sm-6">
               <div class="card">
                 <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Serial Number</label>
-                    <input type="text" placeholder="Enter Staff Name" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Student Name</label>
-                    <input type="text" placeholder="Enter Staff Name" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Class Name</label>
-                    <input type="text" placeholder="Enter Qualification" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Amount</label>
-                    <input type="text" placeholder="Enter Salary" class="form-control">
-                  </div>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Serial Number</mat-label>
+                    <input matInput placeholder="Enter Serial Number">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Student Name</mat-label>
+                    <input matInput placeholder="Enter Student Name">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Class Name</mat-label>
+                    <input matInput placeholder="Enter Class Name">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Amount</mat-label>
+                    <input matInput placeholder="Enter Amount">
+                  </mat-form-field>
                   <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Fees structure</button>
                 </form>
               </div>
@@ -563,6 +575,7 @@
                       <th scope="col">Std.Name</th>
                       <th scope="col">Cls.Name</th>
                       <th scope="col">Amount</th>
+                      <th scope="col">Edit</th>
 
                       <th scope="col">Delete</th>
 
@@ -575,6 +588,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td>@mdo</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
@@ -585,6 +599,7 @@
                       <td>Thornton</td>
                       <td>@fat</td>
                       <td>@fat</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </tr>
@@ -594,6 +609,7 @@
                       <td>the Bird</td>
                       <td>@twitter</td>
                       <td>@fat</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
@@ -664,6 +680,7 @@
                       <th scope="col">Date</th>
                       <th scope="col">Shift</th>
                       <th scope="col">Event</th>
+                      <th scope="col">Edit</th>
 
                       <th scope="col">Delete</th>
 
@@ -677,6 +694,7 @@
                       <td>@mdo</td>
                       <td>@mdo</td>
                       <td>@mdo</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
@@ -688,6 +706,7 @@
                       <td>@fat</td>
                       <td>@fat</td>
                       <td>@mdo</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </tr>
@@ -698,6 +717,7 @@
                       <td>@twitter</td>
                       <td>@fat</td>
                       <td>@mdo</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
