@@ -96,33 +96,18 @@
             <div class="col-sm-5">
               <div class="card">
                 <form>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Serial.No</label>
-                    <input type="number" class="form-control" id="exampleInputPassword1"
-                      placeholder="Enter Serial Number">
-                  </div>
-
-
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Class Name</label>
-                    <input type="number" placeholder="Enter Class Name" class="form-control">
-                    <!-- <select class="form-control">
-                      <option>Select</option>
-
-                      <option>4th</option>
-                      <option>5th</option>
-                      <option>6th</option>
-                      <option>7th</option>
-                      <option>8th</option>
-                      <option>9th</option>
-                      <option>10th</option>
-
-                    </select> -->
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Section</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Section">
-                  </div>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Serial.No</mat-label>
+                    <input matInput placeholder="Enter Serial Number" type="number">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Class Name</mat-label>
+                    <input matInput placeholder="Enter Class Name" type="number">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Section</mat-label>
+                    <input matInput placeholder="Enter Section" type="text">
+                  </mat-form-field>
 
                   <div class="text-center"><button mat-raised-button color="primary" class="btn-block"
                       style="outline:none;">Add Class Details</button></div>
@@ -191,22 +176,26 @@
               <div class="col-sm-6">
                 <div class="card">
                   <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Serial Number</label>
-                      <input type="number" placeholder="Enter Serial Number" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Class Name</label>
-                      <input type="number" placeholder="Enter Class Name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Date</label>
-                      <input type="text" placeholder="Enter Date" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Subject Name</label>
-                      <input type="text" placeholder="Enter subject Name" class="form-control">
-                    </div>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Serial Number</mat-label>
+                      <input matInput placeholder="Enter Serial Number" type="number">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Class Name</mat-label>
+                      <input matInput placeholder="Enter Class Name" type="number">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Date</mat-label>
+                      <input matInput placeholder="Enter Date  Eg: dd-mm-yyyy" type="number">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Subject Name</mat-label>
+                      <input matInput placeholder="Enter Subject Name" type="text">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Staff Name</mat-label>
+                      <input matInput placeholder="Enter Staff Name" type="text">
+                    </mat-form-field>
                     <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Subject
                       Details</button>
                   </form>
@@ -217,9 +206,11 @@
                   <thead>
                     <tr>
                       <th scope="col">Sl.No</th>
-                      <th scope="col">subject Name</th>
-                      <th scope="col">Class Name</th>
+                      <th scope="col">sub Name</th>
+                      <th scope="col">Cls Name</th>
                       <th scope="col">Date</th>
+                      <th scope="col">Stf Name</th>
+
                       <th scope="col">Edit</th>
 
                       <th scope="col">Delete</th>
@@ -231,6 +222,8 @@
                       <td>English</td>
                       <td>5th</td>
                       <td>02/02/2020</td>
+                      <td>abcd</td>
+
                       <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
@@ -241,6 +234,8 @@
                       <td>Maths</td>
                       <td>5th</td>
                       <td>02/02/2020</td>
+                      <td>abcd</td>
+
                       <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
@@ -251,6 +246,8 @@
                       <td>Science</td>
                       <td>5th</td>
                       <td>02/02/2020</td>
+                      <td>abcd</td>
+
                       <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
 
                       <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
@@ -547,19 +544,19 @@
                 <form>
                   <mat-form-field class="example-full-width">
                     <mat-label>Serial Number</mat-label>
-                    <input matInput placeholder="Enter Serial Number">
+                    <input matInput placeholder="Enter Serial Number" type="numbers">
                   </mat-form-field>
                   <mat-form-field class="example-full-width">
                     <mat-label>Student Name</mat-label>
-                    <input matInput placeholder="Enter Student Name">
+                    <input matInput placeholder="Enter Student Name" type="text">
                   </mat-form-field>
                   <mat-form-field class="example-full-width">
                     <mat-label>Class Name</mat-label>
-                    <input matInput placeholder="Enter Class Name">
+                    <input matInput placeholder="Enter Class Name" type="number">
                   </mat-form-field>
                   <mat-form-field class="example-full-width">
                     <mat-label>Amount</mat-label>
-                    <input matInput placeholder="Enter Amount">
+                    <input matInput placeholder="Enter Amount" type="number">
                   </mat-form-field>
                   <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Fees structure</button>
                 </form>
@@ -637,33 +634,34 @@
             <div class="col-sm-6">
               <div class="card">
                 <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Serial Number</label>
-                    <input type="text" placeholder="Enter Staff Name" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Class Name</label>
-                    <input type="text" placeholder="Enter Staff Name" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Date</label>
-                    <input type="text" placeholder="Enter Qualification" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Shift</label>
-                    <select class="form-control">
-                      <option>Select shift</option>
-                      <option>Morning</option>
-                      <option>Afternoon</option>
-                      <option>Evening</option>
-
-
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Event</label>
-                    <input type="text" placeholder="Enter Salary" class="form-control">
-                  </div>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Serial Number</mat-label>
+                    <input matInput placeholder="Enter Amount" type="number">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Class Name</mat-label>
+                    <input matInput placeholder="Enter Amount" type="number">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Date</mat-label>
+                    <input matInput placeholder="Enter Amount" type="number">
+                  </mat-form-field>
+                  <!-- <h4>Basic mat-select</h4> -->
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Shift</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+             
+                  
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Event</mat-label>
+                    <input matInput placeholder="Enter Amount" type="number">
+                  </mat-form-field>
+                  
                   <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Event
                     Details</button>
                 </form>

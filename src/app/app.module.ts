@@ -26,6 +26,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ParenthomeComponent } from './parenthome/parenthome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { HttpClientModule } from '@angular/common/http';
     CarouselModule.forRoot(),
     MatDialogModule,
     FormsModule,
+    MatSelectModule,
     ReactiveFormsModule
   ],
   providers: [],
