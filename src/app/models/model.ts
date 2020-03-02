@@ -1,11 +1,11 @@
 export class Register {
 
-    last: string;
-    telephone: string;
+    lname: string;
+    tel: string;
     address: string;
-    first: string;
+    name: string;
     email: string;
-    mobile: string;
+    number: string;
     password: string;
     cpassword: string;
 }

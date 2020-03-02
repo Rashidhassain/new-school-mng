@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { RestService } from '../rest.service';
+import { FormGroup } from '@angular/forms';
 
 import { Register } from '../models/model';
 
@@ -9,74 +10,67 @@ import { Register } from '../models/model';
   templateUrl: './demo2.component.html',
   styleUrls: ['./demo2.component.scss']
 })
-export class Demo2Component implements OnInit {
+export class Demo2Component implements OnInit
+{
   public forms: FormGroup;
-  // tslint:disable-next-line: typedef-whitespace
+
   public data: Register = new Register();
-  errmsg: boolean = false;
-  valid: boolean = false;
+email:boolean=false;
   showMsg: any;
-  constructor(private formBuilder: FormBuilder, private rest: RestService
-  ) {
+  constructor(private formBuilder: FormBuilder, private rest: RestService)
+  {
     this.forms = this.formBuilder.group({
-      last: ['', [Validators.required]],
-      telephone: ['', [Validators.required]],
+      lname: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      tel: ['', [Validators.required]],
       address: ['', [Validators.required]],
-      username: ['', [Validators.required]],
       email: ['', [Validators.required]],
-      mobile: ['', [Validators.required]],
+      number: ['', [Validators.required]],
       password: ['', [Validators.required]],
       cpassword: ['', [Validators.required]],
-
       roles: this.formBuilder.array(['USER']),
     });
   }
-
-  ngOnInit() {
-
+  ngOnInit()  {
   }
 
-  Regi() {
-    console.log('hi');
-    console.log(this.forms);
 
+  passwordMatchValidator(group: FormGroup): any {
+    if (group) {
+      if (group.get('password').value !== group.get('cpassword').value) {
+        return { notMatching: true };
+      }
+    }
+    return null;
+  }
+  Regi()  {
     Object.assign(this.data, this.forms.value);
     console.log(this.data);
-    if (this.forms.valid) {
-
-
-      this.rest.doRegister(this.data).subscribe((result) => {
-
-        if (result === undefined) {
-
-          console.log(result);
-
-
-          this.errmsg = true;
-
-
-
-        } else {
-          this.errmsg = false;
-          this.showMsg = true;
-
-
-          this.rest.sendToken(result.accessToken);
-
-          console.log(this.rest.sendToken(result.accessToken));
-
-
-        }
-      }, (err) => {
-        this.errmsg = true;
-        console.log(err);
-        // this.closeDialog();
-
-      });
-    } else {
-      alert('false');
-
+    this.forms.setValidators(this.passwordMatchValidator);
+    this.forms.updateValueAndValidity();
+    const x = this.forms.get('email').value;
+    const atposition = x.indexOf('@');
+    const dotposition = x.lastIndexOf('.');
+    if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+  this.email=true;
+      return false;
     }
+    this.rest.doRegister(this.data).subscribe((result) =>
+    {
+      if (result === undefined) {
+        console.log(result);
+      } else {
+
+        alert('success');
+
+      }
+    }, (err) =>
+    {
+      console.log(err);
+
+    });
+
+
   }
 
 }

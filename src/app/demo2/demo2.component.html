@@ -7,61 +7,72 @@
       <hr style="border:1px solid black;width:35%">
     </div>
   </div>
-  
+
   <div class="row">
-    <form  [formGroup]="forms" >
+    <form  [formGroup]="forms" name="form">
+
     <div class="col-sm-12">
-      
+
         <div class="container mt-4">
           <div class="row">
             <div class="col-sm-6">
-          
+
               <mat-form-field class="example-full-width">
                 <mat-label>First Name</mat-label>
-                <input matInput placeholder="Enter Your Fisrt Name" type="text">
+                <input formControlName="name" matInput placeholder="Enter Your Fisrt Name" type="text">
+
               </mat-form-field>
+
               <mat-form-field class="example-full-width">
                 <mat-label>Mobile.No</mat-label>
-                <input matInput placeholder="Enter Your Last Mobile Number" type="number">
+                <input formControlName="number" matInput placeholder="Enter Your  Mobile Num" type="number">
+
               </mat-form-field>
 
               <mat-form-field class="example-full-width">
                 <mat-label>Address</mat-label>
-                <textarea matInput placeholder="Enter Your Address"></textarea>
+                <textarea formControlName="address" matInput placeholder="Enter Your Address"></textarea>
+
               </mat-form-field>
 
               <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="Enter Your Password" type="password">
+                <input formControlName="password" matInput placeholder="Enter Your Password" type="password">
+
               </mat-form-field>
-          
-          
+
+
             </div>
             <div class="col-sm-6">
 
-              
+
               <mat-form-field class="example-full-width">
                 <mat-label>Last Name</mat-label>
-                <input matInput placeholder="Enter Your Last Name" type="text">
+                <input formControlName="lname" matInput placeholder="Enter Your Last Name" type="text">
+
               </mat-form-field>
 
                     <mat-form-field class="example-full-width">
                 <mat-label>Telephone.No</mat-label>
-                <input matInput placeholder="Enter Your Telephone Number" type="number">
+                <input formControlName="tel" matInput placeholder="Enter  Telephone Number" type="number"required>
+
               </mat-form-field>
 
               <mat-form-field class="example-full-width">
-                <mat-label>Mail</mat-label>
-                <input matInput placeholder="Enter Your  Email" type="email">
+                <mat-label  style="color:red" *ngIf="email">Please Enter Valid Mail</mat-label>
+                <mat-label *ngIf="!email">Mail</mat-label>
+                <input formControlName="email" matInput placeholder="Enter Your  Email" type="email" required>
+
               </mat-form-field>
 
               <mat-form-field class="example-full-width">
                 <mat-label>Confirm Password</mat-label>
-                <input matInput placeholder="Enter Your  Comfirm Password" type="password">
+  <p *ngIf="forms.hasError('notMatching')"> Passwords Not Matching </p>
+                <input formControlName="cpassword"matInput placeholder="Enter  Confirm Password" type="password">
               </mat-form-field>
             </div>
           </div>
-         
+
         </div>
         <div class="text-center mt-4">
           <button mat-raised-button color="primary"  class="btn-block" (click)="Regi()">Register</button>
@@ -70,7 +81,7 @@
       </div>
 
 
-    
+
 
     </form>
   </div>

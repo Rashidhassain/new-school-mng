@@ -69,9 +69,14 @@
                                 <div class="card">
                                     <form>
                                         <mat-form-field class="example-full-width">
-                                            <mat-label>Class</mat-label>
-                                            <input matInput placeholder="Enter Class Name" type="number">
-                                        </mat-form-field>
+                                            <mat-label>Class Name</mat-label>
+                                            <mat-select>
+                                              <mat-option *ngFor="let class of classes" [value]="class.value">
+                                                {{class.viewValue}}
+                                              </mat-option>
+                                            </mat-select>
+                                          </mat-form-field>
+
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Subject</mat-label>
                                             <input matInput placeholder="Enter Subject Name" type="text">
@@ -169,10 +174,16 @@
                                                 <mat-label>Mother Name</mat-label>
                                                 <input matInput placeholder="Enter Mother Name" type="text">
                                             </mat-form-field>
+
                                             <mat-form-field class="example-full-width">
-                                                <mat-label>Class</mat-label>
-                                                <input matInput placeholder="Enter >Class Name" type="number">
-                                            </mat-form-field>
+                                                <mat-label>Class Name</mat-label>
+                                                <mat-select>
+                                                  <mat-option *ngFor="let class of classes" [value]="class.value">
+                                                    {{class.viewValue}}
+                                                  </mat-option>
+                                                </mat-select>
+                                              </mat-form-field>
+
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Gender</mat-label>
                                                 <mat-select>
@@ -355,10 +366,16 @@
                                             <mat-label>Student Name</mat-label>
                                             <input matInput placeholder="Enter Student Name" type="number">
                                         </mat-form-field>
+
                                         <mat-form-field class="example-full-width">
-                                            <mat-label>Class</mat-label>
-                                            <input matInput placeholder="Enter Class" type="number">
-                                        </mat-form-field>
+                                            <mat-label>Class Name</mat-label>
+                                            <mat-select>
+                                              <mat-option *ngFor="let class of classes" [value]="class.value">
+                                                {{class.viewValue}}
+                                              </mat-option>
+                                            </mat-select>
+                                          </mat-form-field>
+
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Section</mat-label>
                                             <input matInput placeholder="Enter Section" type="text">

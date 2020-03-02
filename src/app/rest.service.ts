@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Register } from './models/model';
 import { Observable } from 'rxjs';
+
+
 const endpoint = 'http://localhost:8080/';
 
 @Injectable({
