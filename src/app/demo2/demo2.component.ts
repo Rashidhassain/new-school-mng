@@ -15,6 +15,7 @@ export class Demo2Component implements OnInit
   public forms: FormGroup;
 
   public data: Register = new Register();
+
 email:boolean=false;
   showMsg: any;
   constructor(private formBuilder: FormBuilder, private rest: RestService)
@@ -52,10 +53,13 @@ email:boolean=false;
     const atposition = x.indexOf('@');
     const dotposition = x.lastIndexOf('.');
     if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+  // tslint:disable-next-line: whitespace
+  // tslint:disable-next-line: whitespace
   this.email=true;
       return false;
     }
     this.rest.doRegister(this.data).subscribe((result) =>
+    // tslint:disable-next-line: one-line
     {
       if (result === undefined) {
         console.log(result);
