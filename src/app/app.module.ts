@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +29,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ParenthomeComponent } from './parenthome/parenthome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -51,14 +56,22 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatInputModule,
     MatTabsModule,
+    MatTableModule,
     AppRoutingModule, HttpClientModule,
     BrowserAnimationsModule,
     CarouselModule.forRoot(),
     MatDialogModule,
     FormsModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

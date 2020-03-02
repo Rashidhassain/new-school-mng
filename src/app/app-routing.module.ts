@@ -30,17 +30,7 @@ const routes: Routes = [
   {path: 'teacher', component: TeacherComponent},
   {path: 'teacherhome', component: TeacherhomeComponent},
   {path: 'teacherreg', component: TeacherregComponent},
-  {path: 'parenthome', component: ParenthomeComponent}
-
-
-
-
-
-
-
-
-
-
+  {path: 'parenthome', component: ParenthomeComponent},
 
 ];
 
