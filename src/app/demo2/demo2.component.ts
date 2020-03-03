@@ -30,7 +30,7 @@ export class Demo2Component implements OnInit
       number: ['', [Validators.required]],
       password: ['', [Validators.required]],
       cpassword: ['', [Validators.required]],
-      roles: this.formBuilder.array(['TEACHER']),
+      role: 'TEACHER',
     });
   }
   ngOnInit()

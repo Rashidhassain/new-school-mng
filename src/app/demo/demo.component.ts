@@ -48,7 +48,7 @@ Reg()
   console.log(this.data);
   // this.forms.setValidators(this.passwordMatchValidator);
   this.forms.updateValueAndValidity();
-  const x = this.forms.get('email').value;
+  const x = this.forms.get('mail').value;
   const atposition = x.indexOf('@');
   const dotposition = x.lastIndexOf('.');
   if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
@@ -61,7 +61,7 @@ Reg()
     } else {
 
       this.successfull = true;
-      this.emailvalid = false;
+      // this.emailvalid = false;
 
     }
   }, (err) =>
