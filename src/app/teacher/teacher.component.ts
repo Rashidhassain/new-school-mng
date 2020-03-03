@@ -14,7 +14,7 @@ export class TeacherComponent implements OnInit
 {
   public forms: FormGroup;
   public data: Register = new Register();
-  invalidlogin: boolean = false;
+  // invalidlogin: boolean = false;
   successfull: boolean = false;
 
 
@@ -55,12 +55,12 @@ login()
       } else {
         // this.rest.sendToken(result.accessToken);
         this.successfull = true;
-        this.invalidlogin = false;
+        // this.invalidlogin = false;
       }
     }, (err) =>
     {
       if (err.status === 400) {
-        this.invalidlogin = true;
+        // this.invalidlogin = true;
 
       }
       console.log(err);
