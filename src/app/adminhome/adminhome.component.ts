@@ -33,13 +33,7 @@ interface Section {
 //   weight: number;
 //   symbol: string;
 // }
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'}
 
-
-];
 
 @Component({
   selector: 'app-adminhome',
@@ -47,8 +41,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./adminhome.component.scss']
 })
 export class AdminhomeComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','options'];
-  dataSource = ELEMENT_DATA;
+
   constructor() { }
   foods: Food[] = [
 
