@@ -13,7 +13,7 @@ export class RestService {
   httpOptions: any;
   constructor(private http: HttpClient, ) { }
   private extractData(res: Response) {
-    let body = res;
+    const body = res;
     return body || {};
   }
   sendToken(accessToken: string) {
@@ -58,6 +58,27 @@ export class RestService {
 
     return this.http.post<Register>(endpoint + 'api/auth/signup', data, this.httpOptions);
   }
+
+  doLogin(data: Register): Observable<any> {
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    return this.http.post<Register>(endpoint + 'api/auth/signin', data, this.httpOptions);
+  }
+
+// // parent
+//   doReg(data: Register): Observable<any> {
+//     this.httpOptions = {
+//       headers: new HttpHeaders({
+//         'Content-Type': 'application/json'
+//       })
+//     };
+
+//     return this.http.post<Register>(endpoint + 'api/auth/signin', data, this.httpOptions);
+//   }
 
 
 }

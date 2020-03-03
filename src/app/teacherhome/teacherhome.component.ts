@@ -8,6 +8,11 @@ interface Class {
     viewValue: string;
   }
 
+  interface Section {
+    value: string;
+    viewValue: string;
+  }
+
 
 @Component({
   selector: 'app-teacherhome',
@@ -36,6 +41,21 @@ export class TeacherhomeComponent implements OnInit {
     {value: 'steak-0', viewValue: 'X'},
     {value: 'steak-0', viewValue: 'XI'},
     {value: 'steak-0', viewValue: 'XII'},
+
+  ];
+
+  sections: Section[] = [
+
+    {value: 'steak-0', viewValue: 'A'},
+    {value: 'steak-0', viewValue: 'B	'},
+    {value: 'steak-0', viewValue: 'C'},
+    {value: 'steak-0', viewValue: 'D'},
+    {value: 'steak-0', viewValue: 'E'},
+    {value: 'steak-0', viewValue: 'F	'},
+    {value: 'steak-0', viewValue: 'G	'},
+    {value: 'steak-0', viewValue: 'H	'}
+
+
 
   ];
 

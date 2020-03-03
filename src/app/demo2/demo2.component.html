@@ -5,6 +5,9 @@
     <div class="col-sm-12">
       <h3 class="text-center mt-1 mb-3">Register Here</h3>
       <hr style="border:1px solid black;width:35%">
+      <h4 *ngIf="emailvalid" style="color: red;" class="text-center">Email already exists</h4>
+      <h4 *ngIf="successfull" style="color:green;" class="text-center">Registered Successfull..</h4>
+
     </div>
   </div>
 

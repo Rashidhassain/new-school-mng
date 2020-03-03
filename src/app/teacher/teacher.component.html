@@ -1,88 +1,88 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <h5 class="sms">School Management School</h5>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/home">Home</a>
-        </li>
+  <h5 class="sms">School Management School</h5>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/">Welcome To Teacher</a>
-        </li>
- 
-        
-      </ul>
-    </div>
-  </nav>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Welcome To Teacher</a>
+      </li>
+
+
+    </ul>
+  </div>
+</nav>
 
 
 <!-- headers ends -->
 <section id="sec">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1 class="text-center" style="color: white;margin-top: 12%;">School Management system</h1>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-center" style="color: white;margin-top: 12%;">School Management system</h1>
+      </div>
     </div>
-      </section>
+  </div>
+</section>
 
 <section id="sec1">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <h3 class="text-center mt-5">Teacher Login</h3>
-                <hr style="border:1px solid black;    width: 20%;
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="text-center mt-5">Teacher Login</h3>
+        <hr style="border:1px solid black;    width: 20%;
                 " class="mb-3">
 
-            </div>
-        </div>
+
+      </div>
     </div>
-<div class="container mt-5">
+  </div>
+  <div class="container mt-5">
     <div class="row">
-        <div class="col-sm-6 mt-5 mb-5"> 
-            <div class="card">
-            <form>
-              <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Enter Your Mail">
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <mat-label>Password</mat-label>
-                <input matInput placeholder="Enter Your Password">
-              </mat-form-field>
-                
-               <div class="text-center mt-4"><button mat-raised-button color="primary" class="btn-block" style="font-size: 18px;" routerLink="/teacherhome">Login</button>
+      <div class="col-sm-6 mt-5 mb-5">
+        <div class="card">
+          <h4 *ngIf="invalidlogin" style="color: red;" class="text-center">Email exists</h4>
+
+          <h4 *ngIf="successfull" style="color:green;" class="text-center">Login Successfull...</h4>
+
+          <form [formGroup]="forms" name="form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Enter Your Mail" formControlName="email" type="email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Enter Your Password" formControlName="password" type="password">
+            </mat-form-field>
+            <div class="text-center mt-4"><button mat-raised-button color="primary" class="btn-block"
+                style="font-size: 18px;" (click)="login()"  >Login</button>
             </div>
-
-            
-              </form>
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h6 class="text-center mt-3">Don't Have Account?</h6>
-                    <!-- Button trigger modal -->
-<button mat-raised-button  color="warn"  class="btn-block" (click)="open()" style="outline: none;font-size: 18px;">
-  Register
-</button>
-
-
-                  </div>
-                </div>
+          </form>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h6 class="text-center mt-3">Don't Have Account?</h6>
+                <!-- Button trigger modal -->
+                <button mat-raised-button color="warn" class="btn-block" (click)="open()"
+                  style="outline: none;font-size: 18px;">
+                  Register
+                </button>
               </div>
-              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6">
-            <img src="../../assets/admin-login-png-4.png" alt="" style="width:80%" class=" pl-5">
-        </div>
-      
+      </div>
+      <div class="col-sm-6">
+        <img src="../../assets/admin-login-png-4.png" alt="" style="width:80%" class=" pl-5">
+      </div>
     </div>
-   
-</div>
+  </div>
 </section>
 <app-footer></app-footer>

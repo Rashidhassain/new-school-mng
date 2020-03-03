@@ -7,22 +7,22 @@
       <hr style="border:1px solid black;width:35%">
     </div>
   </div>
-  
+
   <div class="row">
-    <!-- <form  [formGroup]="forms" > -->
+    <form  [formGroup]="forms"  name="forms">
 
     <div class="col-sm-12">
-      
+
         <div class="container mt-4">
           <div class="row">
             <div class="col-sm-6">
               <mat-form-field class="example-full-width">
                 <mat-label>First Name</mat-label>
-                <input matInput placeholder="Enter First Name" type="text">
+                <input matInput placeholder="Enter First Name" formControlName="fname" type="text">
               </mat-form-field>
               <mat-form-field class="example-full-width">
                 <mat-label>Mobile</mat-label>
-                <input matInput placeholder="Enter Mobile Number" type="number">
+                <input matInput placeholder="Enter Mobile Number" formControlName="mobile" type="number">
               </mat-form-field>
 
               <mat-form-field class="example-full-width">
@@ -31,54 +31,54 @@
               </mat-form-field>
               <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="Enter Your Password" type="password">
+                <input matInput placeholder="Enter Your Password"  formControlName="password" type="password">
               </mat-form-field>
               <mat-form-field class="example-full-width">
                 <mat-label>Mail</mat-label>
-                <input matInput placeholder="Enter Your Email" type="email">
+                <input matInput placeholder="Enter Your Email" formControlName="mail" type="email">
               </mat-form-field>
-          
+
             </div>
             <div class="col-sm-6">
 
-              
+
               <mat-form-field class="example-full-width">
                 <mat-label>Last Name</mat-label>
-                <input matInput placeholder="Enter Last Name"type="text">
+                <input matInput placeholder="Enter Last Name" formControlName="lname" type="text">
               </mat-form-field>
 
 
               <mat-form-field class="example-full-width">
                 <mat-label>Student Id</mat-label>
-                <input matInput placeholder="Enter Your Student Id" type="text">
+                <input matInput placeholder="Enter Your Student Id" formControlName="stid" type="text">
               </mat-form-field>
 
               <mat-form-field class="example-full-width">
                 <mat-label>Student Name</mat-label>
-                <input matInput placeholder="Enter Your Student Name" type="text">
+                <input matInput placeholder="Enter Your Student Name" formControlName="stname" type="text">
               </mat-form-field>
               <mat-form-field class="example-full-width">
                 <mat-label>Telephone</mat-label>
-                <input matInput placeholder="Enter Your Telephone Number"type="number">
+                <input matInput placeholder="Enter Your Telephone Number" formControlName="tel" type="number">
               </mat-form-field>
-             
+
               <mat-form-field class="example-full-width">
                 <mat-label>Confirm Password</mat-label>
-                <input matInput placeholder="Enter Your Confirm Password"type="password">
+                <input matInput placeholder="Enter Your Confirm Password" formControlName="cpassword" type="password">
               </mat-form-field>
             </div>
           </div>
-         
+
         </div>
-        <div class="text-center mt-4"><button mat-raised-button color="primary" routerLink="/" class="btn-block"
-            style="font-size: 22px;">Register
+        <div class="text-center mt-4"><button mat-raised-button color="primary"  (click)="Reg()" class="btn-block"
+            style="font-size: 22px;" >Register
             </button>
         </div>
 
       </div>
 
 
-    <!-- </form> -->
+    </form>
 
 
   </div>

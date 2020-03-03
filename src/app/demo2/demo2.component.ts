@@ -15,8 +15,9 @@ export class Demo2Component implements OnInit
   public forms: FormGroup;
 
   public data: Register = new Register();
-
-email:boolean=false;
+  successfull: boolean = false;
+  emailvalid: boolean = false;
+  email: boolean = false;
   showMsg: any;
   constructor(private formBuilder: FormBuilder, private rest: RestService)
   {
@@ -29,14 +30,16 @@ email:boolean=false;
       number: ['', [Validators.required]],
       password: ['', [Validators.required]],
       cpassword: ['', [Validators.required]],
-      roles: this.formBuilder.array(['USER']),
+      roles: this.formBuilder.array(['TEACHER']),
     });
   }
-  ngOnInit()  {
+  ngOnInit()
+  {
   }
 
 
-  passwordMatchValidator(group: FormGroup): any {
+  passwordMatchValidator(group: FormGroup): any
+  {
     if (group) {
       if (group.get('password').value !== group.get('cpassword').value) {
         return { notMatching: true };
@@ -44,7 +47,8 @@ email:boolean=false;
     }
     return null;
   }
-  Regi()  {
+  Regi()
+  {
     Object.assign(this.data, this.forms.value);
     console.log(this.data);
     this.forms.setValidators(this.passwordMatchValidator);
@@ -53,23 +57,24 @@ email:boolean=false;
     const atposition = x.indexOf('@');
     const dotposition = x.lastIndexOf('.');
     if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
-  // tslint:disable-next-line: whitespace
-  // tslint:disable-next-line: whitespace
-  this.email=true;
+      this.email = true;
       return false;
     }
     this.rest.doRegister(this.data).subscribe((result) =>
-    // tslint:disable-next-line: one-line
     {
       if (result === undefined) {
         console.log(result);
       } else {
 
-        alert('success');
+        this.successfull = true;
+        this.emailvalid = false;
 
       }
     }, (err) =>
     {
+      if (err.status === 400) {
+        this.emailvalid = true;
+      }
       console.log(err);
 
     });
