@@ -14,6 +14,16 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { TeacherhomeComponent } from './teacherhome/teacherhome.component';
 import { TeacherregComponent } from './teacherreg/teacherreg.component';
 import { ParenthomeComponent } from './parenthome/parenthome.component';
+import { HandledComponent } from './handled/handled.component';
+import { ViewstudentComponent } from './viewstudent/viewstudent.component';
+import { AddmarksComponent } from './addmarks/addmarks.component';
+import { AdminclassComponent } from './adminclass/adminclass.component';
+import { AdmineventComponent } from './adminevent/adminevent.component';
+import { AdminsetexmComponent } from './adminsetexm/adminsetexm.component';
+import { AdminstaffComponent } from './adminstaff/adminstaff.component';
+import { AdminsubjectComponent } from './adminsubject/adminsubject.component';
+import { AdminfeestrucComponent } from './adminfeestruc/adminfeestruc.component';
+import { AdminnoticeComponent } from './adminnotice/adminnotice.component';
 
 
 const routes: Routes = [
@@ -31,6 +41,20 @@ const routes: Routes = [
   {path: 'teacherhome', component: TeacherhomeComponent},
   {path: 'teacherreg', component: TeacherregComponent},
   {path: 'parenthome', component: ParenthomeComponent},
+  {path: 'handled', component: HandledComponent},
+  {path: 'viewstudent', component: ViewstudentComponent},
+  {path: 'addmarks', component: AddmarksComponent},
+  {path: 'addclass', component: AdminclassComponent},
+  {path: 'adminevent', component: AdmineventComponent},
+  {path: 'adminsetexm', component: AdminsetexmComponent},
+  {path: 'adminstaff', component: AdminstaffComponent},
+  {path: 'adminsubject', component: AdminsubjectComponent},
+  {path: 'adminfeestruc', component: AdminfeestrucComponent},
+  {path: 'adminnotice', component: AdminnoticeComponent}
+
+
+
+
 
 ];
 

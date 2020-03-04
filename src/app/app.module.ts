@@ -30,6 +30,16 @@ import { ParenthomeComponent } from './parenthome/parenthome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
+import { HandledComponent } from './handled/handled.component';
+import { ViewstudentComponent } from './viewstudent/viewstudent.component';
+import { AddmarksComponent } from './addmarks/addmarks.component';
+import { AdminclassComponent } from './adminclass/adminclass.component';
+import { AdminsubjectComponent } from './adminsubject/adminsubject.component';
+import { AdminstaffComponent } from './adminstaff/adminstaff.component';
+import { AdminsetexmComponent } from './adminsetexm/adminsetexm.component';
+import { AdminfeestrucComponent } from './adminfeestruc/adminfeestruc.component';
+import { AdmineventComponent } from './adminevent/adminevent.component';
+import { AdminnoticeComponent } from './adminnotice/adminnotice.component';
 
 
 @NgModule({
@@ -49,6 +59,16 @@ import {MatSelectModule} from '@angular/material/select';
     TeacherhomeComponent,
     TeacherregComponent,
     ParenthomeComponent,
+    HandledComponent,
+    ViewstudentComponent,
+    AddmarksComponent,
+    AdminclassComponent,
+    AdminsubjectComponent,
+    AdminstaffComponent,
+    AdminsetexmComponent,
+    AdminfeestrucComponent,
+    AdmineventComponent,
+    AdminnoticeComponent,
 
   ],
   imports: [

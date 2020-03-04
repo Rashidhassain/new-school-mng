@@ -1,0 +1,50 @@
+<div class="container">
+<div class="row">
+    <div class="col-sm-12">
+        <h3 class="text-center mt-3">Edit Marks</h3>
+
+    </div>
+</div>
+<div class="row mt-3 mb-2">
+    <div class="col-sm-12">
+        <form>
+            <mat-form-field class="example-full-width">
+                <mat-label>Student Id</mat-label>
+                <input matInput placeholder="Enter Student Id" type="number">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Student Name</mat-label>
+                <input matInput placeholder="Enter Student Name" type="number">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Class Name</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let class of classes" [value]="class.value">
+                        {{class.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Section</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let section of sections" [value]="section.value">
+                        {{section.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>marks</mat-label>
+                <input matInput placeholder="Enter marks" type="number">
+            </mat-form-field>
+
+
+            <button mat-raised-button color="primary" class="btn-block"
+                style="outline:none;">Add Edit Details</button>
+        </form>
+    </div>
+</div>
+
+</div>

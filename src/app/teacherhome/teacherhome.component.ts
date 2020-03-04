@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HandledComponent } from '../handled/handled.component';
+import { MatDialog } from '@angular/material/dialog';
+import { ViewstudentComponent } from '../viewstudent/viewstudent.component';
+import { AddmarksComponent } from '../addmarks/addmarks.component';
+
 interface Gender {
   value: string;
   viewValue: string;
@@ -13,8 +18,10 @@ interface Class {
     viewValue: string;
   }
 
-
-
+  interface Day {
+    value: string;
+    viewValue: string;
+  }
 
 @Component({
   selector: 'app-teacherhome',
@@ -23,7 +30,9 @@ interface Class {
 })
 export class TeacherhomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
+
   genders: Gender[] = [
 
     {value: 'steak-0', viewValue: 'Male'},
@@ -61,7 +70,66 @@ export class TeacherhomeComponent implements OnInit {
 
   ];
 
+
+  days: Day[] = [
+
+    {value: 'steak-0', viewValue: 'Monday'},
+    {value: 'steak-0', viewValue: 'Tuesday'},
+    {value: 'steak-0', viewValue: 'Wednesday'},
+    {value: 'steak-0', viewValue: 'Thursday'},
+    {value: 'steak-0', viewValue: 'Friday'},
+    {value: 'steak-0', viewValue: 'Saturday'},
+
+
+
+  ];
+
+
   ngOnInit() {
   }
+  // handled class
+  open()
+  {
+    const dialogRef = this.dialog.open(HandledComponent, {
+      width: '530px',
+
+    });
+
+    dialogRef.afterClosed().subscribe(result =>
+    {
+      console.log('The dialog was closed');
+    });
+  }
+  // handled clas end
+
+
+  // viewstudent
+  open1()
+  {
+    const dialogRef = this.dialog.open(ViewstudentComponent, {
+      width: '530px',
+
+    });
+
+    dialogRef.afterClosed().subscribe(result =>
+    {
+      console.log('The dialog was closed');
+    });
+  }
+
+
+  open2()
+  {
+    const dialogRef = this.dialog.open(AddmarksComponent, {
+      width: '530px',
+
+    });
+
+    dialogRef.afterClosed().subscribe(result =>
+    {
+      console.log('The dialog was closed');
+    });
+  }
+    // viewstudent ends
 
 }

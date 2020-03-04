@@ -1,0 +1,122 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="text-center mt-4">Edit Student Details</h3>
+
+
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <form>
+
+      <div class="col-sm-12">
+
+          <div class="container mt-4">
+
+
+            <div class="container  mt-5">
+                <div class="row">
+                    <div class="col-sm-12">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Student Id</mat-label>
+                                            <input matInput placeholder="Enter Student Id" type="number">
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Student Name</mat-label>
+                                            <input matInput placeholder="Enter Student Name" type="text">
+                                        </mat-form-field>
+
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Father Name</mat-label>
+                                            <input matInput placeholder="Enter Father Name" type="text">
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Mother Name</mat-label>
+                                            <input matInput placeholder="Enter Mother Name" type="text">
+                                        </mat-form-field>
+
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Class Name</mat-label>
+                                            <mat-select>
+                                                <mat-option *ngFor="let class of classes" [value]="class.value">
+                                                    {{class.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Gender</mat-label>
+                                            <mat-select>
+                                                <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                                                    {{gender.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Phone Number</mat-label>
+                                            <input matInput placeholder="Enter Phone Number" type="number">
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Father Mail Id</mat-label>
+                                            <input matInput placeholder="Enter Father @Mail Id" type="email">
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Mother mail Id</mat-label>
+                                            <input matInput placeholder="Enter Mother  @Mail Id" type="email">
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Section</mat-label>
+                                            <mat-select>
+                                                <mat-option *ngFor="let section of sections"
+                                                    [value]="section.value">
+                                                    {{section.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Address</mat-label>
+                                            <textarea matInput placeholder="Enter Your Address"></textarea>
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Date</mat-label>
+                                            <input matInput [matDatepicker]="picker3">
+                                            <mat-datepicker-toggle matSuffix [for]="picker3">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #picker3></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="text-center mt-4"><button mat-raised-button color="primary" routerLink="/"
+                                    class="btn-block" style="font-size: 18px;">Add Edit
+                                    Details</button>
+                            </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+

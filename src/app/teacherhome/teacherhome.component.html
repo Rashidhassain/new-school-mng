@@ -89,6 +89,20 @@
                                                 </mat-option>
                                             </mat-select>
                                         </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Day</mat-label>
+                                            <mat-select>
+                                                <mat-option *ngFor="let day of days" [value]="day.value">
+                                                    {{day.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Date</mat-label>
+                                            <input matInput [matDatepicker]="picker6">
+                                            <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker6></mat-datepicker>
+                                          </mat-form-field>
                                         <button mat-raised-button color="primary" class="btn-block"
                                             style="outline:none;">Add Details</button>
                                     </form>
@@ -101,6 +115,9 @@
                                             <th scope="col">Class</th>
                                             <th scope="col">Subject</th>
                                             <th scope="col">Section</th>
+                                            <th scope="col">Day</th>
+                                            <th scope="col">Date</th>
+
                                             <th scope="col">Edit</th>
 
                                             <th scope="col">Delete</th>
@@ -111,8 +128,11 @@
                                             <td>Mark</td>
                                             <td>Otto</td>
                                             <td>Otto</td>
+                                            <td>Otto</td>
+                                            <td>Otto</td>
+
                                             <td><button mat-raised-button color="primary"
-                                                    style="outline:none;">Edit</button></td>
+                                                    style="outline:none;" (click)="open()"  >Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
@@ -120,8 +140,11 @@
                                             <td>Jacob</td>
                                             <td>Thornton</td>
                                             <td>Otto</td>
+                                            <td>Otto</td>
+                                            <td>Otto</td>
+
                                             <td><button mat-raised-button color="primary"
-                                                    style="outline:none;">Edit</button></td>
+                                                    style="outline:none;"  (click)="open()">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
@@ -129,8 +152,11 @@
                                             <td>Larry</td>
                                             <td>the Bird</td>
                                             <td>Otto</td>
+                                            <td>Otto</td>
+                                            <td>Otto</td>
+
                                             <td><button mat-raised-button color="primary"
-                                                    style="outline:none;">Edit</button></td>
+                                                    style="outline:none;"  (click)="open()">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
@@ -200,13 +226,7 @@
                                                     </mat-option>
                                                 </mat-select>
                                             </mat-form-field>
-                                            <mat-form-field class="example-full-width">
-                                                <mat-label>Date</mat-label>
-                                                <input matInput [matDatepicker]="picker3">
-                                                <mat-datepicker-toggle matSuffix [for]="picker3">
-                                                </mat-datepicker-toggle>
-                                                <mat-datepicker #picker3></mat-datepicker>
-                                            </mat-form-field>
+
                                         </div>
                                         <div class="col-sm-6">
                                             <mat-form-field class="example-full-width">
@@ -234,8 +254,13 @@
                                                 <mat-label>Address</mat-label>
                                                 <textarea matInput placeholder="Enter Your Address"></textarea>
                                             </mat-form-field>
-
-                                            Browse
+                                            <mat-form-field class="example-full-width">
+                                                <mat-label>Date</mat-label>
+                                                <input matInput [matDatepicker]="picker3">
+                                                <mat-datepicker-toggle matSuffix [for]="picker3">
+                                                </mat-datepicker-toggle>
+                                                <mat-datepicker #picker3></mat-datepicker>
+                                            </mat-form-field>
                                         </div>
                                     </div>
 
@@ -308,7 +333,7 @@
                                     <td>Otto</td>
                                     <td>Otto</td>
 
-                                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open1()">Edit</button>
                                     <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                                     </td>
                                 </tr>
@@ -326,7 +351,7 @@
                                     <th scope="row">2</th>
                                     <td>Jacob</td>
                                     <td>Thornton</td>
-                                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                                    <td><button mat-raised-button color="primary" style="outline:none;"(click)="open1()">Edit</button>
                                     <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                                     </td>
                                 </tr>
@@ -344,7 +369,7 @@
                                     <th scope="row">3</th>
                                     <td>Larry</td>
                                     <td>the Bird</td>
-                                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                                    <td><button mat-raised-button color="primary" style="outline:none;"(click)="open1()">Edit</button>
                                     <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                                     </td>
                                 </tr>
@@ -436,7 +461,7 @@
                                             <td>@mdo</td>
 
                                             <td><button mat-raised-button color="primary"
-                                                    style="outline:none;">Edit</button></td>
+                                                    style="outline:none;"(click)="open2()">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
@@ -448,7 +473,7 @@
                                             <td>@mdo</td>
 
                                             <td><button mat-raised-button color="primary"
-                                                    style="outline:none;">Edit</button></td>
+                                                    style="outline:none;" (click)="open2()">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
@@ -460,7 +485,7 @@
                                             <td>@mdo</td>
 
                                             <td><button mat-raised-button color="primary"
-                                                    style="outline:none;">Edit</button></td>
+                                                    style="outline:none;"(click)="open2()">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
