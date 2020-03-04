@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminclassComponent } from '../adminclass/adminclass.component';
+import { MatDialog } from '@angular/material';
+import { AdminsubjectComponent } from '../adminsubject/adminsubject.component';
 
 interface Food {
   value: string;
@@ -18,12 +21,7 @@ interface Section {
 }
 
 
- interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
+
 
 
 
@@ -42,7 +40,7 @@ interface Section {
 })
 export class AdminhomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
   foods: Food[] = [
 
     {value: 'steak-0', viewValue: 'Morning'},
@@ -91,6 +89,38 @@ export class AdminhomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  // class
+  open()
+  {
+    const dialogRef = this.dialog.open(AdminclassComponent, {
+      width: '530px',
+
+    });
+
+    dialogRef.afterClosed().subscribe(result =>
+    {
+      console.log('The dialog was closed');
+    });
+  }
+
+// class ends
+
+
+//  subject
+  open1()
+  {
+    const dialogRef = this.dialog.open(AdminsubjectComponent, {
+      width: '530px',
+
+    });
+
+    dialogRef.afterClosed().subscribe(result =>
+    {
+      console.log('The dialog was closed');
+    });
+  }
+// subject ends
 
 
 }

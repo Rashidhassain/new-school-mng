@@ -151,7 +151,7 @@
                     <td>5th</td>
 
 
-                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open()">Edit</button>
 
                     <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </td>
@@ -162,7 +162,7 @@
                     <td>5th</td>
 
 
-                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                    <td><button mat-raised-button color="primary" style="outline:none;"(click)="open()">Edit</button>
 
                     <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </td>
@@ -173,7 +173,7 @@
                     <td>5th</td>
 
 
-                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                    <td><button mat-raised-button color="primary" style="outline:none;"(click)="open()">Edit</button>
 
                     <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </td>
@@ -197,9 +197,12 @@
           </div>
           <div class="container mt-5">
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-8 offset-2">
                 <div class="card">
                   <form>
+
+<div class="row">
+  <div class="col-sm-6">
 
 
                     <mat-form-field class="example-full-width">
@@ -216,93 +219,118 @@
                         </mat-option>
                       </mat-select>
                     </mat-form-field>
-
-
                     <mat-form-field class="example-full-width">
-                      <mat-label>Date</mat-label>
-                      <input matInput [matDatepicker]="picker1">
-                      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                      <mat-datepicker #picker1></mat-datepicker>
+                      <mat-label>Section Name</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let section   of sections" [value]="section.value">
+                          {{section.viewValue}}
+                        </mat-option>
+                      </mat-select>
                     </mat-form-field>
+</div>
 
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Subject Name</mat-label>
-                      <input matInput placeholder="Enter Subject Name" type="text">
-                    </mat-form-field>
+<div class="col-sm-6">
+  <mat-form-field class="example-full-width">
+    <mat-label>Date</mat-label>
+    <input matInput [matDatepicker]="picker1">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
 
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Staff Name</mat-label>
-                      <input matInput placeholder="Enter Staff Name" type="text">
-                    </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Subject Name</mat-label>
+    <input matInput placeholder="Enter Subject Name" type="text">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Staff Name</mat-label>
+    <input matInput placeholder="Enter Staff Name" type="text">
+  </mat-form-field>
+</div>
+</div>
+
                     <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Subject
                       Details</button>
                   </form>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Sl.No</th>
-                      <th scope="col">sub Name</th>
-                      <th scope="col">Cls Name</th>
-                      <th scope="col">Date</th>
-                      <th scope="col">Stf Name</th>
-
-                      <th scope="col">Edit</th>
-
-                      <th scope="col">Delete</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>English</td>
-                      <td>5th</td>
-                      <td>02/02/2020</td>
-                      <td>abcd</td>
-
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Maths</td>
-                      <td>5th</td>
-                      <td>02/02/2020</td>
-                      <td>abcd</td>
-
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Science</td>
-                      <td>5th</td>
-                      <td>02/02/2020</td>
-                      <td>abcd</td>
-
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-
-
-
 
 
             </div>
           </div>
         </div>
+      </mat-tab>
+
+
+      <mat-tab label="View Subject">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center mt-5">View Subject Details</h3>
+    </div>
+  </div>
+</div>
+
+        <div class="conatiner">
+        <table class="table mt-5">
+          <thead>
+            <tr>
+              <th scope="col">Sl.No</th>
+              <th scope="col">subject Name</th>
+              <th scope="col">Class Name</th>
+              <th scope="col">Section</th>
+
+              <th scope="col">Date</th>
+              <th scope="col">Staff Name</th>
+
+              <th scope="col">Edit</th>
+
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>English</td>
+              <td>5th</td>
+              <td>02/02/2020</td>
+              <td>abcd</td>
+              <td>abcd</td>
+
+              <td><button mat-raised-button color="primary" style="outline:none;" (click)="open1()">Edit</button>
+
+              <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Maths</td>
+              <td>5th</td>
+              <td>02/02/2020</td>
+              <td>abcd</td>
+              <td>abcd</td>
+
+              <td><button mat-raised-button color="primary" style="outline:none;"(click)="open1()">Edit</button>
+
+              <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Science</td>
+              <td>5th</td>
+              <td>02/02/2020</td>
+              <td>abcd</td>
+              <td>abcd</td>
+
+              <td><button mat-raised-button color="primary" style="outline:none;"(click)="open1()">Edit</button>
+
+              <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+</div>
       </mat-tab>
       <mat-tab label="Staff">
         <div class="container-fluid">
@@ -337,50 +365,54 @@
                   </form>
                 </div>
               </div>
-              <div class="col-sm-6 mt-4">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Staff Name</th>
-                      <th scope="col">Qualification</th>
-                      <th scope="col">Salary</th>
-                      <th scope="col">Edit</th>
 
-                      <th scope="col">Delete</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>Otto</td>
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                    </tr>
-                    <tr>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>Otto</td>
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                    </tr>
-                    <tr>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>Otto</td>
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
           </div>
         </div>
 
+      </mat-tab>
+
+      <mat-tab label="View Staff">
+        <div class="container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Staff Name</th>
+                <th scope="col">Qualification</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Edit</th>
+
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Otto</td>
+                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>Otto</td>
+                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </tr>
+              <tr>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>Otto</td>
+                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </mat-tab>
 
       <mat-tab label="Set Exam">
