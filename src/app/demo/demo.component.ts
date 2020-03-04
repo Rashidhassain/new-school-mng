@@ -31,6 +31,7 @@ export class DemoComponent implements OnInit
       stid: ['', [Validators.required]],
       stname: ['', [Validators.required]],
       tel: ['', [Validators.required]],
+      address: ['', [Validators.required]],
 
       cpassword: ['', [Validators.required]],
       roles: this.formBuilder.array(['PARENT']),

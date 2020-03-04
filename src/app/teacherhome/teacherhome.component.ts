@@ -14,6 +14,8 @@ interface Class {
   }
 
 
+
+
 @Component({
   selector: 'app-teacherhome',
   templateUrl: './teacherhome.component.html',

@@ -101,6 +101,7 @@
                                             <th scope="col">Class</th>
                                             <th scope="col">Subject</th>
                                             <th scope="col">Section</th>
+                                            <th scope="col">Edit</th>
 
                                             <th scope="col">Delete</th>
                                         </tr>
@@ -110,25 +111,28 @@
                                             <td>Mark</td>
                                             <td>Otto</td>
                                             <td>Otto</td>
-
+                                            <td><button mat-raised-button color="primary"
+                                                style="outline:none;">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
-                                                    style="outline:none;">Delete</button>
+                                                    style="outline:none;">Delete</button></td>
                                         </tr>
                                         <tr>
                                             <td>Jacob</td>
                                             <td>Thornton</td>
                                             <td>Otto</td>
-
+                                            <td><button mat-raised-button color="primary"
+                                                style="outline:none;">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
-                                                    style="outline:none;">Delete</button>
+                                                    style="outline:none;">Delete</button></td>
                                         </tr>
                                         <tr>
                                             <td>Larry</td>
                                             <td>the Bird</td>
                                             <td>Otto</td>
-
+                                            <td><button mat-raised-button color="primary"
+                                                style="outline:none;">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
-                                                    style="outline:none;">Delete</button>
+                                                    style="outline:none;">Delete</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -268,20 +272,20 @@
                         <table class="table mt-4">
                             <thead>
                                 <tr>
-                                    <th scope="col">S.Id</th>
-                                    <th scope="col">S.Name</th>
-                                    <th scope="col">F.Name</th>
-                                    <th scope="col">M.Name</th>
+                                    <th scope="col">Student.Id</th>
+                                    <th scope="col">Student.Name</th>
+                                    <th scope="col">Father.Name</th>
+                                    <th scope="col">Mother.Name</th>
                                     <th scope="col">Gender</th>
-                                    <th scope="col">P.Number</th>
-                                    <th scope="col">F. Mail</th>
-                                    <th scope="col">M. Mail</th>
+                                    <th scope="col">Phone.Number</th>
+                                    <th scope="col">Father.Mail</th>
+                                    <th scope="col">Mother.Mail</th>
                                     <th scope="col">Section</th>
                                     <th scope="col">Address</th>
                                     <th scope="col">Class</th>
                                     <th scope="col">D.O.B</th>
 
-                                    <th scope="col">Image</th>
+                                    <th scope="col">Edit</th>
                                     <th scope="col">Delete</th>
 
 
@@ -303,8 +307,8 @@
                                     <td>Otto</td>
                                     <td>Otto</td>
 
-                                    <td>@mdo</td>
-                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                                        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -321,8 +325,8 @@
                                     <th scope="row">2</th>
                                     <td>Jacob</td>
                                     <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                                        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -339,8 +343,8 @@
                                     <th scope="row">3</th>
                                     <td>Larry</td>
                                     <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                                    <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                                        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -384,10 +388,14 @@
                                             </mat-select>
                                           </mat-form-field>
 
-                                        <mat-form-field class="example-full-width">
+                                          <mat-form-field class="example-full-width">
                                             <mat-label>Section</mat-label>
-                                            <input matInput placeholder="Enter Section" type="text">
-                                        </mat-form-field>
+                                            <mat-select>
+                                              <mat-option *ngFor="let section of sections" [value]="section.value">
+                                                {{section.viewValue}}
+                                              </mat-option>
+                                            </mat-select>
+                                          </mat-form-field>
 
                                         <mat-form-field class="example-full-width">
                                             <mat-label>marks</mat-label>
@@ -412,6 +420,8 @@
                                             <th scope="col">Class</th>
                                             <th scope="col">Section</th>
                                             <th scope="col">Marks</th>
+                                            <th scope="col">Edit</th>
+
                                             <th scope="col">Delete</th>
 
                                         </tr>
@@ -423,6 +433,9 @@
                                             <td>Otto</td>
                                             <td>@mdo</td>
                                             <td>@mdo</td>
+
+                                            <td><button mat-raised-button color="primary"
+                                                style="outline:none;">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
@@ -432,6 +445,9 @@
                                             <td>Thornton</td>
                                             <td>@fat</td>
                                             <td>@mdo</td>
+
+                                            <td><button mat-raised-button color="primary"
+                                                style="outline:none;">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
@@ -441,6 +457,9 @@
                                             <td>the Bird</td>
                                             <td>@twitter</td>
                                             <td>@mdo</td>
+
+                                            <td><button mat-raised-button color="primary"
+                                                style="outline:none;">Edit</button></td>
                                             <td><button mat-raised-button color="warn"
                                                     style="outline:none;">Delete</button></td>
                                         </tr>
@@ -453,10 +472,11 @@
                 </div>
             </mat-tab>
 
-            <mat-tab label="Student Result">
 
 
-            </mat-tab>
+
+
+
             <mat-tab label="Attendence">
 
 
