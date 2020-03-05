@@ -9,6 +9,10 @@
       <div class="col-sm-8 offset-2">
           <form>
             <mat-form-field class="example-full-width">
+              <mat-label>Serial Number</mat-label>
+              <input matInput placeholder="Enter Serial Number" type="number">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
               <mat-label>Staff Name</mat-label>
               <input matInput placeholder="Enter Staff Name" type="text">
             </mat-form-field>
@@ -17,9 +21,25 @@
               <input matInput placeholder="Enter Staff Qualification" type="text">
             </mat-form-field>
             <mat-form-field class="example-full-width">
+              <mat-label>Subject</mat-label>
+              <input matInput placeholder="Enter Staff Subject" type="number">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
               <mat-label>Salary</mat-label>
               <input matInput placeholder="Enter Staff Salary" type="number">
             </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Mobile Number</mat-label>
+              <input matInput placeholder="Enter Staff Salary" type="number">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Gender</mat-label>
+              <mat-select>
+                  <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                      {{gender.viewValue}}
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
             <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Edit
               Details</button>
           </form>

@@ -3,6 +3,7 @@ import { HandledComponent } from '../handled/handled.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ViewstudentComponent } from '../viewstudent/viewstudent.component';
 import { AddmarksComponent } from '../addmarks/addmarks.component';
+import { TeacherattendComponent } from '../teacherattend/teacherattend.component';
 
 interface Gender {
   value: string;
@@ -19,6 +20,12 @@ interface Class {
   }
 
   interface Day {
+    value: string;
+    viewValue: string;
+  }
+
+
+  interface Month {
     value: string;
     viewValue: string;
   }
@@ -83,7 +90,24 @@ export class TeacherhomeComponent implements OnInit {
 
 
   ];
+  months: Month[] = [
 
+    {value: 'steak-0', viewValue: 'JANUARY'},
+    {value: 'steak-0', viewValue: 'FEBRUARY'},
+    {value: 'steak-0', viewValue: 'MARCH'},
+    {value: 'steak-0', viewValue: 'APRIL'},
+    {value: 'steak-0', viewValue: 'MAY'},
+    {value: 'steak-0', viewValue: 'JULY'},
+    {value: 'steak-0', viewValue: 'AUGUST'},
+    {value: 'steak-0', viewValue: 'SEPTEMBER'},
+    {value: 'steak-0', viewValue: 'OCTOBER'},
+    {value: 'steak-0', viewValue: 'NOVEMBER'},
+    {value: 'steak-0', viewValue: 'DECEMBER'}
+
+
+
+
+  ];
 
   ngOnInit() {
   }
@@ -132,4 +156,16 @@ export class TeacherhomeComponent implements OnInit {
   }
     // viewstudent ends
 
+open3()
+{
+  const dialogRef = this.dialog.open(TeacherattendComponent, {
+    width: '530px',
+
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
+}
 }

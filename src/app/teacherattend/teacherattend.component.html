@@ -1,0 +1,80 @@
+<div class="container-fluid mt-5">
+<div class="row">
+    <div class="col-sm-12">
+        <h5 class="text-center mb-5">Edit Attendence Details</h5>
+    </div>
+</div>
+
+<div class="row mt-1 mb-3">
+    <div class="col-sm-12">
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Student Id</mat-label>
+                        <input matInput placeholder="Enter Student Id" type="number">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Student Name</mat-label>
+                        <input matInput placeholder="Enter Student Name" type="number">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Class Name</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let class of classes" [value]="class.value">
+                                {{class.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Section</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let section of sections" [value]="section.value">
+                                {{section.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+<div class="col-sm-6">
+<mat-form-field class="example-full-width">
+<mat-label>Month</mat-label>
+<mat-select>
+<mat-option *ngFor="let month of months" [value]="month.value">
+    {{month.viewValue}}
+</mat-option>
+</mat-select>
+</mat-form-field>
+<mat-form-field class="example-full-width">
+<mat-label>Number Of Days</mat-label>
+<input matInput placeholder="Enter marks" type="number">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+<mat-label>Present Days</mat-label>
+<input matInput placeholder="Enter marks" type="number">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+<mat-label>Absent Days</mat-label>
+<input matInput placeholder="Enter marks" type="number">
+</mat-form-field>
+</div>
+
+            </div>
+
+
+
+
+
+            <button mat-raised-button color="primary" class="btn-block"
+                style="outline:none;">Add Attendence Details</button>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+</div>

@@ -1,42 +1,80 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h5 class="text-center mt-3">Edit Fee Details</h5>
+            <h5 class="text-center mt-3 mb-3">Edit Fee Details</h5>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-3">
         <div class="col-sm-12">
-                <form>
-                        <mat-form-field class="example-full-width">
-                          <mat-label>Serial Number</mat-label>
-      
-                          <input matInput placeholder="Enter Serial Number" type="number">
-      
-                        </mat-form-field>
-                        <mat-form-field class="example-full-width">
-                          <mat-label>Student Name</mat-label>
-                          <input matInput placeholder="Enter Student Name" type="text">
-                        </mat-form-field>
-      
-                        <mat-form-field class="example-full-width">
-                          <mat-label>Class Name</mat-label>
-                          <mat-select>
-                            <mat-option *ngFor="let class   of classes" [value]="class.value">
-                              {{class.viewValue}}
-                            </mat-option>
-                          </mat-select>
-                        </mat-form-field>
-      
-      
-      
-                        <mat-form-field class="example-full-width">
-                          <mat-label>Amount</mat-label>
-                          <input matInput placeholder="Enter Amount" type="number">
-                        </mat-form-field>
-                        <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Fees
-                          structure</button>
-                      </form>
+          <form>
+            <div class="row">
+              <div class="col-sm-6">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Serial Number</mat-label>
+
+                  <input matInput placeholder="Enter Serial Number" type="number">
+
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Student Name</mat-label>
+                  <input matInput placeholder="Enter Student Name" type="text">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Class Name</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let class   of classes" [value]="class.value">
+                      {{class.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Monthly Fee</mat-label>
+                  <input matInput placeholder="Enter Amount" type="number">
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Student Id</mat-label>
+
+                  <input matInput placeholder="Enter Serial Number" type="number">
+                </mat-form-field>
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Section Name</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let section   of sections" [value]="section.value">
+                      {{section.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Sports Fee</mat-label>
+
+                  <input matInput placeholder="Enter Serial Number" type="number">
+                </mat-form-field>
+
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Admission Fee</mat-label>
+                  <input matInput placeholder="Enter Amount" type="number">
+                </mat-form-field>
+              </div>
+
+
+
+            </div>
+
+            <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Edited
+              Details</button>
+          </form>
         </div>
     </div>
 </div>

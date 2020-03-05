@@ -6,12 +6,17 @@ import { AdminstaffComponent } from '../adminstaff/adminstaff.component';
 import { AdminsetexmComponent } from '../adminsetexm/adminsetexm.component';
 import { AdminfeestrucComponent } from '../adminfeestruc/adminfeestruc.component';
 import { AdmineventComponent } from '../adminevent/adminevent.component';
+import { AdminnoticeComponent } from '../adminnotice/adminnotice.component';
+import { AdminnonstaffComponent } from '../adminnonstaff/adminnonstaff.component';
 
 interface Food {
   value: string;
   viewValue: string;
 }
-
+interface Gender {
+  value: string;
+  viewValue: string;
+}
 
 interface Class {
   value: string;
@@ -68,7 +73,11 @@ export class AdminhomeComponent implements OnInit {
     {value: 'steak-0', viewValue: 'XII'},
 
   ];
+  genders: Gender[] = [
 
+    {value: 'steak-0', viewValue: 'Male'},
+    {value: 'pizza-1', viewValue: 'Female'}
+  ];
 
 
 
@@ -126,7 +135,7 @@ export class AdminhomeComponent implements OnInit {
   }
 // subject ends
 
-//  staff 
+//  staff
 
 open2()
 {
@@ -158,7 +167,7 @@ openn()
 // fee
 open7()
 {
-  const dialogRef = this.dialog.open(AdmineventComponent, {
+  const dialogRef = this.dialog.open(AdminfeestrucComponent, {
     width: '530px',
 
   });
@@ -184,6 +193,35 @@ open10()
   });
 }
 //  event ends
+
+// notice
+open11()
+{
+  const dialogRef = this.dialog.open(AdminnoticeComponent, {
+    width: '530px',
+
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
+}
+
+open12()
+{
+  const dialogRef = this.dialog.open(AdminnonstaffComponent, {
+    width: '530px',
+
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
+}
+
+// notice ends
 }
 
 

@@ -4,11 +4,11 @@ interface Gender {
   viewValue: string;
 }
 @Component({
-  selector: 'app-adminstaff',
-  templateUrl: './adminstaff.component.html',
-  styleUrls: ['./adminstaff.component.scss']
+  selector: 'app-adminnonstaff',
+  templateUrl: './adminnonstaff.component.html',
+  styleUrls: ['./adminnonstaff.component.scss']
 })
-export class AdminstaffComponent implements OnInit {
+export class AdminnonstaffComponent implements OnInit {
 
   constructor() { }
   genders: Gender[] = [
@@ -19,5 +19,4 @@ export class AdminstaffComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

@@ -1,20 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-
 interface Class {
   value: string;
   viewValue: string;
 }
-interface Section {
+
+interface Month {
   value: string;
   viewValue: string;
 }
 
+interface Section {
+  value: string;
+  viewValue: string;
+}
 @Component({
-  selector: 'app-adminfeestruc',
-  templateUrl: './adminfeestruc.component.html',
-  styleUrls: ['./adminfeestruc.component.scss']
+  selector: 'app-teacherattend',
+  templateUrl: './teacherattend.component.html',
+  styleUrls: ['./teacherattend.component.scss']
 })
-export class AdminfeestrucComponent implements OnInit {
+export class TeacherattendComponent implements OnInit {
 
   constructor() { }
   classes: Class[] = [
@@ -35,6 +39,10 @@ export class AdminfeestrucComponent implements OnInit {
   ];
 
 
+
+
+
+
   sections: Section[] = [
 
     {value: 'steak-0', viewValue: 'A'},
@@ -49,8 +57,24 @@ export class AdminfeestrucComponent implements OnInit {
 
 
   ];
+  months: Month[] = [
 
+    {value: 'steak-0', viewValue: 'JANUARY'},
+    {value: 'steak-0', viewValue: 'FEBRUARY'},
+    {value: 'steak-0', viewValue: 'MARCH'},
+    {value: 'steak-0', viewValue: 'APRIL'},
+    {value: 'steak-0', viewValue: 'MAY'},
+    {value: 'steak-0', viewValue: 'JULY'},
+    {value: 'steak-0', viewValue: 'AUGUST'},
+    {value: 'steak-0', viewValue: 'SEPTEMBER'},
+    {value: 'steak-0', viewValue: 'OCTOBER'},
+    {value: 'steak-0', viewValue: 'NOVEMBER'},
+    {value: 'steak-0', viewValue: 'DECEMBER'}
+
+
+
+
+  ];
   ngOnInit() {
   }
-
 }

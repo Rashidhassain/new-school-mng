@@ -40,6 +40,9 @@ import { AdminsetexmComponent } from './adminsetexm/adminsetexm.component';
 import { AdminfeestrucComponent } from './adminfeestruc/adminfeestruc.component';
 import { AdmineventComponent } from './adminevent/adminevent.component';
 import { AdminnoticeComponent } from './adminnotice/adminnotice.component';
+import { TeacherattendComponent } from './teacherattend/teacherattend.component';
+import { AdminnonstaffComponent } from './adminnonstaff/adminnonstaff.component';
+import { AdminadmissComponent } from './adminadmiss/adminadmiss.component';
 
 
 @NgModule({
@@ -69,6 +72,9 @@ import { AdminnoticeComponent } from './adminnotice/adminnotice.component';
     AdminfeestrucComponent,
     AdmineventComponent,
     AdminnoticeComponent,
+    TeacherattendComponent,
+    AdminnonstaffComponent,
+    AdminadmissComponent,
 
   ],
   imports: [

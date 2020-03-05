@@ -1,1 +1,61 @@
-<p>adminnotice works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h5 class="text-center mt-3">Edit Notice Details</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <form>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Serial Number</mat-label>
+                      <input matInput placeholder="Enter Serial Number" type="text">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Class Name</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let class   of classes" [value]="class.value">
+                          {{class.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Title</mat-label>
+                      <input matInput placeholder="Enter Notice Title" type="text">
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-6">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Notice</mat-label>
+                      <textarea matInput placeholder="Enter Notice"></textarea>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Start Date</mat-label>
+                      <input matInput [matDatepicker]="picker4">
+                      <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                      <mat-datepicker #picker4></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>End Date</mat-label>
+                      <input matInput [matDatepicker]="picker5">
+                      <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                      <mat-datepicker #picker5></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+
+                </div>
+
+
+                <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Notice
+                  Details</button>
+              </form>
+        </div>
+    </div>
+</div>

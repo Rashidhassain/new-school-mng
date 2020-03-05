@@ -24,6 +24,8 @@ import { AdminstaffComponent } from './adminstaff/adminstaff.component';
 import { AdminsubjectComponent } from './adminsubject/adminsubject.component';
 import { AdminfeestrucComponent } from './adminfeestruc/adminfeestruc.component';
 import { AdminnoticeComponent } from './adminnotice/adminnotice.component';
+import { TeacherattendComponent } from './teacherattend/teacherattend.component';
+import { AdminnonstaffComponent } from './adminnonstaff/adminnonstaff.component';
 
 
 const routes: Routes = [
@@ -50,7 +52,11 @@ const routes: Routes = [
   { path: 'adminstaff', component: AdminstaffComponent },
   { path: 'adminsubject', component: AdminsubjectComponent },
   { path: 'adminfeestruc', component: AdminfeestrucComponent },
-  { path: 'adminnotice', component: AdminnoticeComponent }
+  { path: 'adminnotice', component: AdminnoticeComponent },
+  { path: 'teacherattend', component: TeacherattendComponent },
+  { path: 'adminnonstaff', component: AdminnonstaffComponent }
+
+
 
 
 
