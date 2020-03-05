@@ -162,7 +162,7 @@
                     <td>5th</td>
 
 
-                    <td><button mat-raised-button color="primary" style="outline:none;"(click)="open()">Edit</button>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open()">Edit</button>
 
                     <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </td>
@@ -173,7 +173,7 @@
                     <td>5th</td>
 
 
-                    <td><button mat-raised-button color="primary" style="outline:none;"(click)="open()">Edit</button>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open()">Edit</button>
 
                     <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
                     </td>
@@ -201,53 +201,53 @@
                 <div class="card">
                   <form>
 
-<div class="row">
-  <div class="col-sm-6">
+                    <div class="row">
+                      <div class="col-sm-6">
 
 
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Serial Number</mat-label>
-                      <input matInput placeholder="Enter Serial Number" type="number">
-                    </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Serial Number</mat-label>
+                          <input matInput placeholder="Enter Serial Number" type="number">
+                        </mat-form-field>
 
 
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Class Name</mat-label>
-                      <mat-select>
-                        <mat-option *ngFor="let class   of classes" [value]="class.value">
-                          {{class.viewValue}}
-                        </mat-option>
-                      </mat-select>
-                    </mat-form-field>
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Section Name</mat-label>
-                      <mat-select>
-                        <mat-option *ngFor="let section   of sections" [value]="section.value">
-                          {{section.viewValue}}
-                        </mat-option>
-                      </mat-select>
-                    </mat-form-field>
-</div>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Class Name</mat-label>
+                          <mat-select>
+                            <mat-option *ngFor="let class   of classes" [value]="class.value">
+                              {{class.viewValue}}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Section Name</mat-label>
+                          <mat-select>
+                            <mat-option *ngFor="let section   of sections" [value]="section.value">
+                              {{section.viewValue}}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
 
-<div class="col-sm-6">
-  <mat-form-field class="example-full-width">
-    <mat-label>Date</mat-label>
-    <input matInput [matDatepicker]="picker1">
-    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-    <mat-datepicker #picker1></mat-datepicker>
-  </mat-form-field>
+                      <div class="col-sm-6">
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Date</mat-label>
+                          <input matInput [matDatepicker]="picker1">
+                          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                          <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Subject Name</mat-label>
-    <input matInput placeholder="Enter Subject Name" type="text">
-  </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Subject Name</mat-label>
+                          <input matInput placeholder="Enter Subject Name" type="text">
+                        </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Staff Name</mat-label>
-    <input matInput placeholder="Enter Staff Name" type="text">
-  </mat-form-field>
-</div>
-</div>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Staff Name</mat-label>
+                          <input matInput placeholder="Enter Staff Name" type="text">
+                        </mat-form-field>
+                      </div>
+                    </div>
 
                     <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Subject
                       Details</button>
@@ -263,74 +263,74 @@
 
 
       <mat-tab label="View Subject">
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h3 class="text-center mt-5">View Subject Details</h3>
-    </div>
-  </div>
-</div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-center mt-5">View Subject Details</h3>
+            </div>
+          </div>
+        </div>
 
         <div class="conatiner">
-        <table class="table mt-5">
-          <thead>
-            <tr>
-              <th scope="col">Sl.No</th>
-              <th scope="col">subject Name</th>
-              <th scope="col">Class Name</th>
-              <th scope="col">Section</th>
+          <table class="table mt-5">
+            <thead>
+              <tr>
+                <th scope="col">Sl.No</th>
+                <th scope="col">subject Name</th>
+                <th scope="col">Class Name</th>
+                <th scope="col">Section</th>
 
-              <th scope="col">Date</th>
-              <th scope="col">Staff Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Staff Name</th>
 
-              <th scope="col">Edit</th>
+                <th scope="col">Edit</th>
 
-              <th scope="col">Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>English</td>
-              <td>5th</td>
-              <td>02/02/2020</td>
-              <td>abcd</td>
-              <td>abcd</td>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>English</td>
+                <td>5th</td>
+                <td>02/02/2020</td>
+                <td>abcd</td>
+                <td>abcd</td>
 
-              <td><button mat-raised-button color="primary" style="outline:none;" (click)="open1()">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open1()">Edit</button>
 
-              <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Maths</td>
-              <td>5th</td>
-              <td>02/02/2020</td>
-              <td>abcd</td>
-              <td>abcd</td>
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Maths</td>
+                <td>5th</td>
+                <td>02/02/2020</td>
+                <td>abcd</td>
+                <td>abcd</td>
 
-              <td><button mat-raised-button color="primary" style="outline:none;"(click)="open1()">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open1()">Edit</button>
 
-              <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Science</td>
-              <td>5th</td>
-              <td>02/02/2020</td>
-              <td>abcd</td>
-              <td>abcd</td>
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Science</td>
+                <td>5th</td>
+                <td>02/02/2020</td>
+                <td>abcd</td>
+                <td>abcd</td>
 
-              <td><button mat-raised-button color="primary" style="outline:none;"(click)="open1()">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open1()">Edit</button>
 
-              <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-</div>
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </mat-tab>
       <mat-tab label="Staff">
         <div class="container-fluid">
@@ -397,7 +397,7 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>Otto</td>
-                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open2()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
               </tr>
@@ -405,7 +405,7 @@
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>Otto</td>
-                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open2()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
               </tr>
@@ -413,7 +413,7 @@
                 <td>Larry</td>
                 <td>the Bird</td>
                 <td>Otto</td>
-                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open2()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
               </tr>
@@ -483,64 +483,71 @@
       </mat-tab>
 
 
-<mat-tab label="View Exam">
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h3 class="text-center mt-4">View Exam Details</h3>
-    </div>
-  </div>
-</div>
+      <mat-tab label="View Exam">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-center mt-4">View Exam Details</h3>
+            </div>
+          </div>
+        </div>
 
-<div class="container">
-  <table class="table mt-4">
-    <thead>
-      <tr>
-        <!-- <th scope="col">#</th> -->
-        <th scope="col">Exam Name</th>
-        <th scope="col">Class Name</th>
-        <th scope="col">Subject</th>
+        <div class="container">
+          <table class="table mt-4">
+            <thead>
+              <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Exam Name</th>
+                <th scope="col">Class Name</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Date</th>
 
-        <th scope="col">Edit</th>
-        <th scope="col">Delete</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
 
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <!-- <th scope="row">1</th> -->
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!-- <th scope="row">1</th> -->
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
 
-        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="openn()">Edit</button>
 
-      </tr>
-      <tr>
-        <!-- <th scope="row">2</th> -->
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
-        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-      </tr>
-      <tr>
-        <!-- <th scope="row">3</th> -->
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+              </tr>
+              <tr>
+                <!-- <th scope="row">2</th> -->
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>@mdo</td>
 
-        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="openn()">Edit</button>
 
-      </tr>
-    </tbody>
-  </table>
-</div>
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </tr>
+              <tr>
+                <!-- <th scope="row">3</th> -->
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>@mdo</td>
 
-</mat-tab>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="openn()">Edit</button>
+
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </mat-tab>
 
 
 
@@ -588,63 +595,78 @@
                 </form>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="container">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <!-- <th scope="col">#</th> -->
-                      <th scope="col">Serial.No</th>
-                      <th scope="col">Std.Name</th>
-                      <th scope="col">Cls.Name</th>
-                      <th scope="col">Amount</th>
-                      <th scope="col">Edit</th>
-
-                      <th scope="col">Delete</th>
-
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <!-- <th scope="row">1</th> -->
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>@mdo</td>
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-
-                    </tr>
-                    <tr>
-                      <!-- <th scope="row">2</th> -->
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>@fat</td>
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                    </tr>
-                    <tr>
-                      <!-- <th scope="row">3</th> -->
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                      <td>@fat</td>
-                      <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
-
-                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            
           </div>
         </div>
 
       </mat-tab>
+
+      <mat-tab label="View Fee structure">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-center mt-4">View Fee Structure</h3>
+
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-sm-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <!-- <th scope="col">#</th> -->
+                    <th scope="col">Serial.No</th>
+                    <th scope="col">Std.Name</th>
+                    <th scope="col">Cls.Name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Edit</th>
+
+                    <th scope="col">Delete</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- <th scope="row">1</th> -->
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open7()">Edit</button>
+
+                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+                  </tr>
+                  <tr>
+                    <!-- <th scope="row">2</th> -->
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>@fat</td>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open7()">Edit</button>
+
+                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                  </tr>
+                  <tr>
+                    <!-- <th scope="row">3</th> -->
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>@fat</td>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open7()">Edit</button>
+
+                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+      </mat-tab>
+
       <mat-tab label="Event">
 
         <div class="container">
@@ -733,7 +755,7 @@
               <tr>
                 <!-- <th scope="col">#</th> -->
                 <th scope="col">Serial.No</th>
-                <th scope="col">Cls.Name</th>
+                <th scope="col">Class.Name</th>
                 <th scope="col">Event</th>
                 <th scope="col">Date</th>
                 <th scope="col">Shift</th>
@@ -751,7 +773,7 @@
                 <td>@mdo</td>
                 <td>@mdo</td>
                 <td>@mdo</td>
-                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open10()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
@@ -763,7 +785,7 @@
                 <td>@fat</td>
                 <td>@fat</td>
                 <td>@mdo</td>
-                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;"(click)="open10()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
               </tr>
@@ -774,7 +796,7 @@
                 <td>@twitter</td>
                 <td>@fat</td>
                 <td>@mdo</td>
-                <td><button mat-raised-button color="primary" style="outline:none;">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;"(click)="open10()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 

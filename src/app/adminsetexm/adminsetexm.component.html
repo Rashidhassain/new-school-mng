@@ -1,1 +1,48 @@
-<p>adminsetexm works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h5 class="text-center mt-3">Edit Exam Details</h5>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col-sm-12">
+            <form>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Exam Name</mat-label>
+                      <input matInput placeholder="Enter Exam Name" type="text">
+                    </mat-form-field>
+
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Class Name</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let class   of classes" [value]="class.value">
+                          {{class.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Subject</mat-label>
+                      <input matInput placeholder="Enter Subject Name" type="text">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Date</mat-label>
+                      <input matInput [matDatepicker]="picker">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+
+
+
+                    <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Exam
+                      Details</button>
+                  </form>
+    </div>
+</div>    
+</div>

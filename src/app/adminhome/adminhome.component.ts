@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AdminclassComponent } from '../adminclass/adminclass.component';
 import { MatDialog } from '@angular/material';
 import { AdminsubjectComponent } from '../adminsubject/adminsubject.component';
+import { AdminstaffComponent } from '../adminstaff/adminstaff.component';
+import { AdminsetexmComponent } from '../adminsetexm/adminsetexm.component';
+import { AdminfeestrucComponent } from '../adminfeestruc/adminfeestruc.component';
+import { AdmineventComponent } from '../adminevent/adminevent.component';
 
 interface Food {
   value: string;
@@ -122,5 +126,64 @@ export class AdminhomeComponent implements OnInit {
   }
 // subject ends
 
+//  staff 
 
+open2()
+{
+  const dialogRef = this.dialog.open(AdminstaffComponent, {
+    width: '530px',
+
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
 }
+//  staff ends
+openn()
+{
+  const dialogRef = this.dialog.open(AdminsetexmComponent, {
+    width: '530px',
+
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
+}
+
+
+// fee
+open7()
+{
+  const dialogRef = this.dialog.open(AdmineventComponent, {
+    width: '530px',
+
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
+}
+
+// fee ends
+// event
+open10()
+{
+  const dialogRef = this.dialog.open(AdmineventComponent, {
+    width: '530px',
+
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
+}
+//  event ends
+}
+
+

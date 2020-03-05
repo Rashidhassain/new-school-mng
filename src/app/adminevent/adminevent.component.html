@@ -1,1 +1,64 @@
-<p>adminevent works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h5 class="text-center mt-4">Edit Event Details</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+                <form>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <mat-form-field class="example-full-width">
+                              <mat-label>Serial Number</mat-label>
+      
+                              <input matInput placeholder="Enter Serial Name" type="number">
+                            </mat-form-field>
+      
+                            <mat-form-field class="example-full-width">
+                              <mat-label>Class Name</mat-label>
+                              <mat-select>
+                                <mat-option *ngFor="let class   of classes" [value]="class.value">
+                                  {{class.viewValue}}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+      
+      
+      
+      
+      
+      
+      
+                            <mat-form-field class="example-full-width">
+                              <mat-label>Event</mat-label>
+                              <input matInput placeholder="Enter Event Name" type="text">
+                            </mat-form-field>
+                          </div>
+                          <div class="col-sm-6">
+                            <mat-form-field class="example-full-width">
+                              <mat-label>Date</mat-label>
+                              <input matInput [matDatepicker]="picker3">
+                              <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                              <mat-datepicker #picker3></mat-datepicker>
+                            </mat-form-field>
+      
+                            <mat-form-field class="example-full-width">
+                              <mat-label>Shift</mat-label>
+                              <mat-select>
+                                <mat-option *ngFor="let shift of shifts" [value]="shift.value">
+                                  {{shift.viewValue}}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+      
+                          </div>
+                        </div>
+      
+                        <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Event
+                          Details</button>
+                      </form>
+        </div>
+    </div>
+</div>
