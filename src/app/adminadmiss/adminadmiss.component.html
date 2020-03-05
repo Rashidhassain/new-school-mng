@@ -1,1 +1,144 @@
-<p>adminadmiss works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="text-center mt-5">Add Admission Details</h3>
+      </div>
+
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-8 offset-2">
+          <form>
+            <div class="row">
+              <div class="col-sm-6">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Serial Number</mat-label>
+
+                  <input matInput placeholder="Enter Serial Number" type="number">
+
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Student Name</mat-label>
+                  <input matInput placeholder="Enter Student Name" type="text">
+                </mat-form-field>
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Date Of Birth</mat-label>
+                  <input matInput [matDatepicker]="picker10">
+                  <mat-datepicker-toggle matSuffix [for]="picker10"></mat-datepicker-toggle>
+                  <mat-datepicker #picker10></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Father Name</mat-label>
+                  <input matInput placeholder="Enter Amount" type="text">
+                </mat-form-field>
+
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Father Profession</mat-label>
+
+                  <input matInput placeholder="Enter Serial Number" type="text">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Religion</mat-label>
+                  <input matInput placeholder="Enter Amount" type="text">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="Enter Amount" type="email">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>City</mat-label>
+                  <input matInput placeholder="Enter Amount" type="text">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Town</mat-label>
+                  <input matInput placeholder="Enter Amount" type="text">
+                </mat-form-field>
+
+              </div>
+              <div class="col-sm-6">
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Student Id</mat-label>
+
+                  <input matInput placeholder="Enter Serial Number" type="number">
+                </mat-form-field>
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Class Name</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let class   of classes" [value]="class.value">
+                      {{class.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Section Name</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let section   of sections" [value]="section.value">
+                      {{section.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Mother Name</mat-label>
+
+                  <input matInput placeholder="Enter Serial Number" type="text">
+                </mat-form-field>
+
+
+
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Mother Profession</mat-label>
+                  <input matInput placeholder="Enter Amount" type="text">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Nationality</mat-label>
+                  <input matInput placeholder="Enter Amount" type="text">
+                </mat-form-field>
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Address</mat-label>
+                  <textarea matInput placeholder="Enter Address"></textarea>
+                </mat-form-field>
+
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Village</mat-label>
+                  <input matInput placeholder="Enter Amount" type="text">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Gender</mat-label>
+                  <mat-select>
+                      <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                          {{gender.viewValue}}
+                      </mat-option>
+                  </mat-select>
+              </mat-form-field>
+              </div>
+
+            </div>
+
+            <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Fees
+              structure</button>
+          </form>
+      </div>
+
+    </div>
+  </div>

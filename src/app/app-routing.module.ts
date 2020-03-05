@@ -26,7 +26,7 @@ import { AdminfeestrucComponent } from './adminfeestruc/adminfeestruc.component'
 import { AdminnoticeComponent } from './adminnotice/adminnotice.component';
 import { TeacherattendComponent } from './teacherattend/teacherattend.component';
 import { AdminnonstaffComponent } from './adminnonstaff/adminnonstaff.component';
-
+import { AdminadmissComponent } from './adminadmiss/adminadmiss.component';
 
 const routes: Routes = [
   { path: 'header', component: HeaderComponent },
@@ -54,7 +54,9 @@ const routes: Routes = [
   { path: 'adminfeestruc', component: AdminfeestrucComponent },
   { path: 'adminnotice', component: AdminnoticeComponent },
   { path: 'teacherattend', component: TeacherattendComponent },
-  { path: 'adminnonstaff', component: AdminnonstaffComponent }
+  { path: 'adminnonstaff', component: AdminnonstaffComponent },
+  { path: 'adminadmiss', component: AdminadmissComponent }
+
 
 
 

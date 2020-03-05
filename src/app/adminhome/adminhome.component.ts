@@ -8,6 +8,7 @@ import { AdminfeestrucComponent } from '../adminfeestruc/adminfeestruc.component
 import { AdmineventComponent } from '../adminevent/adminevent.component';
 import { AdminnoticeComponent } from '../adminnotice/adminnotice.component';
 import { AdminnonstaffComponent } from '../adminnonstaff/adminnonstaff.component';
+import { AdminadmissComponent } from '../adminadmiss/adminadmiss.component';
 
 interface Food {
   value: string;
@@ -220,7 +221,18 @@ open12()
     console.log('The dialog was closed');
   });
 }
+open13()
+{
+  const dialogRef = this.dialog.open(AdminadmissComponent, {
+    width: '530px',
 
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
+}
 // notice ends
 }
 
