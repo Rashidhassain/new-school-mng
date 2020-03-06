@@ -4,6 +4,7 @@ import { Demo2Component } from '../demo2/demo2.component';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { RestService } from '../rest.service';
 import { Register } from '../models/model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher',
@@ -18,7 +19,7 @@ export class TeacherComponent implements OnInit
   successfull: boolean = false;
 
 
-  constructor(private formBuilder: FormBuilder, private rest: RestService, public dialog: MatDialog)
+  constructor(private root:Router,private formBuilder: FormBuilder, private rest: RestService, public dialog: MatDialog)
 {
     this.forms = this.formBuilder.group({
       email: ['', [Validators.required]],
@@ -53,7 +54,8 @@ login()
       if (result === undefined) {
         console.log(result);
       } else {
-        // this.rest.sendToken(result.accessToken);
+        this.rest.sendToken(result.accessToken);
+        this.root.navigate(['/teacherhome']);
         this.successfull = true;
         // this.invalidlogin = false;
       }

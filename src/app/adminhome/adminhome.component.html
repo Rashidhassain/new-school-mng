@@ -96,19 +96,19 @@
           <div class="row mt-5">
             <div class="col-sm-5">
               <div class="card">
-                <form>
+                <form >
 
 
                   <mat-form-field class="example-full-width">
                     <mat-label>Serial Number</mat-label>
-                    <input matInput placeholder="Enter Serial Number" type="number">
+                    <input matInput placeholder="Enter Serial Number" type="number" formControlName="serial">
                   </mat-form-field>
 
 
                   <mat-form-field class="example-full-width">
                     <mat-label>Class Name</mat-label>
                     <mat-select>
-                      <mat-option *ngFor="let class of classes" [value]="class.value">
+                      <mat-option *ngFor="let class of classes" [value]="class.value" formControlName="class">
                         {{class.viewValue}}
                       </mat-option>
                     </mat-select>
@@ -117,7 +117,7 @@
                   <mat-form-field class="example-full-width">
                     <mat-label>Section</mat-label>
                     <mat-select>
-                      <mat-option *ngFor="let section of sections" [value]="section.value">
+                      <mat-option *ngFor="let section of sections" [value]="section.value" formControlName="section">
                         {{section.viewValue}}
                       </mat-option>
                     </mat-select>
@@ -125,11 +125,11 @@
                   <mat-form-field class="example-full-width">
                     <mat-label>Gender</mat-label>
                     <mat-select>
-                        <mat-option *ngFor="let gender of genders" [value]="gender.value">
-                            {{gender.viewValue}}
-                        </mat-option>
+                      <mat-option *ngFor="let gender of genders" [value]="gender.value" formControlName="gender">
+                        {{gender.viewValue}}
+                      </mat-option>
                     </mat-select>
-                </mat-form-field>
+                  </mat-form-field>
 
                   <div class="text-center"><button mat-raised-button color="primary" class="btn-block"
                       style="outline:none;">Add Class Details</button></div>
@@ -153,39 +153,19 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>English</td>
-                    <td>5th</td>
 
 
-                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open()">Edit</button>
+                    <tr *ngFor="let t of teacher">
+                      <td>{{t.name}}</td>
+                      <td>{{t.phone}}</td>
+                      <td>{{t.email}}</td>
 
-                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Maths</td>
-                    <td>5th</td>
-
-
-                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open()">Edit</button>
-
-                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Science</td>
-                    <td>5th</td>
+                      <td><button mat-raised-button color="primary" style="outline:none;" (click)="open()">Edit</button>
+                      <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                      </td>
+                    </tr>
 
 
-                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open()">Edit</button>
-
-                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
 
@@ -326,11 +306,11 @@
                       <mat-form-field class="example-full-width">
                         <mat-label>Gender</mat-label>
                         <mat-select>
-                            <mat-option *ngFor="let gender of genders" [value]="gender.value">
-                                {{gender.viewValue}}
-                            </mat-option>
+                          <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                            {{gender.viewValue}}
+                          </mat-option>
                         </mat-select>
-                    </mat-form-field>
+                      </mat-form-field>
                     </div>
 
                   </div>
@@ -347,122 +327,122 @@
       </mat-tab>
 
 
-<mat-tab label="View Admission">
-<div class="container-fluid">
+      <mat-tab label="View Admission">
+        <div class="container-fluid">
 
-<div class="row">
-  <div class="col-sm-12">
-
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Sl.No</th>
-        <th scope="col">Student.Id</th>
-        <th scope="col">Student.Name</th>
-        <th scope="col">Cls.Name</th>
-        <th scope="col">D.O.B</th>
-
-        <th scope="col">Section</th>
-        <th scope="col">F.Name</th>
-        <th scope="col">M.Name</th>
-        <th scope="col">F.Profession</th>
-        <th scope="col">M.Profession</th>
-        <th scope="col">Religion</th>
-        <th scope="col">Nationality</th>
-        <th scope="col">Email</th>
-        <th scope="col">Address</th>
-        <th scope="col">City</th>
-        <th scope="col">Village</th>
-        <th scope="col">Town</th>
-        <th scope="col">Gender</th>
+          <div class="row">
+            <div class="col-sm-12">
 
 
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Sl.No</th>
+                    <th scope="col">Student.Id</th>
+                    <th scope="col">Student.Name</th>
+                    <th scope="col">Cls.Name</th>
+                    <th scope="col">D.O.B</th>
 
-        <th scope="col">Edit</th>
+                    <th scope="col">Section</th>
+                    <th scope="col">F.Name</th>
+                    <th scope="col">M.Name</th>
+                    <th scope="col">F.Profession</th>
+                    <th scope="col">M.Profession</th>
+                    <th scope="col">Religion</th>
+                    <th scope="col">Nationality</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Village</th>
+                    <th scope="col">Town</th>
+                    <th scope="col">Gender</th>
 
-        <th scope="col">Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td><button mat-raised-button color="primary" style="outline:none;" (click)="open13()">Edit</button>
 
-        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td><button mat-raised-button color="primary" style="outline:none;" (click)="open13()">Edit</button>
 
-        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td>5th</td>
-        <td>English</td>
-        <td>5th</td>
-        <td><button mat-raised-button color="primary" style="outline:none;" (click)="open13()">Edit</button>
+                    <th scope="col">Edit</th>
 
-        <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  </div>
-  </div>
-</mat-tab>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open13()">Edit</button>
+
+                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open13()">Edit</button>
+
+                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td>5th</td>
+                    <td>English</td>
+                    <td>5th</td>
+                    <td><button mat-raised-button color="primary" style="outline:none;" (click)="open13()">Edit</button>
+
+                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
 
 
 
@@ -655,11 +635,11 @@
                     <mat-form-field class="example-full-width">
                       <mat-label>Gender</mat-label>
                       <mat-select>
-                          <mat-option *ngFor="let gender of genders" [value]="gender.value">
-                              {{gender.viewValue}}
-                          </mat-option>
+                        <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                          {{gender.viewValue}}
+                        </mat-option>
                       </mat-select>
-                  </mat-form-field>
+                    </mat-form-field>
                     <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Staff
                       Details</button>
                   </form>
@@ -748,140 +728,140 @@
       </mat-tab>
 
 
-<mat-tab label="Non-Teaching Staff">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
+      <mat-tab label="Non-Teaching Staff">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
 
-        <h3 class="text-center mt-5 ml-2">Add Teaching Staff Details</h3>
+              <h3 class="text-center mt-5 ml-2">Add Teaching Staff Details</h3>
 
-      </div>
+            </div>
 
-    </div>
+          </div>
 
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-sm-8 offset-2">
-          <div class="card">
-            <form>
-              <mat-form-field class="example-full-width">
-                <mat-label>Serial Number</mat-label>
-                <input matInput placeholder="Enter Serial Number" type="number">
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <mat-label>Staff Name</mat-label>
-                <input matInput placeholder="Enter Staff Name" type="text">
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <mat-label>Qualification</mat-label>
-                <input matInput placeholder="Enter Staff Qualification" type="text">
-              </mat-form-field>
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-sm-8 offset-2">
+                <div class="card">
+                  <form>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Serial Number</mat-label>
+                      <input matInput placeholder="Enter Serial Number" type="number">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Staff Name</mat-label>
+                      <input matInput placeholder="Enter Staff Name" type="text">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Qualification</mat-label>
+                      <input matInput placeholder="Enter Staff Qualification" type="text">
+                    </mat-form-field>
 
-              <mat-form-field class="example-full-width">
-                <mat-label>Salary</mat-label>
-                <input matInput placeholder="Enter Staff Salary" type="number">
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <mat-label>Mobile Number</mat-label>
-                <input matInput placeholder="Enter Staff Mobile.No" type="number">
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <mat-label>Staff Type</mat-label>
-                <input matInput placeholder="Enter Staff Type eg:clerk" type="text">
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <mat-label>Gender</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let gender of genders" [value]="gender.value">
-                        {{gender.viewValue}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-              <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Staff
-                Details</button>
-            </form>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Salary</mat-label>
+                      <input matInput placeholder="Enter Staff Salary" type="number">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Mobile Number</mat-label>
+                      <input matInput placeholder="Enter Staff Mobile.No" type="number">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Staff Type</mat-label>
+                      <input matInput placeholder="Enter Staff Type eg:clerk" type="text">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Gender</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                          {{gender.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Staff
+                      Details</button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
+      </mat-tab>
 
-      </div>
-    </div>
-  </div>
-</mat-tab>
+      <mat-tab label="View Non-Teaching Staff">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="text-center mt-4">View Non-Teaching Staff Details</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <table class="table mt-5">
+            <thead>
+              <tr>
+                <th scope="col">Serial Number</th>
 
-<mat-tab label="View Non-Teaching Staff">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h3 class="text-center mt-4">View Non-Teaching Staff Details</h3>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <table class="table mt-5">
-      <thead>
-        <tr>
-          <th scope="col">Serial Number</th>
+                <th scope="col">Staff Name</th>
+                <th scope="col">Qualification</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">Staff Type</th>
 
-          <th scope="col">Staff Name</th>
-          <th scope="col">Qualification</th>
-          <th scope="col">Salary</th>
-          <th scope="col">Mobile Number</th>
-          <th scope="col">Staff Type</th>
+                <th scope="col">Gender</th>
 
-          <th scope="col">Gender</th>
+                <th scope="col">Edit</th>
 
-          <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Mark</td>
 
-          <th scope="col">Delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Mark</td>
-          <td>Mark</td>
+                <td>Otto</td>
+                <td>Otto</td>
+                <td>1234567890</td>
+                <td>Otto</td>
+                <td>Otto</td>
 
-          <td>Otto</td>
-          <td>Otto</td>
-          <td>1234567890</td>
-          <td>Otto</td>
-          <td>Otto</td>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open12()">Edit</button>
 
-          <td><button mat-raised-button color="primary" style="outline:none;" (click)="open12()">Edit</button>
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
 
-          <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-        </tr>
-        <tr>
-          <td>Mark</td>
-          <td>Otto</td>
+                <td>Jacob</td>
+                <td>Otto</td>
+                <td>Otto</td>
+                <td>1234567890</td>
+                <td>Otto</td>
 
-          <td>Jacob</td>
-          <td>Otto</td>
-          <td>Otto</td>
-          <td>1234567890</td>
-          <td>Otto</td>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open2()">Edit</button>
 
-          <td><button mat-raised-button color="primary" style="outline:none;" (click)="open2()">Edit</button>
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
 
-          <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-        </tr>
-        <tr>
-          <td>Mark</td>
-          <td>Otto</td>
+                <td>Larry</td>
+                <td>Otto</td>
+                <td>Otto</td>
+                <td>1234567890</td>
+                <td>Otto</td>
 
-          <td>Larry</td>
-          <td>Otto</td>
-          <td>Otto</td>
-          <td>1234567890</td>
-          <td>Otto</td>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open2()">Edit</button>
 
-          <td><button mat-raised-button color="primary" style="outline:none;" (click)="open2()">Edit</button>
-
-          <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</mat-tab>
+                <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </mat-tab>
 
 
 
@@ -912,7 +892,6 @@
                         </mat-option>
                       </mat-select>
                     </mat-form-field>
-
 
 
                     <mat-form-field class="example-full-width">
@@ -1320,7 +1299,7 @@
                 <td>@fat</td>
                 <td>@fat</td>
                 <td>@mdo</td>
-                <td><button mat-raised-button color="primary" style="outline:none;"(click)="open10()">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open10()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
               </tr>
@@ -1331,7 +1310,7 @@
                 <td>@twitter</td>
                 <td>@fat</td>
                 <td>@mdo</td>
-                <td><button mat-raised-button color="primary" style="outline:none;"(click)="open10()">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open10()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 
@@ -1458,7 +1437,7 @@
                 <td>@mdo</td>
 
                 <td>02/02/20</td>
-                <td><button mat-raised-button color="primary" style="outline:none;"(click)="open11()">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open11()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
               </tr>
@@ -1472,7 +1451,7 @@
                 <td>@mdo</td>
 
                 <td>02/02/20</td>
-                <td><button mat-raised-button color="primary" style="outline:none;"(click)="open11()">Edit</button>
+                <td><button mat-raised-button color="primary" style="outline:none;" (click)="open11()">Edit</button>
 
                 <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
 

@@ -9,6 +9,8 @@ import { AdmineventComponent } from '../adminevent/adminevent.component';
 import { AdminnoticeComponent } from '../adminnotice/adminnotice.component';
 import { AdminnonstaffComponent } from '../adminnonstaff/adminnonstaff.component';
 import { AdminadmissComponent } from '../adminadmiss/adminadmiss.component';
+import { RestService } from '../rest.service';
+import { FormBuilder } from '@angular/forms';
 
 interface Food {
   value: string;
@@ -54,8 +56,8 @@ interface Section {
   styleUrls: ['./adminhome.component.scss']
 })
 export class AdminhomeComponent implements OnInit {
-
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,private rest:RestService,private formBuilder: FormBuilder,) { }
+teacher;
   foods: Food[] = [
 
     {value: 'steak-0', viewValue: 'Morning'},
@@ -63,6 +65,7 @@ export class AdminhomeComponent implements OnInit {
     {value: 'tacos-2', viewValue: 'Evening'}
   ];
 
+  // tslint:disable-next-line: member-ordering
   classes: Class[] = [
 
     {value: 'steak-0', viewValue: 'I'},
@@ -81,6 +84,7 @@ export class AdminhomeComponent implements OnInit {
   ];
 
 
+  // tslint:disable-next-line: member-ordering
   exams: Exam[] = [
 
     {value: 'steak-0', viewValue: 'Test 1'},
@@ -96,6 +100,7 @@ export class AdminhomeComponent implements OnInit {
   ];
 
 
+  // tslint:disable-next-line: member-ordering
   genders: Gender[] = [
 
     {value: 'steak-0', viewValue: 'Male'},
@@ -121,14 +126,35 @@ export class AdminhomeComponent implements OnInit {
 
   ];
 
+
+
+
+  fetchteacher(){
+    this.rest.fetch().subscribe((result)=>{
+      if(result === undefined){
+      console.log(result);
+      }
+      else{
+        this.teacher=result.teacher;
+        console.log(result);
+      }
+    });
+  }
+
   // startDate = new Date(1990, 0, 1);
 
+
+
+
+
   ngOnInit() {
+    this.fetchteacher();
   }
 
   // class
   open()
   {
+
     const dialogRef = this.dialog.open(AdminclassComponent, {
       width: '530px',
 

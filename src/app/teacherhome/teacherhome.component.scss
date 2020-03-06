@@ -16,7 +16,7 @@
     background:black;
     transition: width .3s;
     height: 2px;
- 
+
 }
 
 .navbar-light .navbar-nav .nav-link:hover::after{
@@ -67,6 +67,9 @@ h6{
 
 }
 
+mat-grid-tile {
+    padding: 12px;
+  }
 
 
 #sec{

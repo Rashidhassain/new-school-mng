@@ -48,7 +48,15 @@ export class RestService {
     localStorage.removeItem('LoggedInRole');
 
   }
+  fetch():Observable<any>{
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
 
+    return this.http.get<any>(endpoint + 'api/teacherList', this.httpOptions);
+  }
   doRegister(data: Register): Observable<any> {
     this.httpOptions = {
       headers: new HttpHeaders({

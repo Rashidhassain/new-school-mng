@@ -5,6 +5,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -91,6 +92,7 @@ import { AdminadmissComponent } from './adminadmiss/adminadmiss.component';
     MatDatepickerModule,
     MatSelectModule,
     MatNativeDateModule,
+    MatGridListModule,
     ReactiveFormsModule
   ],
   providers: [
