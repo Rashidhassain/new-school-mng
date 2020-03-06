@@ -4,6 +4,11 @@ interface Class {
   viewValue: string;
 }
 
+
+interface Exam {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-adminsetexm',
   templateUrl: './adminsetexm.component.html',
@@ -12,9 +17,7 @@ interface Class {
 export class AdminsetexmComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit() {
-  }
+  // tslint:disable-next-line: member-ordering
   classes: Class[] = [
 
     {value: 'steak-0', viewValue: 'I'},
@@ -31,4 +34,21 @@ export class AdminsetexmComponent implements OnInit {
     {value: 'steak-0', viewValue: 'XII'},
 
   ];
+
+  exams: Exam[] = [
+
+    {value: 'steak-0', viewValue: 'Test 1'},
+    {value: 'steak-0', viewValue: 'Test 2	'},
+    {value: 'steak-0', viewValue: 'Test 3'},
+    {value: 'steak-0', viewValue: 'Prepratory 1'},
+    {value: 'steak-0', viewValue: 'Prepratory 2'},
+    {value: 'steak-0', viewValue: 'Prepratory 3	'},
+    {value: 'steak-0', viewValue: 'Mid-Term Exam	'},
+    {value: 'steak-0', viewValue: 'Annual Exam'}
+
+
+  ];
+
+  ngOnInit() {
+  }
 }

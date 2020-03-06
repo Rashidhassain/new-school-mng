@@ -24,6 +24,11 @@ interface Class {
   viewValue: string;
 }
 
+interface Exam {
+  value: string;
+  viewValue: string;
+}
+
 
 interface Section {
   value: string;
@@ -74,6 +79,23 @@ export class AdminhomeComponent implements OnInit {
     {value: 'steak-0', viewValue: 'XII'},
 
   ];
+
+
+  exams: Exam[] = [
+
+    {value: 'steak-0', viewValue: 'Test 1'},
+    {value: 'steak-0', viewValue: 'Test 2	'},
+    {value: 'steak-0', viewValue: 'Test 3'},
+    {value: 'steak-0', viewValue: 'Prepratory 1'},
+    {value: 'steak-0', viewValue: 'Prepratory 2'},
+    {value: 'steak-0', viewValue: 'Prepratory 3	'},
+    {value: 'steak-0', viewValue: 'Mid-Term Exam	'},
+    {value: 'steak-0', viewValue: 'Annual Exam'}
+
+
+  ];
+
+
   genders: Gender[] = [
 
     {value: 'steak-0', viewValue: 'Male'},

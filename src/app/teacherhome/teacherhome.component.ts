@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ViewstudentComponent } from '../viewstudent/viewstudent.component';
 import { AddmarksComponent } from '../addmarks/addmarks.component';
 import { TeacherattendComponent } from '../teacherattend/teacherattend.component';
+import { AdminsetexmComponent } from '../adminsetexm/adminsetexm.component';
 
 interface Gender {
   value: string;
@@ -29,7 +30,10 @@ interface Class {
     value: string;
     viewValue: string;
   }
-
+  interface Exam {
+    value: string;
+    viewValue: string;
+  }
 @Component({
   selector: 'app-teacherhome',
   templateUrl: './teacherhome.component.html',
@@ -77,7 +81,19 @@ export class TeacherhomeComponent implements OnInit {
 
   ];
 
+  exams: Exam[] = [
 
+    {value: 'steak-0', viewValue: 'Test 1'},
+    {value: 'steak-0', viewValue: 'Test 2	'},
+    {value: 'steak-0', viewValue: 'Test 3'},
+    {value: 'steak-0', viewValue: 'Prepratory 1'},
+    {value: 'steak-0', viewValue: 'Prepratory 2'},
+    {value: 'steak-0', viewValue: 'Prepratory 3	'},
+    {value: 'steak-0', viewValue: 'Mid-Term Exam	'},
+    {value: 'steak-0', viewValue: 'Annual Exam'}
+
+
+  ];
   days: Day[] = [
 
     {value: 'steak-0', viewValue: 'Monday'},
@@ -159,6 +175,19 @@ export class TeacherhomeComponent implements OnInit {
 open3()
 {
   const dialogRef = this.dialog.open(TeacherattendComponent, {
+    width: '530px',
+
+  });
+
+  dialogRef.afterClosed().subscribe(result =>
+  {
+    console.log('The dialog was closed');
+  });
+}
+
+openn()
+{
+  const dialogRef = this.dialog.open(AdminsetexmComponent, {
     width: '530px',
 
   });

@@ -29,7 +29,14 @@
                       <mat-label>Subject</mat-label>
                       <input matInput placeholder="Enter Subject Name" type="text">
                     </mat-form-field>
-
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Type Of Exam</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let exam   of exams" [value]="exam.value">
+                          {{exam.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
                     <mat-form-field class="example-full-width">
                       <mat-label>Date</mat-label>
                       <input matInput [matDatepicker]="picker">
@@ -40,9 +47,9 @@
 
 
 
-                    <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Exam
+                    <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Edited
                       Details</button>
                   </form>
     </div>
-</div>    
+</div>
 </div>

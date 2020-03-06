@@ -231,7 +231,7 @@
 
                       <mat-form-field class="example-full-width">
                         <mat-label>Father Name</mat-label>
-                        <input matInput placeholder="Enter Amount" type="text">
+                        <input matInput placeholder="Enter Father Name" type="text">
                       </mat-form-field>
 
 
@@ -239,25 +239,25 @@
                       <mat-form-field class="example-full-width">
                         <mat-label>Father Profession</mat-label>
 
-                        <input matInput placeholder="Enter Serial Number" type="text">
+                        <input matInput placeholder="Enter Father Profession" type="text">
                       </mat-form-field>
 
                       <mat-form-field class="example-full-width">
                         <mat-label>Religion</mat-label>
-                        <input matInput placeholder="Enter Amount" type="text">
+                        <input matInput placeholder="Enter Religion" type="text">
                       </mat-form-field>
                       <mat-form-field class="example-full-width">
                         <mat-label>Email</mat-label>
-                        <input matInput placeholder="Enter Amount" type="email">
+                        <input matInput placeholder="Enter Email" type="email">
                       </mat-form-field>
 
                       <mat-form-field class="example-full-width">
                         <mat-label>City</mat-label>
-                        <input matInput placeholder="Enter Amount" type="text">
+                        <input matInput placeholder="Enter City" type="text">
                       </mat-form-field>
                       <mat-form-field class="example-full-width">
                         <mat-label>Town</mat-label>
-                        <input matInput placeholder="Enter Amount" type="text">
+                        <input matInput placeholder="Enter Town" type="text">
                       </mat-form-field>
 
                     </div>
@@ -267,7 +267,7 @@
                       <mat-form-field class="example-full-width">
                         <mat-label>Student Id</mat-label>
 
-                        <input matInput placeholder="Enter Serial Number" type="number">
+                        <input matInput placeholder="Enter Student Id" type="number">
                       </mat-form-field>
 
 
@@ -294,7 +294,7 @@
                       <mat-form-field class="example-full-width">
                         <mat-label>Mother Name</mat-label>
 
-                        <input matInput placeholder="Enter Serial Number" type="text">
+                        <input matInput placeholder="Enter Mother Name" type="text">
                       </mat-form-field>
 
 
@@ -303,12 +303,12 @@
 
                       <mat-form-field class="example-full-width">
                         <mat-label>Mother Profession</mat-label>
-                        <input matInput placeholder="Enter Amount" type="text">
+                        <input matInput placeholder="Enter Mother Profession" type="text">
                       </mat-form-field>
 
                       <mat-form-field class="example-full-width">
                         <mat-label>Nationality</mat-label>
-                        <input matInput placeholder="Enter Amount" type="text">
+                        <input matInput placeholder="Enter Nationality" type="text">
                       </mat-form-field>
 
 
@@ -320,7 +320,7 @@
 
                       <mat-form-field class="example-full-width">
                         <mat-label>Village</mat-label>
-                        <input matInput placeholder="Enter Amount" type="text">
+                        <input matInput placeholder="Enter Village" type="text">
                       </mat-form-field>
 
                       <mat-form-field class="example-full-width">
@@ -335,8 +335,8 @@
 
                   </div>
 
-                  <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Fees
-                    structure</button>
+                  <button mat-raised-button color="primary" class="btn-block" style="outline:none;">Add Admiision
+                    Details</button>
                 </form>
               </div>
             </div>
@@ -650,7 +650,7 @@
                     </mat-form-field>
                     <mat-form-field class="example-full-width">
                       <mat-label>Mobile Number</mat-label>
-                      <input matInput placeholder="Enter Staff Salary" type="number">
+                      <input matInput placeholder="Enter Staff Mobile.No" type="number">
                     </mat-form-field>
                     <mat-form-field class="example-full-width">
                       <mat-label>Gender</mat-label>
@@ -783,7 +783,7 @@
               </mat-form-field>
               <mat-form-field class="example-full-width">
                 <mat-label>Mobile Number</mat-label>
-                <input matInput placeholder="Enter Staff Salary" type="number">
+                <input matInput placeholder="Enter Staff Mobile.No" type="number">
               </mat-form-field>
               <mat-form-field class="example-full-width">
                 <mat-label>Staff Type</mat-label>
@@ -921,6 +921,15 @@
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width">
+                      <mat-label>Type Of Exam</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let exam   of exams" [value]="exam.value">
+                          {{exam.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
                       <mat-label>Date</mat-label>
                       <input matInput [matDatepicker]="picker">
                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -963,6 +972,8 @@
                 <th scope="col">Exam Name</th>
                 <th scope="col">Class Name</th>
                 <th scope="col">Subject</th>
+                <th scope="col">Type Of Exam</th>
+
                 <th scope="col">Date</th>
 
                 <th scope="col">Edit</th>
@@ -977,6 +988,7 @@
                 <td>Otto</td>
                 <td>@mdo</td>
                 <td>@mdo</td>
+                <td>@mdo</td>
 
                 <td><button mat-raised-button color="primary" style="outline:none;" (click)="openn()">Edit</button>
 
@@ -989,6 +1001,7 @@
                 <td>Thornton</td>
                 <td>@fat</td>
                 <td>@mdo</td>
+                <td>@mdo</td>
 
                 <td><button mat-raised-button color="primary" style="outline:none;" (click)="openn()">Edit</button>
 
@@ -999,6 +1012,7 @@
                 <td>Larry</td>
                 <td>the Bird</td>
                 <td>@twitter</td>
+                <td>@mdo</td>
                 <td>@mdo</td>
 
                 <td><button mat-raised-button color="primary" style="outline:none;" (click)="openn()">Edit</button>
@@ -1053,14 +1067,14 @@
 
                       <mat-form-field class="example-full-width">
                         <mat-label>Monthly Fee</mat-label>
-                        <input matInput placeholder="Enter Amount" type="number">
+                        <input matInput placeholder="Enter Monthly Fee" type="number">
                       </mat-form-field>
                     </div>
                     <div class="col-sm-6">
                       <mat-form-field class="example-full-width">
                         <mat-label>Student Id</mat-label>
 
-                        <input matInput placeholder="Enter Serial Number" type="number">
+                        <input matInput placeholder="Enter Student Id" type="number">
                       </mat-form-field>
 
 
@@ -1076,14 +1090,14 @@
                       <mat-form-field class="example-full-width">
                         <mat-label>Sports Fee</mat-label>
 
-                        <input matInput placeholder="Enter Serial Number" type="number">
+                        <input matInput placeholder="Enter Sports Fee" type="number">
                       </mat-form-field>
 
 
 
                       <mat-form-field class="example-full-width">
                         <mat-label>Admission Fee</mat-label>
-                        <input matInput placeholder="Enter Amount" type="number">
+                        <input matInput placeholder="Enter Admission Fee" type="number">
                       </mat-form-field>
                     </div>
 
