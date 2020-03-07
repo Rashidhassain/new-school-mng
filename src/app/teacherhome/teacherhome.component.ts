@@ -5,6 +5,8 @@ import { ViewstudentComponent } from '../viewstudent/viewstudent.component';
 import { AddmarksComponent } from '../addmarks/addmarks.component';
 import { TeacherattendComponent } from '../teacherattend/teacherattend.component';
 import { AdminsetexmComponent } from '../adminsetexm/adminsetexm.component';
+import { FormBuilder, Validators } from '@angular/forms';
+import { RestService } from '../rest.service';
 
 interface Gender {
   value: string;
@@ -40,8 +42,25 @@ interface Class {
   styleUrls: ['./teacherhome.component.scss']
 })
 export class TeacherhomeComponent implements OnInit {
+  forms: any;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,private formBuilder: FormBuilder, private rest: RestService)
+  {
+    this.forms = this.formBuilder.group({
+      lname: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      tel: ['', [Validators.required]],
+      address: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      number: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+      cpassword: ['', [Validators.required]],
+      role: 'TEACHER',
+    });
+
+
+
+   }
 
 
   genders: Gender[] = [
@@ -124,6 +143,8 @@ export class TeacherhomeComponent implements OnInit {
 
 
   ];
+
+
 
   ngOnInit() {
   }
