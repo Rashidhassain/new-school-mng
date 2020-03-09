@@ -5,8 +5,8 @@ import { ViewstudentComponent } from '../viewstudent/viewstudent.component';
 import { AddmarksComponent } from '../addmarks/addmarks.component';
 import { TeacherattendComponent } from '../teacherattend/teacherattend.component';
 import { AdminsetexmComponent } from '../adminsetexm/adminsetexm.component';
-import { Validators, FormGroup,FormBuilder } from '@angular/forms';
-import { RestService } from '../rest.service';
+// import { Validators, FormGroup,FormBuilder } from '@angular/forms';
+// import { RestService } from '../rest.service';
 
 interface Gender {
   value: string;
@@ -42,19 +42,19 @@ interface Class {
   styleUrls: ['./teacherhome.component.scss']
 })
 export class TeacherhomeComponent implements OnInit {
-  public forms: FormGroup;
-  formBuilder: FormBuilder;
+  // public forms: FormGroup;
+  // formBuilder: FormBuilder;
 
 
-  constructor(public dialog: MatDialog,private rest: RestService,formBuilder: FormBuilder)
+  constructor(public dialog: MatDialog)
   {
-    this.forms = this.formBuilder.group({
-      class: ['', [Validators.required]],
-      subject: ['', [Validators.required]],
-      day: ['', [Validators.required]],
-      date: ['', [Validators.required]],
-      role: 'TEACHER',
-    });
+    // this.forms = this.formBuilder.group({
+    //   class: ['', [Validators.required]],
+    //   subject: ['', [Validators.required]],
+    //   day: ['', [Validators.required]],
+    //   date: ['', [Validators.required]],
+    //   role: 'TEACHER',
+    // });
 
   }
 
