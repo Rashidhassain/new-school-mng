@@ -44,6 +44,7 @@ import { AdminnoticeComponent } from './adminnotice/adminnotice.component';
 import { TeacherattendComponent } from './teacherattend/teacherattend.component';
 import { AdminnonstaffComponent } from './adminnonstaff/adminnonstaff.component';
 import { AdminadmissComponent } from './adminadmiss/adminadmiss.component';
+import { AdminnComponent } from './adminn/adminn.component';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { AdminadmissComponent } from './adminadmiss/adminadmiss.component';
     TeacherattendComponent,
     AdminnonstaffComponent,
     AdminadmissComponent,
+    AdminnComponent,
 
   ],
   imports: [
