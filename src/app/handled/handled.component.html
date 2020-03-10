@@ -15,10 +15,10 @@
       <div class="col-sm-12">
 
           <div class="container mt-4">
-  <form>
+  <form [formGroup]="forms">
     <mat-form-field class="example-full-width">
         <mat-label>Class Name</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="cls" formControlName="cls" >
             <mat-option *ngFor="let class of classes" [value]="class.value">
                 {{class.viewValue}}
             </mat-option>
@@ -27,11 +27,11 @@
 
     <mat-form-field class="example-full-width">
         <mat-label>Subject</mat-label>
-        <input matInput placeholder="Enter Subject Name" type="text">
+        <input formControlName="sub"[(ngModel)]="sub" matInput placeholder="Enter Subject Name" type="text">
     </mat-form-field>
     <mat-form-field class="example-full-width">
         <mat-label>Section</mat-label>
-        <mat-select>
+        <mat-select formControlName="sec"  [(ngModel)]="sec" >
             <mat-option *ngFor="let section of sections" [value]="section.value">
                 {{section.viewValue}}
             </mat-option>
@@ -39,7 +39,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Day</mat-label>
-      <mat-select>
+      <mat-select formControlName="day"  [(ngModel)]="day">
           <mat-option *ngFor="let day of days" [value]="day.value">
               {{day.viewValue}}
           </mat-option>
@@ -47,12 +47,12 @@
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Date</mat-label>
-    <input matInput [matDatepicker]="picker3">
+    <input formControlName="date"  [(ngModel)]="date"matInput [matDatepicker]="picker3">
     <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
     <mat-datepicker #picker3></mat-datepicker>
   </mat-form-field>
     <button mat-raised-button color="primary" class="btn-block"
-        style="outline:none;">Add Edit Details</button>
+        style="outline:none;"(click)="update()">Add Edit Details</button>
 </form>
 
 

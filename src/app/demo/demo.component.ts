@@ -34,7 +34,7 @@ export class DemoComponent implements OnInit
       address: ['', [Validators.required]],
 
       cpassword: ['', [Validators.required]],
-      roles: this.formBuilder.array(['PARENT']),
+      roles: 'PARENT',
     });
   }
   ngOnInit()
@@ -67,6 +67,7 @@ Reg()
     }
   }, (err) =>
   {
+
     if (err.status === 400) {
       this.emailvalid = true;
     }

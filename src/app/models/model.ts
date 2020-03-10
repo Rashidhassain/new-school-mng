@@ -9,3 +9,11 @@ export class Register {
     password: string;
     cpassword: string;
 }
+
+export class Handled{
+    date:string;
+    day:string;
+    sub:string;
+    sec:string;
+    cls:string;
+}

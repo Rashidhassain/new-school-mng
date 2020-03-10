@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Register } from './models/model';
+import { Register, Handled } from './models/model';
 import { Observable } from 'rxjs';
 
 
@@ -22,9 +22,7 @@ export class RestService {
   }
 
   getToken() {
-    // localStorage.removeItem("LoggedInUser");
-
-    return localStorage.getItem('LoggedInUser');
+       return localStorage.getItem('LoggedInUser');
   }
   isLoggednIn() {
     return this.getToken() !== null;
@@ -51,13 +49,37 @@ export class RestService {
   fetch():Observable<any>{
     this.httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'x-access-token':this.getToken()
+
       })
     };
 
     return this.http.get<any>(endpoint + 'api/teacherList', this.httpOptions);
   }
-  doRegister(data: Register): Observable<any> {
+  // parent
+  doRegister(data): Observable<any> {
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    return this.http.post<any>(endpoint + 'api/auth/signups', data, this.httpOptions);
+  }
+
+  doLogin(data: Register): Observable<any> {
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      })
+    };
+
+    return this.http.post<Register>(endpoint + 'api/auth/signin', data, this.httpOptions);
+  }
+
+
+  doReg(data: Register): Observable<any> {
     this.httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -67,26 +89,68 @@ export class RestService {
     return this.http.post<Register>(endpoint + 'api/auth/signup', data, this.httpOptions);
   }
 
-  doLogin(data: Register): Observable<any> {
+
+// Class Crud Operation
+
+  clas(data:Handled): Observable<any> {
     this.httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'x-access-token':this.getToken()
+
       })
     };
 
-    return this.http.post<Register>(endpoint + 'api/auth/signin', data, this.httpOptions);
+    return this.http.post<Register>(endpoint + 'class/add', data, this.httpOptions);
   }
 
-// // parent
-//   doReg(data: Register): Observable<any> {
-//     this.httpOptions = {
-//       headers: new HttpHeaders({
-//         'Content-Type': 'application/json'
-//       })
-//     };
+  clasfetch(): Observable<any> {
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token':this.getToken()
 
-//     return this.http.post<Register>(endpoint + 'api/auth/signin', data, this.httpOptions);
-//   }
+      })
+    };
+
+    return this.http.get<Handled>(endpoint + 'class/fetch', this.httpOptions);
+  }
+  clasfetchOne(id): Observable<any> {
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token':this.getToken()
+
+      })
+    };
+
+    return this.http.get<Handled>(endpoint + 'class/edit/'+id, this.httpOptions);
+  }
+
+update(data:Handled,id): Observable<any> {
+  this.httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'x-access-token':this.getToken()
+
+    })
+  };
+
+  return this.http.put<Handled>(endpoint + 'class/update/'+id, data, this.httpOptions);
+}
 
 
+  dlt(id){
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token':this.getToken()
+
+      })
+    };
+
+    return this.http.delete<Handled>(endpoint + 'class/delete/'+id,  this.httpOptions);
+
+  }
+  // end Of Class Crud operation
 }

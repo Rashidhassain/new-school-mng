@@ -44,7 +44,7 @@ const routes: Routes = [
   { path: 'teacherhome', component: TeacherhomeComponent },
   { path: 'teacherreg', component: TeacherregComponent },
   { path: 'parenthome', component: ParenthomeComponent },
-  { path: 'handled', component: HandledComponent },
+  { path: 'handled/:id', component: HandledComponent },
   { path: 'viewstudent', component: ViewstudentComponent },
   { path: 'addmarks', component: AddmarksComponent },
   { path: 'addclass', component: AdminclassComponent },

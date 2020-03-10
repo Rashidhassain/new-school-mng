@@ -1,3 +1,4 @@
+import { RestService } from './../rest.service';
 import { Component, OnInit } from '@angular/core';
 import { HandledComponent } from '../handled/handled.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -5,8 +6,8 @@ import { ViewstudentComponent } from '../viewstudent/viewstudent.component';
 import { AddmarksComponent } from '../addmarks/addmarks.component';
 import { TeacherattendComponent } from '../teacherattend/teacherattend.component';
 import { AdminsetexmComponent } from '../adminsetexm/adminsetexm.component';
-// import { Validators, FormGroup,FormBuilder } from '@angular/forms';
-// import { RestService } from '../rest.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+ import { Handled } from '../models/model';
 
 interface Gender {
   value: string;
@@ -42,19 +43,19 @@ interface Class {
   styleUrls: ['./teacherhome.component.scss']
 })
 export class TeacherhomeComponent implements OnInit {
-  // public forms: FormGroup;
-  // formBuilder: FormBuilder;
+  public forms: FormGroup;
+public data:Handled = new Handled();
+classf:any;
 
-
-  constructor(public dialog: MatDialog)
+  constructor(public dialog: MatDialog,private  formBuilder: FormBuilder,private rest:RestService)
   {
-    // this.forms = this.formBuilder.group({
-    //   class: ['', [Validators.required]],
-    //   subject: ['', [Validators.required]],
-    //   day: ['', [Validators.required]],
-    //   date: ['', [Validators.required]],
-    //   role: 'TEACHER',
-    // });
+    this.forms = this.formBuilder.group({
+      cls: ['', [Validators.required]],
+      sec: ['', [Validators.required]],
+      sub: ['', [Validators.required]],
+      day: ['', [Validators.required]],
+      date: ['', [Validators.required]],
+    });
 
   }
 
@@ -66,44 +67,40 @@ export class TeacherhomeComponent implements OnInit {
 
   genders: Gender[] = [
 
-    {value: 'steak-0', viewValue: 'Male'},
+    {value: '', viewValue: 'Male'},
     {value: 'pizza-1', viewValue: 'Female'}
   ];
   classes: Class[] = [
 
-    {value: 'steak-0', viewValue: 'I'},
-    {value: 'steak-0', viewValue: 'II	'},
-    {value: 'steak-0', viewValue: 'III'},
-    {value: 'steak-0', viewValue: 'IV'},
-    {value: 'steak-0', viewValue: 'V'},
-    {value: 'steak-0', viewValue: 'VI	'},
-    {value: 'steak-0', viewValue: 'VII	'},
-    {value: 'steak-0', viewValue: 'VIII	'},
-    {value: 'steak-0', viewValue: 'IX	'},
-    {value: 'steak-0', viewValue: 'X'},
-    {value: 'steak-0', viewValue: 'XI'},
-    {value: 'steak-0', viewValue: 'XII'},
+    {value: 'I', viewValue: 'I'},
+    {value: 'II', viewValue: 'II	'},
+    {value: 'III', viewValue: 'III'},
+    {value: 'IV', viewValue: 'IV'},
+    {value: 'V', viewValue: 'V'},
+    {value: 'VI', viewValue: 'VI	'},
+    {value: 'VII', viewValue: 'VII	'},
+    {value: 'VIII', viewValue: 'VIII	'},
+    {value: 'IX', viewValue: 'IX	'},
+    {value: 'X', viewValue: 'X'},
+    {value: 'XI', viewValue: 'XI'},
+    {value: 'XII', viewValue: 'XII'},
 
   ];
 
   sections: Section[] = [
-
-    {value: 'steak-0', viewValue: 'A'},
-    {value: 'steak-0', viewValue: 'B	'},
-    {value: 'steak-0', viewValue: 'C'},
-    {value: 'steak-0', viewValue: 'D'},
-    {value: 'steak-0', viewValue: 'E'},
-    {value: 'steak-0', viewValue: 'F	'},
-    {value: 'steak-0', viewValue: 'G	'},
-    {value: 'steak-0', viewValue: 'H	'}
-
-
-
+    {value: 'A', viewValue: 'A'},
+    {value: 'B', viewValue: 'B	'},
+    {value: 'C', viewValue: 'C'},
+    {value: 'D', viewValue: 'D'},
+    {value: 'E', viewValue: 'E'},
+    {value: 'F', viewValue: 'F	'},
+    {value: 'G', viewValue: 'G	'},
+    {value: 'H', viewValue: 'H	'}
   ];
 
   exams: Exam[] = [
 
-    {value: 'steak-0', viewValue: 'Test 1'},
+    {value: '', viewValue: 'Test 1'},
     {value: 'steak-0', viewValue: 'Test 2	'},
     {value: 'steak-0', viewValue: 'Test 3'},
     {value: 'steak-0', viewValue: 'Prepratory 1'},
@@ -116,38 +113,84 @@ export class TeacherhomeComponent implements OnInit {
   ];
   days: Day[] = [
 
-    {value: 'steak-0', viewValue: 'Monday'},
-    {value: 'steak-0', viewValue: 'Tuesday'},
-    {value: 'steak-0', viewValue: 'Wednesday'},
-    {value: 'steak-0', viewValue: 'Thursday'},
-    {value: 'steak-0', viewValue: 'Friday'},
-    {value: 'steak-0', viewValue: 'Saturday'},
+    {value: 'Monday', viewValue: 'Monday'},
+    {value: 'Tuesday', viewValue: 'Tuesday'},
+    {value: 'Wednesday', viewValue: 'Wednesday'},
+    {value: 'Thursday', viewValue: 'Thursday'},
+    {value: 'Friday', viewValue: 'Friday'},
+    {value: 'Saturday', viewValue: 'Saturday'},
 
 
 
   ];
   months: Month[] = [
 
-    {value: 'steak-0', viewValue: 'JANUARY'},
-    {value: 'steak-0', viewValue: 'FEBRUARY'},
-    {value: 'steak-0', viewValue: 'MARCH'},
-    {value: 'steak-0', viewValue: 'APRIL'},
-    {value: 'steak-0', viewValue: 'MAY'},
-    {value: 'steak-0', viewValue: 'JULY'},
-    {value: 'steak-0', viewValue: 'AUGUST'},
-    {value: 'steak-0', viewValue: 'SEPTEMBER'},
-    {value: 'steak-0', viewValue: 'OCTOBER'},
-    {value: 'steak-0', viewValue: 'NOVEMBER'},
-    {value: 'steak-0', viewValue: 'DECEMBER'}
+    {value: 'JANUARY', viewValue: 'JANUARY'},
+    {value: 'FEBRUARY', viewValue: 'FEBRUARY'},
+    {value: 'MARCH', viewValue: 'MARCH'},
+    {value: 'APRIL', viewValue: 'APRIL'},
+    {value: 'MAY', viewValue: 'MAY'},
+    {value: 'JULY', viewValue: 'JULY'},
+    {value: 'AUGUST', viewValue: 'AUGUST'},
+    {value: 'SEPTEMBER', viewValue: 'SEPTEMBER'},
+    {value: 'OCTOBER', viewValue: 'OCTOBER'},
+    {value: 'NOVEMBER', viewValue: 'NOVEMBER'},
+    {value: 'DECEMBER', viewValue: 'DECEMBER'}
 
 
 
 
   ];
 
+add(){
+  Object.assign(this.data, this.forms.value);
+  console.log(this.data);
+  if(this.forms.valid){
+  this.rest.clas(this.data).subscribe((result)=>{
+    if(result===undefined){
+      console.log(result);
+    }
+    else{
+      this.classfetch();
+      console.log('Here we go'+ result);
+    }
+  });
+  }
+  else{
+    console.log('error');
+  }
+}
+
+
+
+classfetch(){
+  this.rest.clasfetch().subscribe((result)=>{
+    if(result===undefined){
+      console.log(result);
+    }
+    else{
+
+      this.classf=result.product;
+      console.log('Here we go'+ result);
+    }
+  });
+}
+
+dlt(id){
+  this.rest.dlt(id).subscribe((result)=>{
+    if(result===undefined){
+      console.log(result);
+    }
+    else{
+this.classfetch();
+      console.log('Here we go'+ result);
+    }
+  });
+}
 
 
   ngOnInit() {
+    this.classfetch();
   }
   // handled class
   open()
@@ -162,10 +205,34 @@ export class TeacherhomeComponent implements OnInit {
       console.log('The dialog was closed');
     });
   }
-  // handled clas end
 
 
-  // viewstudent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   open1()
   {
     const dialogRef = this.dialog.open(ViewstudentComponent, {
