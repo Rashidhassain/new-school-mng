@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-       
+
         <li class="nav-item">
           <a class="nav-link" routerLink="/home">Home</a>
         </li>
@@ -14,8 +14,8 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/">Welcome To Parent</a>
         </li>
- 
-        
+
+
       </ul>
     </div>
   </nav>
@@ -45,21 +45,21 @@
     </div>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-sm-6 mt-5 mb-5"> 
+            <div class="col-sm-6 mt-5 mb-5">
                 <div class="card">
-                <form>
+                <form [formGroup]="forms" name="form">
                   <mat-form-field class="example-full-width">
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="Enter Your Mail" type="email">
+                    <input matInput placeholder="Enter Your Mail" formControlName="email" type="email">
                   </mat-form-field>
                   <mat-form-field class="example-full-width">
                     <mat-label>Password</mat-label>
-                    <input matInput placeholder="Enter Your Password" type="email">
+                    <input matInput placeholder="Enter Your Password"  formControlName="password" type="password">
                   </mat-form-field>
-                   <div class="text-center mt-4"><button mat-raised-button color="primary" class="btn-block" style="font-size: 18px;" routerLink="/parenthome">Login</button>
+                   <div class="text-center mt-4"><button mat-raised-button color="primary" class="btn-block" style="font-size: 18px;"  (click)="login()">Login</button>
                 </div>
-    
-                
+
+
                   </form>
                   <div class="container">
                     <div class="row">
@@ -77,9 +77,9 @@
             <div class="col-sm-6">
                 <img src="../../assets/admin-login-png-4.png" alt="" style="width:80%" class=" pl-5">
             </div>
-          
+
         </div>
-       
+
     </div>
 </section>
 <app-footer></app-footer>

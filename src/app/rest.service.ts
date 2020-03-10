@@ -78,6 +78,16 @@ export class RestService {
     return this.http.post<Register>(endpoint + 'api/auth/signin', data, this.httpOptions);
   }
 
+  Login(data: any): Observable<any> {
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      })
+    };
+
+    return this.http.post<any>(endpoint + 'api/auth/signinn', data, this.httpOptions);
+  }
+
 
   doReg(data: Register): Observable<any> {
     this.httpOptions = {
