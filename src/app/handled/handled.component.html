@@ -1,20 +1,17 @@
 
 
-<div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-        <h3 class="text-center mt-4">Edit  Here</h3>
+<div class="container">
 
 
-      </div>
-    </div>
 
     <div class="row mb-3">
-      <form>
 
-      <div class="col-sm-12">
+      <div class="col-sm-8 offset-1">
 
-          <div class="container mt-4">
+          <div class="container offset-1 mt-4">
+              <div class="card">
+                <h3 class="text-center mt-4">Edit  Here</h3>
+
   <form [formGroup]="forms">
     <mat-form-field class="example-full-width">
         <mat-label>Class Name</mat-label>
@@ -52,16 +49,18 @@
     <mat-datepicker #picker3></mat-datepicker>
   </mat-form-field>
     <button mat-raised-button color="primary" class="btn-block"
-        style="outline:none;"(click)="update()">Add Edit Details</button>
+        style="outline:none;font-size: 18px"(click)="update()">Update</button>
+        <button mat-raised-button color="warn" style="outline:none; font-size: 18px" class="mt-2 btn-block">Check</button>
 </form>
-
 
 
 
         </div>
 
 
-
+</div>
 
     </div>
 
+</div>
+</div>
