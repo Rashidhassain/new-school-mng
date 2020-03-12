@@ -1,4 +1,8 @@
+import { Student } from './../models/model';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
+import { RestService } from '../rest.service';
 interface Section
 {
   value: string;
@@ -29,7 +33,28 @@ interface Gender {
 export class ViewstudentComponent implements OnInit
 {
 
-  constructor() { }
+
+
+  constructor(private rest: RestService, private route: ActivatedRoute,private fb:FormBuilder)
+  {
+    this.formss=this.fb.group({
+      stid: [''],
+      stname : [''],
+      ftname: [''],
+    mtname: [''],
+     clsname: [''],
+     gender: [''],
+  pnum: [''],
+     ftmail: [''],
+     mtmail: [''],
+     section: [''],
+     address: [''],
+      date: ['']
+    });
+    this.route.params.subscribe(params => this.doSearch(params));
+  }
+  formss: any;
+
   // tslint:disable-next-line: member-ordering
   sections: Section[] = [
 
@@ -46,6 +71,7 @@ export class ViewstudentComponent implements OnInit
 
   ];
 
+  // tslint:disable-next-line: member-ordering
   genders: Gender[] = [
 
     {value: 'steak-0', viewValue: 'Male'},
@@ -69,6 +95,7 @@ export class ViewstudentComponent implements OnInit
     { value: 'steak-0', viewValue: 'XII' },
 
   ];
+  // tslint:disable-next-line: member-ordering
   days: Day[] = [
 
     { value: 'steak-0', viewValue: 'Monday' },
@@ -81,8 +108,16 @@ export class ViewstudentComponent implements OnInit
 
 
   ];
+  public data1:Student = new Student();
+  doSearch(params: import('@angular/router').Params): void
+  {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit()
   {
   }
+
+
+
 }

@@ -17,3 +17,20 @@ export class Handled{
     sec:string;
     cls:string;
 }
+
+
+export class Student{
+    stid:string;
+    stname:string;
+    ftname:string;
+    mtname:string;
+    clsname:string;
+    gender:string;
+    pnum:string;
+    ftmail:string;
+    mtmail:string;
+    section:string;
+    address:string;
+    date:string;
+
+}

@@ -55,7 +55,7 @@ Reg()
   if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
     this.email = true;
   }
-  this.rest.doRegister(this.data).subscribe((result) =>
+  this.rest.doRegisters(this.data).subscribe((result) =>
   {
     if (result === undefined) {
       console.log(result);

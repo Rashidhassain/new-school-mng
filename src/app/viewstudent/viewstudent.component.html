@@ -10,7 +10,6 @@
     </div>
 
     <div class="row mb-3">
-      <form>
 
       <div class="col-sm-12">
 
@@ -21,29 +20,30 @@
                 <div class="row">
                     <div class="col-sm-12">
                             <div class="container">
+                                <form [formGroup]="formss">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Student Id</mat-label>
-                                            <input matInput placeholder="Enter Student Id" type="number">
+                                            <input matInput placeholder="Enter Student Id" type="number"formControlName="stid">
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Student Name</mat-label>
-                                            <input matInput placeholder="Enter Student Name" type="text">
+                                            <input matInput placeholder="Enter Student Name" type="text"   formControlName="stname">
                                         </mat-form-field>
 
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Father Name</mat-label>
-                                            <input matInput placeholder="Enter Father Name" type="text">
+                                            <input matInput placeholder="Enter Father Name" type="text"  formControlName="ftname">
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Mother Name</mat-label>
-                                            <input matInput placeholder="Enter Mother Name" type="text">
+                                            <input matInput placeholder="Enter Mother Name" type="text"  formControlName="mtname">
                                         </mat-form-field>
 
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Class Name</mat-label>
-                                            <mat-select>
+                                            <mat-select formControlName="clsname" >
                                                 <mat-option *ngFor="let class of classes" [value]="class.value">
                                                     {{class.viewValue}}
                                                 </mat-option>
@@ -52,7 +52,7 @@
 
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Gender</mat-label>
-                                            <mat-select>
+                                            <mat-select formControlName="gender" >
                                                 <mat-option *ngFor="let gender of genders" [value]="gender.value">
                                                     {{gender.viewValue}}
                                                 </mat-option>
@@ -63,19 +63,19 @@
                                     <div class="col-sm-6">
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Phone Number</mat-label>
-                                            <input matInput placeholder="Enter Phone Number" type="number">
+                                            <input matInput placeholder="Enter Phone Number" type="number"formControlName="pnum">
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Father Mail Id</mat-label>
-                                            <input matInput placeholder="Enter Father @Mail Id" type="email">
+                                            <input matInput placeholder="Enter Father @Mail Id" type="email"formControlName="ftmail" >
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Mother mail Id</mat-label>
-                                            <input matInput placeholder="Enter Mother  @Mail Id" type="email">
+                                            <input matInput placeholder="Enter Mother  @Mail Id" type="email"formControlName="mtmail" >
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Section</mat-label>
-                                            <mat-select>
+                                            <mat-select formControlName="section" >
                                                 <mat-option *ngFor="let section of sections"
                                                     [value]="section.value">
                                                     {{section.viewValue}}
@@ -84,20 +84,20 @@
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Address</mat-label>
-                                            <textarea matInput placeholder="Enter  Address"></textarea>
+                                            <textarea matInput placeholder="Enter  Address"formControlName="address" ></textarea>
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Date</mat-label>
-                                            <input matInput [matDatepicker]="picker3">
+                                            <input matInput [matDatepicker]="picker3"formControlName="date" >
                                             <mat-datepicker-toggle matSuffix [for]="picker3">
                                             </mat-datepicker-toggle>
                                             <mat-datepicker #picker3></mat-datepicker>
                                         </mat-form-field>
                                     </div>
                                 </div>
-
+</form>
                             </div>
-                            <div class="text-center mt-4"><button mat-raised-button color="primary" routerLink="/"
+                            <div class="text-center mt-4"><button mat-raised-button color="primary"
                                     class="btn-block" style="font-size: 18px;">Add Edit
                                     Details</button>
                             </div>

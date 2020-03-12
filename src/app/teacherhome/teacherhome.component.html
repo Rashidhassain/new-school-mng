@@ -107,16 +107,16 @@
 
 
 
-            <mat-tab label="Handled Class">
+            <mat-tab label="Handled Class" id="hclass">
 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
 
                             <h3 class="text-center mt-5">Add Handled Classes </h3>
 
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-8">
                             <h3 class="text-center mt-5"> Details</h3>
 
                         </div>
@@ -124,7 +124,7 @@
 
                     <div class="container mt-5">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="card">
                                     <form  [formGroup]="forms">
                                         <mat-form-field class="example-full-width">
@@ -167,41 +167,44 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="col-sm-6 mt-4">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Class</th>
-                                            <th scope="col">Subject</th>
-                                            <th scope="col">Section</th>
-                                            <th scope="col">Day</th>
-                                            <th scope="col">Date</th>
+<div class="col-sm-8">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Section</th>
+                <th scope="col">Day</th>
+                <th scope="col">Date</th>
 
-                                            <th scope="col">Edit</th>
+                <th scope="col">Edit</th>
 
-                                            <th scope="col">Delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr *ngFor="let r of classf">
-                                           <td> {{r.class}}</td>
-                                           <td> {{r.subject}}</td>
-                                           <td> {{r.section}}</td>
-                                           <td> {{r.day}}</td>
-                                           <td> {{r.date}}</td>
-                                            <td><button mat-raised-button color="primary" style="outline:none;"[routerLink]="['/handled',r.id]">Edit</button></td>
-                                            <td><button mat-raised-button color="warn" (click)="dlt(r.id)"
-                                                    style="outline:none;">Delete</button></td>
-                                        </tr>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of classf">
+               <td> {{r.class}}</td>
+               <td> {{r.subject}}</td>
+               <td> {{r.section}}</td>
+               <td> {{r.day}}</td>
+               <td> {{r.date}}</td>
+                <td><button mat-raised-button color="primary" style="outline:none;"[routerLink]="['/handled',r.id]">Edit</button></td>
+                <td><button mat-raised-button color="warn" (click)="dlt(r.id)"
+                        style="outline:none;">Delete</button></td>
+            </tr>
 
-                                    </tbody>
-                                </table>
-                            </div>
+        </tbody>
+    </table>
+</div>
                         </div>
                     </div>
                 </div>
 
             </mat-tab>
+
+
+
             <mat-tab label="Students">
 
                 <div class="container">
@@ -222,30 +225,31 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="card">
+                                <form [formGroup]="formss">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Student Id</mat-label>
-                                                <input matInput placeholder="Enter Student Id" type="number">
+                                                <input matInput placeholder="Enter Student Id" type="number" formControlName="stid">
                                             </mat-form-field>
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Student Name</mat-label>
-                                                <input matInput placeholder="Enter Student Name" type="text">
+                                                <input matInput placeholder="Enter Student Name" type="text"formControlName="stname">
                                             </mat-form-field>
 
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Father Name</mat-label>
-                                                <input matInput placeholder="Enter Father Name" type="text">
+                                                <input matInput placeholder="Enter Father Name" type="text"formControlName="ftname">
                                             </mat-form-field>
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Mother Name</mat-label>
-                                                <input matInput placeholder="Enter Mother Name" type="text">
+                                                <input matInput placeholder="Enter Mother Name" type="text"formControlName="mtname">
                                             </mat-form-field>
 
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Class Name</mat-label>
-                                                <mat-select>
+                                                <mat-select formControlName="clsname">
                                                     <mat-option *ngFor="let class of classes" [value]="class.value">
                                                         {{class.viewValue}}
                                                     </mat-option>
@@ -254,7 +258,7 @@
 
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Gender</mat-label>
-                                                <mat-select>
+                                                <mat-select formControlName="gender">
                                                     <mat-option *ngFor="let gender of genders" [value]="gender.value">
                                                         {{gender.viewValue}}
                                                     </mat-option>
@@ -265,19 +269,19 @@
                                         <div class="col-sm-6">
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Phone Number</mat-label>
-                                                <input matInput placeholder="Enter Phone Number" type="number">
+                                                <input matInput placeholder="Enter Phone Number" type="number"formControlName="pnum">
                                             </mat-form-field>
                                             <mat-form-field class="example-full-width">
-                                                <mat-label>Father Mail Id</mat-label>
-                                                <input matInput placeholder="Enter Father @Mail Id" type="email">
+                                                <mat-label>Father Mail</mat-label>
+                                                <input matInput placeholder="Enter Father @Mail Id" type="email"formControlName="ftmail">
                                             </mat-form-field>
                                             <mat-form-field class="example-full-width">
-                                                <mat-label>Mother mail Id</mat-label>
-                                                <input matInput placeholder="Enter Mother  @Mail Id" type="email">
+                                                <mat-label>Mother mail</mat-label>
+                                                <input matInput placeholder="Enter Mother  @Mail Id" type="email"formControlName="mtmail">
                                             </mat-form-field>
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Section</mat-label>
-                                                <mat-select>
+                                                <mat-select formControlName="section">
                                                     <mat-option *ngFor="let section of sections"
                                                         [value]="section.value">
                                                         {{section.viewValue}}
@@ -286,11 +290,11 @@
                                             </mat-form-field>
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Address</mat-label>
-                                                <textarea matInput placeholder="Enter  Address"></textarea>
+                                                <textarea matInput placeholder="Enter  Address" formControlName="address"></textarea>
                                             </mat-form-field>
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Date</mat-label>
-                                                <input matInput [matDatepicker]="picker3">
+                                                <input matInput [matDatepicker]="picker3" formControlName="date" readonly>
                                                 <mat-datepicker-toggle matSuffix [for]="picker3">
                                                 </mat-datepicker-toggle>
                                                 <mat-datepicker #picker3></mat-datepicker>
@@ -299,11 +303,11 @@
                                     </div>
 
                                 </div>
-                                <div class="text-center mt-4"><button mat-raised-button color="primary" routerLink="/"
-                                        class="btn-block" style="font-size: 18px;">Add Student
+                                <div class="text-center mt-4"><button mat-raised-button color="primary"
+                                        class="btn-block" style="font-size: 18px;" (click)="add1()">Add Student
                                         Details</button>
                                 </div>
-
+</form>
                             </div>
 
 
@@ -331,7 +335,7 @@
 
                         <table class="table mt-4">
                             <thead>
-                                <tr>
+                                <tr  >
                                     <th scope="col">Student.Id</th>
                                     <th scope="col">Student.Name</th>
                                     <th scope="col">Father.Name</th>
@@ -349,67 +353,29 @@
                                     <th scope="col">Delete</th>
 
 
-
-                                </tr>
+</tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>Otto</td>
+                                <tr *ngFor="let c of clas">
+                                    <td> {{c.id}}</td>
+                                    <td> {{c.studentname}}</td>
+                                    <td> {{c.fathername}}</td>
+                                    <td> {{c.mothername}}</td>
+                                    <td> {{c.gender}}</td>
+                                    <td> {{c.phonenumber}}</td>
+                                    <td> {{c.fathermail}}</td>
+                                    <td> {{c.mothermail}}</td>
+                                    <td> {{c.section}}</td>
+                                    <td> {{c.address}}</td>
+                                    <td> {{c.classname}}</td>
+                                    <td> {{c.date}}</td>
 
-                                    <td><button mat-raised-button color="primary" style="outline:none;"
-                                            (click)="open1()">Edit</button>
-                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>Otto</td>
 
-                                    <td>@fat</td>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td><button mat-raised-button color="primary" style="outline:none;"
-                                            (click)="open1()">Edit</button>
-                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>Otto</td>
+                                     <td><button mat-raised-button color="primary" style="outline:none;"[routerLink]="['/viewstudent',c.id]">Edit</button></td>
+                                     <td><button mat-raised-button color="warn" (click)="dlt1(c.id)"
+                                             style="outline:none;">Delete</button></td>
+                                 </tr>
 
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td><button mat-raised-button color="primary" style="outline:none;"
-                                            (click)="open1()">Edit</button>
-                                    <td><button mat-raised-button color="warn" style="outline:none;">Delete</button>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>

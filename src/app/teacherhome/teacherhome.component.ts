@@ -7,7 +7,7 @@ import { AddmarksComponent } from '../addmarks/addmarks.component';
 import { TeacherattendComponent } from '../teacherattend/teacherattend.component';
 import { AdminsetexmComponent } from '../adminsetexm/adminsetexm.component';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
- import { Handled } from '../models/model';
+ import { Handled, Student } from '../models/model';
 
 interface Gender {
   value: string;
@@ -44,8 +44,13 @@ interface Class {
 })
 export class TeacherhomeComponent implements OnInit {
   public forms: FormGroup;
+  public formss: FormGroup;
+
 public data:Handled = new Handled();
+public data1:Student = new Student();
+clas:any;
 classf:any;
+
 
   constructor(public dialog: MatDialog,private  formBuilder: FormBuilder,private rest:RestService)
   {
@@ -57,6 +62,22 @@ classf:any;
       date: ['', [Validators.required]],
     });
 
+
+     this.formss = this.formBuilder.group({
+       stid: ['', [Validators.required]],
+        stname : ['', [Validators.required]],
+        ftname: ['', [Validators.required]],
+      mtname: ['', [Validators.required]],
+       clsname: ['', [Validators.required]],
+       gender: ['', [Validators.required]],
+    pnum: ['', [Validators.required]],
+       ftmail: ['', [Validators.required]],
+       mtmail: ['', [Validators.required]],
+       section: ['', [Validators.required]],
+       address: ['', [Validators.required]],
+        date: ['', [Validators.required]]
+
+     });
   }
 
 
@@ -67,8 +88,8 @@ classf:any;
 
   genders: Gender[] = [
 
-    {value: '', viewValue: 'Male'},
-    {value: 'pizza-1', viewValue: 'Female'}
+    {value: 'Male', viewValue: 'Male'},
+    {value: 'Female', viewValue: 'Female'}
   ];
   classes: Class[] = [
 
@@ -142,6 +163,7 @@ classf:any;
 
   ];
 
+  // handled crud //
 add(){
   Object.assign(this.data, this.forms.value);
   console.log(this.data);
@@ -188,9 +210,53 @@ this.classfetch();
   });
 }
 
+// handled crud  ends//
+
+/* student crud */
+add1(){
+  Object.assign(this.data1, this.formss.value);
+  console.log(this.data1);
+  if(this.formss.valid){
+  this.rest.clas1(this.data1).subscribe((result)=>{
+    if(result===undefined){
+      console.log(result);
+    }
+    else{
+      this.clasfetch1();
+      console.log('Here we go');
+    }
+  });
+  }
+
+}
+clasfetch1(){
+  this.rest.clasfetch1().subscribe((result)=>{
+    if(result===undefined){
+      console.log(result);
+    }
+    else{
+
+      this.clas=result.product;
+      console.log('Here we go'+ result);
+    }
+  });
+}
+dlt1(id){
+  this.rest.dlt1(id).subscribe((result)=>{
+    if(result===undefined){
+      console.log(result);
+    }
+    else{
+this.clasfetch1();
+      console.log('Here we go'+ result);
+    }
+  });
+}
+/*  student crud ends */
 
   ngOnInit() {
     this.classfetch();
+    this.clasfetch1();
   }
   // handled class
   open()
@@ -205,31 +271,6 @@ this.classfetch();
       console.log('The dialog was closed');
     });
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
