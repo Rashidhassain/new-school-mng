@@ -214,7 +214,7 @@ update(data:Handled,id): Observable<any> {
 
 
   // tslint:disable-next-line: adjacent-overload-signatures
-  update1(data1:Student,id): Observable<any> {
+  update1(data1:Student,id1): Observable<any> {
     this.httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -223,7 +223,7 @@ update(data:Handled,id): Observable<any> {
       })
     };
 
-    return this.http.put<Student>(endpoint + 'clas/update/'+id, data1, this.httpOptions);
+    return this.http.put<Student>(endpoint + 'clas/update1/'+id1, data1, this.httpOptions);
   }
 
   // tslint:disable-next-line: adjacent-overload-signatures

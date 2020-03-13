@@ -386,7 +386,7 @@
             <mat-tab label="Add Marks">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-8">
                             <h3 class="text-center mt-5">Add Marks</h3>
                         </div>
 
@@ -396,22 +396,22 @@
                         <div class="row">
                             <div class="col-sm-7 offset-2">
                                 <div class="card">
-                                    <form>
+                                    <form [formGroup]="forms1">
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <mat-form-field class="example-full-width">
                                                     <mat-label>Student Id</mat-label>
-                                                    <input matInput placeholder="Enter Student Id" type="number">
+                                                    <input matInput placeholder="Enter Student Id" type="number" formControlName="stid">
                                                 </mat-form-field>
                                                 <mat-form-field class="example-full-width">
                                                     <mat-label>Student Name</mat-label>
-                                                    <input matInput placeholder="Enter Student Name" type="number">
+                                                    <input matInput placeholder="Enter Student Name" type="number" formControlName="stname">
                                                 </mat-form-field>
 
                                                 <mat-form-field class="example-full-width">
                                                     <mat-label>Class Name</mat-label>
-                                                    <mat-select>
-                                                        <mat-option *ngFor="let class of classes" [value]="class.value">
+                                                    <mat-select formControlName="clsname">
+                                                        <mat-option *ngFor="let class of classes" [value]="class.value" >
                                                             {{class.viewValue}}
                                                         </mat-option>
                                                     </mat-select>
@@ -420,7 +420,7 @@
                                             <div class="col-sm-6">
                                                 <mat-form-field class="example-full-width">
                                                     <mat-label>Section</mat-label>
-                                                    <mat-select>
+                                                    <mat-select formControlName="section">
                                                         <mat-option *ngFor="let section of sections"
                                                             [value]="section.value">
                                                             {{section.viewValue}}
@@ -429,7 +429,7 @@
                                                 </mat-form-field>
                                                 <mat-form-field class="example-full-width">
                                                     <mat-label>Type Of Exam</mat-label>
-                                                    <mat-select>
+                                                    <mat-select formControlName="tof">
                                                         <mat-option *ngFor="let exam   of exams" [value]="exam.value">
                                                             {{exam.viewValue}}
                                                         </mat-option>
@@ -437,7 +437,7 @@
                                                 </mat-form-field>
                                                 <mat-form-field class="example-full-width">
                                                     <mat-label>marks</mat-label>
-                                                    <input matInput placeholder="Enter marks" type="number">
+                                                    <input matInput placeholder="Enter marks" type="number"formControlName="marks">
                                                 </mat-form-field>
                                             </div>
 
@@ -448,7 +448,7 @@
 
 
                                         <button mat-raised-button color="primary" class="btn-block"
-                                            style="outline:none;">Add Marks</button>
+                                            style="outline:none;" (click)="add2()">Add Marks</button>
                                     </form>
 
                                 </div>

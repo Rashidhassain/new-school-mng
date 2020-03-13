@@ -34,3 +34,36 @@ export class Student{
     date:string;
 
 }
+
+export class Mark{
+     stid:string;
+ stname:string;
+ clsname:string;
+      marks:string;
+
+ section:string;
+ typeofexam:string;
+
+}
+
+export class Teacherattendence{
+stid:string;
+stname:string;
+clsname:string;
+section:string;
+month:string;
+numberofdays:string;
+presentdays:string;
+absentdays:string;
+
+}
+
+export class Teacherexam{
+    exmname:string;
+    clsname:string;
+    section:string;
+    subject:string;
+    typeofexam:string;
+    date:string;
+
+    }

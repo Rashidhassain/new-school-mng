@@ -45,6 +45,7 @@ interface Class {
 export class TeacherhomeComponent implements OnInit {
   public forms: FormGroup;
   public formss: FormGroup;
+  public forms1: FormGroup;
 
 public data:Handled = new Handled();
 public data1:Student = new Student();
@@ -78,6 +79,18 @@ classf:any;
         date: ['', [Validators.required]]
 
      });
+
+
+
+     this.forms1 = this.formBuilder.group ({
+      stid: ['', [Validators.required]],
+      stname : ['', [Validators.required]],
+      clsname: ['', [Validators.required]],
+      section: ['', [Validators.required]],
+      tof: ['', [Validators.required]],
+      marks: ['', [Validators.required]],
+
+    });
   }
 
 
@@ -121,14 +134,14 @@ classf:any;
 
   exams: Exam[] = [
 
-    {value: '', viewValue: 'Test 1'},
-    {value: 'steak-0', viewValue: 'Test 2	'},
-    {value: 'steak-0', viewValue: 'Test 3'},
-    {value: 'steak-0', viewValue: 'Prepratory 1'},
-    {value: 'steak-0', viewValue: 'Prepratory 2'},
-    {value: 'steak-0', viewValue: 'Prepratory 3	'},
-    {value: 'steak-0', viewValue: 'Mid-Term Exam	'},
-    {value: 'steak-0', viewValue: 'Annual Exam'}
+    {value: 'Test 1', viewValue: 'Test 1'},
+    {value: 'Test 2', viewValue: 'Test 2	'},
+    {value: 'Test 3', viewValue: 'Test 3'},
+    {value: 'Prepratory 1', viewValue: 'Prepratory 1'},
+    {value: 'Preparatory 2', viewValue: 'Prepratory 2'},
+    {value: 'Preapratory', viewValue: 'Prepratory 3	'},
+    {value: 'Mid Term Exam', viewValue: 'Mid-Term Exam	'},
+    {value: 'Annual Exam', viewValue: 'Annual Exam'}
 
 
   ];
@@ -259,18 +272,46 @@ this.clasfetch1();
     this.clasfetch1();
   }
   // handled class
-  open()
-  {
-    const dialogRef = this.dialog.open(HandledComponent, {
-      width: '530px',
+  // open()
+  // {
+  //   const dialogRef = this.dialog.open(HandledComponent, {
+  //     width: '530px',
 
-    });
+  //   });
 
-    dialogRef.afterClosed().subscribe(result =>
-    {
-      console.log('The dialog was closed');
-    });
+  //   dialogRef.afterClosed().subscribe(result =>
+  //   {
+  //     console.log('The dialog was closed');
+  //   });
+  // }
+
+
+
+
+
+/* marks crude operation */
+add2(){
+  Object.assign(this.data, this.forms1.value);
+  console.log(this.data);
+  if(this.forms1.valid){
+  this.rest.clas(this.data).subscribe((result)=>{
+    if(result===undefined){
+      console.log(result);
+    }
+    else{
+      this.clasfetch1();
+      console.log('Here we go');
+    }
+  });
   }
+
+}
+/* marks crud opeartion ends */
+
+
+
+
+
 
 
 

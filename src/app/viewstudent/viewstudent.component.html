@@ -25,25 +25,25 @@
                                     <div class="col-sm-6">
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Student Id</mat-label>
-                                            <input matInput placeholder="Enter Student Id" type="number"formControlName="stid">
+                                            <input matInput placeholder="Enter Student Id" type="number"formControlName="stid" [(ngModel)]="stid">
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Student Name</mat-label>
-                                            <input matInput placeholder="Enter Student Name" type="text"   formControlName="stname">
+                                            <input matInput placeholder="Enter Student Name" type="text"   formControlName="stname"[(ngModel)]="stname">
                                         </mat-form-field>
 
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Father Name</mat-label>
-                                            <input matInput placeholder="Enter Father Name" type="text"  formControlName="ftname">
+                                            <input matInput placeholder="Enter Father Name" type="text"  formControlName="ftname"[(ngModel)]="ftname">
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Mother Name</mat-label>
-                                            <input matInput placeholder="Enter Mother Name" type="text"  formControlName="mtname">
+                                            <input matInput placeholder="Enter Mother Name" type="text"  formControlName="mtname"[(ngModel)]="mtname">
                                         </mat-form-field>
 
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Class Name</mat-label>
-                                            <mat-select formControlName="clsname" >
+                                            <mat-select formControlName="clsname"[(ngModel)]="clsname" >
                                                 <mat-option *ngFor="let class of classes" [value]="class.value">
                                                     {{class.viewValue}}
                                                 </mat-option>
@@ -52,7 +52,7 @@
 
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Gender</mat-label>
-                                            <mat-select formControlName="gender" >
+                                            <mat-select formControlName="gender"[(ngModel)]="gender" >
                                                 <mat-option *ngFor="let gender of genders" [value]="gender.value">
                                                     {{gender.viewValue}}
                                                 </mat-option>
@@ -63,32 +63,31 @@
                                     <div class="col-sm-6">
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Phone Number</mat-label>
-                                            <input matInput placeholder="Enter Phone Number" type="number"formControlName="pnum">
+                                            <input matInput placeholder="Enter Phone Number" type="number"formControlName="pnum" [(ngModel)]="pnum">
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Father Mail Id</mat-label>
-                                            <input matInput placeholder="Enter Father @Mail Id" type="email"formControlName="ftmail" >
+                                            <input matInput placeholder="Enter Father @Mail Id" type="email"formControlName="ftmail"  [(ngModel)]="ftmail">
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Mother mail Id</mat-label>
-                                            <input matInput placeholder="Enter Mother  @Mail Id" type="email"formControlName="mtmail" >
+                                            <input matInput placeholder="Enter Mother  @Mail Id" type="email"formControlName="mtmail" [(ngModel)]="mtmail">
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Section</mat-label>
-                                            <mat-select formControlName="section" >
-                                                <mat-option *ngFor="let section of sections"
-                                                    [value]="section.value">
+                                            <mat-select formControlName="section"  [(ngModel)]="section" >
+                                                <mat-option *ngFor="let section of sections" [value]="section.value">
                                                     {{section.viewValue}}
                                                 </mat-option>
                                             </mat-select>
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Address</mat-label>
-                                            <textarea matInput placeholder="Enter  Address"formControlName="address" ></textarea>
+                                            <textarea matInput placeholder="Enter  Address"formControlName="address" [(ngModel)]="address"></textarea>
                                         </mat-form-field>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Date</mat-label>
-                                            <input matInput [matDatepicker]="picker3"formControlName="date" >
+                                            <input matInput [matDatepicker]="picker3"formControlName="date" [(ngModel)]="date">
                                             <mat-datepicker-toggle matSuffix [for]="picker3">
                                             </mat-datepicker-toggle>
                                             <mat-datepicker #picker3></mat-datepicker>
@@ -98,7 +97,7 @@
 </form>
                             </div>
                             <div class="text-center mt-4"><button mat-raised-button color="primary"
-                                    class="btn-block" style="font-size: 18px;">Add Edit
+                                    class="btn-block" style="font-size: 18px;" (click)="update1()">Add Edit
                                     Details</button>
                             </div>
 
